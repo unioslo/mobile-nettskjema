@@ -1,0 +1,14 @@
+{
+  "name": "react-native-nettskjema",
+  "version": "1.0.0",
+  "description": "Library for posting submissions to Nettskjema",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.usit.uio.no:7999/mob/react-native-nettskjema.git"
+  },
+  "keywords": [
+    "nettskjema"
+  ],
+  "author": "Jarle Fagerheim",
+  "license": "GPL-2.0"
+}

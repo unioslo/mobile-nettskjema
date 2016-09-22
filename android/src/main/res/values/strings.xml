@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="deferred_submissions_settings_key">autoUploadSubmissions</string>
+    <string name="auto_upload_setting_key">autoUploadSetting</string>
+</resources>

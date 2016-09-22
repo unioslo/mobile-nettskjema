@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="no.uio.mobileapps.reactnativenettskjema"
+    package="no.uio.mobileapps.mobilenettskjema.android"
 >
 
 </manifest>

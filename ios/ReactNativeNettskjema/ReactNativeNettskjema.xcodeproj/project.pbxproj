@@ -45,6 +45,13 @@
 		985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */; };
 		98A72DD31D9EAC4E00853CDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A72DD21D9EAC4E00853CDD /* Alamofire.framework */; };
 		98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */; };
+		98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD61DA25D7B00853CDD /* SerializationTest.swift */; };
+		98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */; };
+		98A72DDA1DA278A500853CDD /* NettskjemaJsonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */; };
+		98A72DDC1DA2805600853CDD /* StorageDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDB1DA2805600853CDD /* StorageDirectory.swift */; };
+		98A72DDD1DA2805600853CDD /* StorageDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDB1DA2805600853CDD /* StorageDirectory.swift */; };
+		98A72DDF1DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */; };
+		98A72DE01DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */; };
 		98E2402C1D9E52B5000EDED2 /* ReactNativeNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +87,10 @@
 		985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaFilledInForm.swift; sourceTree = "<group>"; };
 		98A72DD21D9EAC4E00853CDD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CsrfRequestTest.swift; sourceTree = "<group>"; };
+		98A72DD61DA25D7B00853CDD /* SerializationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationTest.swift; sourceTree = "<group>"; };
+		98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaJsonField.swift; sourceTree = "<group>"; };
+		98A72DDB1DA2805600853CDD /* StorageDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageDirectory.swift; sourceTree = "<group>"; };
+		98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaJsonFields.swift; sourceTree = "<group>"; };
 		98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactNativeNettskjema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E240261D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeNettskjemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +167,8 @@
 				985FC2881D9E6E9600958E97 /* TextQuestionAnswer.swift */,
 				985FC2911D9E701000958E97 /* SelectedMultiOption.swift */,
 				985FC29A1D9E723800958E97 /* FileUploadForField.swift */,
+				98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */,
+				98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */,
 			);
 			name = answers;
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 		98E240241D9E52B5000EDED2 /* ReactNativeNettskjema */ = {
 			isa = PBXGroup;
 			children = (
+				98A72DDB1DA2805600853CDD /* StorageDirectory.swift */,
 				985FC2701D9E5ED600958E97 /* submission */,
 				98E240261D9E52B5000EDED2 /* Info.plist */,
 				985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */,
@@ -204,6 +218,7 @@
 				985FC2781D9E608E00958E97 /* testdata */,
 				98E240321D9E52B5000EDED2 /* Info.plist */,
 				985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */,
+				98A72DD61DA25D7B00853CDD /* SerializationTest.swift */,
 				98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */,
 			);
 			path = ReactNativeNettskjemaTests;
@@ -326,16 +341,19 @@
 				985FC2981D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
 				985FC29E1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
 				985FC28F1D9E6F7C00958E97 /* NettskjemaFieldIdentifier.swift in Sources */,
+				98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */,
 				985FC27A1D9E60A100958E97 /* TestFile.swift in Sources */,
 				985FC2891D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
 				985FC29B1D9E723800958E97 /* FileUploadForField.swift in Sources */,
 				985FC28C1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
 				985FC2851D9E668400958E97 /* NettskjemaForm.swift in Sources */,
 				985FC2951D9E70AF00958E97 /* RadioQuestion.swift in Sources */,
+				98A72DDC1DA2805600853CDD /* StorageDirectory.swift in Sources */,
 				985FC2821D9E641100958E97 /* MultipleChoiceQuestion.swift in Sources */,
 				985FC2A11D9E75DC00958E97 /* NettskjemaCsrfRequestFactory.swift in Sources */,
 				985FC27E1D9E636000958E97 /* TestForm.swift in Sources */,
 				985FC2A71D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
+				98A72DDF1DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
 				985FC2921D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
 				985FC2731D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */,
 				985FC2761D9E601A00958E97 /* protocols.swift in Sources */,
@@ -346,6 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */,
+				98A72DDA1DA278A500853CDD /* NettskjemaJsonField.swift in Sources */,
 				985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
 				985FC28D1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
 				985FC2961D9E70AF00958E97 /* RadioQuestion.swift in Sources */,
@@ -360,11 +380,13 @@
 				985FC28A1D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
 				985FC27B1D9E60A100958E97 /* TestFile.swift in Sources */,
 				985FC2991D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
+				98A72DDD1DA2805600853CDD /* StorageDirectory.swift in Sources */,
 				985FC2931D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
 				985FC2771D9E601A00958E97 /* protocols.swift in Sources */,
 				98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */,
 				985FC27F1D9E636000958E97 /* TestForm.swift in Sources */,
 				985FC29F1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
+				98A72DE01DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

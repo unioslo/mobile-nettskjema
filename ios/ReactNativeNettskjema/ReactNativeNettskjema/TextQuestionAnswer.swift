@@ -9,7 +9,21 @@ class TextQuestionAnswer: FilledInFormField {
         self.answer = answer
     }
     
-    func addTo(multipartFormData: MultipartFormData) {
-        multipartFormData.appendBodyPart(data: answer.dataUsingEncoding(NSASCIIStringEncoding)!, name: identifier)
+    init(serialized: [String: AnyObject]) {
+        self.identifier = serialized["identifier"] as! String
+        self.answer = serialized["answer"] as! String
+    }
+    
+    func addTo(multipartFormData: KeyValueMedia) {
+        multipartFormData.write(identifier, value: answer.dataUsingEncoding(NSASCIIStringEncoding)!)
+    }
+    
+    
+    var serialized: [String : AnyObject] {
+        get {
+            return ["identifier": identifier, "answer": answer]
+        }
     }
 }
+
+

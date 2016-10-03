@@ -5,8 +5,7 @@ class TestFile {
     let kbSize: Int
     
     init(kbSize: Int) {
-        let directory = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask,  true).first!
-        self.file = NSURL(fileURLWithPath: directory).URLByAppendingPathComponent(String(kbSize) + "kbFile")!
+        self.file = DocumentStorageDirectory().newFileWithName(String(kbSize) + "kbFile")
         self.kbSize = kbSize
     }
     

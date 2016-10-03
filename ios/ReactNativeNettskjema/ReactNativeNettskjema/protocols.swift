@@ -45,7 +45,7 @@ public enum FormSubmissionStatusCode {
 }
 
 public protocol MultipartRequestField {
-    func addTo(multipartFormData: MultipartFormData)
+    func addTo(media: KeyValueMedia)
 }
 
 protocol MultipleOptionsFormField: FormField {
@@ -53,7 +53,12 @@ protocol MultipleOptionsFormField: FormField {
 }
 
 public protocol JSONSerializable {
-    // TBD
+    var serialized: [String: AnyObject] { get }
+}
+
+public protocol KeyValueMedia {
+    func write(key: String, value: NSData)
+    func writeFile(key: String, value: NSData, filename: String, mimeType: String)
 }
 
 public protocol PostRequest {

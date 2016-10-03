@@ -50,8 +50,9 @@ class NettskjemaFormSubmission: FormSubmission {
                             let stringResponse = String(response)
                             if stringResponse.containsString("failure") {
                                 onComplete(status: PostFailedStatus(error: stringResponse))
+                            } else {
+                                onComplete(status: PostSucceeded())
                             }
-                            onComplete(status: PostSucceeded())
                         }
                     case .Failure(let encodingError):
                         print("TEST: upload failed")

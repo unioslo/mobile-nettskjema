@@ -16,12 +16,13 @@ class NettskjemaSubmissionTest: XCTestCase {
                 SelectedMultiOption(question: TestForm.radioQuestion, index: 0),
                 SelectedMultiOption(question: TestForm.multipleChoiceQuestion, index: 0),
                 SelectedMultiOption(question: TestForm.multipleChoiceQuestion, index: 1),
-                FileUploadForField(uploadQuestion: TestForm.uploadField1, file: testFile1.randomContent),
-                FileUploadForField(uploadQuestion: TestForm.uploadField2, file: testFile2.randomContent),
+                FileUploadForField(uploadQuestion: TestForm.uploadField1, file: testFile1.randomContent, mimeType: "text/txt"),
+                FileUploadForField(uploadQuestion: TestForm.uploadField2, file: testFile2.randomContent, mimeType: "text/txt"),
             ]
         )
         formSubmission.post { formSubmissionStatus in
             expectation.fulfill()
+            print("DBG: " + formSubmissionStatus.description)
             XCTAssert(formSubmissionStatus.statusCode == FormSubmissionStatusCode.POST_SUCCESSFUL)
         }
         waitForExpectationsWithTimeout(5.0, handler:nil)

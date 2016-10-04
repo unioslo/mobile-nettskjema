@@ -1,7 +1,7 @@
 import XCTest
 @testable import ReactNativeNettskjema
 
-class MockMultipartFormData: KeyValueMedia {
+private class MockMultipartFormData: KeyValueMedia {
     let media = NSMutableDictionary()
     func write(key: String, value: NSData) {
         media[key] = value

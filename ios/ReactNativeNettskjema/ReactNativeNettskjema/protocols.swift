@@ -9,6 +9,14 @@ protocol CsrfTokenFactory {
     func newCsrfToken(rawToken: String) -> MultipartRequestField
 }
 
+protocol Event {
+    var key: String { get }
+}
+
+protocol EventSink {
+    func put(event: Event)
+}
+
 protocol FieldIdentifier {
     var name: String { get }
 }
@@ -63,4 +71,29 @@ public protocol KeyValueMedia {
 
 public protocol PostRequest {
     // TBD
+}
+
+protocol SubmissionDecision {
+    func nextSubmissionState(submissionFile: SubmissionFile) -> SubmissionState
+}
+
+enum SubmissionFileState: String {
+    case DECRYPTED
+    case DELETED
+    case UNENCRYPTED
+    case SUBMITTED
+    case ENCRYPTED
+    case SUBMISSION_FAILED
+    
+    var fileExtension: String {
+        get {
+            return self.rawValue
+        }
+    }
+}
+
+protocol SubmissionState {
+    func transformToState(eventSink: EventSink, onComplete: (nextState: SubmissionState) throws -> Void) throws
+    var next: SubmissionState { get }
+    var isEndOfProcessing: Bool { get }
 }

@@ -3,6 +3,7 @@ import Foundation
 class TestFile {
     let file: NSURL
     let kbSize: Int
+    let fileManager = NSFileManager.defaultManager()
     
     init(kbSize: Int) {
         self.file = DocumentStorageDirectory().newFileWithName(String(kbSize) + "kbFile")
@@ -12,8 +13,13 @@ class TestFile {
     var randomContent: NSURL {
         get {
             let data = "".stringByPaddingToLength(kbSize * 1024, withString: " ", startingAtIndex: 0).dataUsingEncoding(NSASCIIStringEncoding)
-            NSFileManager.defaultManager().createFileAtPath(self.file.path!, contents: data, attributes: nil)
+            fileManager.createFileAtPath(self.file.path!, contents: data, attributes: nil)
             return self.file
         }
     }
+    
+    func delete() {
+        try! fileManager.removeItemAtURL(self.file)
+    }
+    
 }

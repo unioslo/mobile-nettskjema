@@ -1,10 +1,3 @@
-//
-//  CsrfRequestTest.swift
-//  ReactNativeNettskjema
-//
-//  Created by Jarle Fagerheim on 03/10/16.
-//  Copyright © 2016 University of Oslo, Norway. All rights reserved.
-//
 import XCTest
 @testable import ReactNativeNettskjema
 

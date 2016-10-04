@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980314391DA3B6D5005603E8 /* DecryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */; };
+		9803143B1DA3B6DB005603E8 /* InitialSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DFB1DA3A34700853CDD /* InitialSubmission.swift */; };
+		9803143C1DA3B6DB005603E8 /* SubmittedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */; };
+		9803143D1DA3B6DB005603E8 /* EncryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */; };
+		9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
+		9803143F1DA3B6DB005603E8 /* DecryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */; };
 		985FC26D1D9E5B2700958E97 /* ReactNativeNettskjema.h in Headers */ = {isa = PBXBuildFile; fileRef = 985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		985FC26F1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */; };
 		985FC2731D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2721D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift */; };
@@ -43,7 +49,20 @@
 		985FC2A51D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A31D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift */; };
 		985FC2A71D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */; };
 		985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */; };
-		98A72DD31D9EAC4E00853CDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98A72DD21D9EAC4E00853CDD /* Alamofire.framework */; };
+		988467BA1DA4F7A500E2D1CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467B91DA4F7A500E2D1CB /* Alamofire.framework */; };
+		988467BD1DA50EFC00E2D1CB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467BC1DA50EFC00E2D1CB /* Queue.swift */; };
+		988467BE1DA50EFF00E2D1CB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467BC1DA50EFC00E2D1CB /* Queue.swift */; };
+		988467C11DA52F6500E2D1CB /* TemporaryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C01DA52F6500E2D1CB /* TemporaryFile.swift */; };
+		988467C21DA52F6500E2D1CB /* TemporaryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C01DA52F6500E2D1CB /* TemporaryFile.swift */; };
+		988467C41DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C31DA531FF00E2D1CB /* AlwaysSubmit.swift */; };
+		988467C51DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C31DA531FF00E2D1CB /* AlwaysSubmit.swift */; };
+		988467C71DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C61DA5328200E2D1CB /* SubmissionStateFromFile.swift */; };
+		988467C81DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C61DA5328200E2D1CB /* SubmissionStateFromFile.swift */; };
+		988467CA1DA533C200E2D1CB /* NotASubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C91DA533C200E2D1CB /* NotASubmission.swift */; };
+		988467CB1DA533C200E2D1CB /* NotASubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C91DA533C200E2D1CB /* NotASubmission.swift */; };
+		988467CD1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */; };
+		988467CE1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */; };
+		988467D01DA53B5900E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
 		98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */; };
 		98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD61DA25D7B00853CDD /* SerializationTest.swift */; };
 		98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */; };
@@ -52,6 +71,23 @@
 		98A72DDD1DA2805600853CDD /* StorageDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDB1DA2805600853CDD /* StorageDirectory.swift */; };
 		98A72DDF1DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */; };
 		98A72DE01DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */; };
+		98A72DE31DA38D2300853CDD /* MobileNettskjemaTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DE11DA38D2300853CDD /* MobileNettskjemaTest.swift */; };
+		98A72DEA1DA39CEC00853CDD /* events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DE91DA39CEC00853CDD /* events.swift */; };
+		98A72DEB1DA39CEC00853CDD /* events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DE91DA39CEC00853CDD /* events.swift */; };
+		98A72DED1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */; };
+		98A72DEE1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */; };
+		98A72DF11DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DF01DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift */; };
+		98A72DF21DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DF01DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift */; };
+		98A72DF51DA3A1B900853CDD /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DF41DA3A1B900853CDD /* JsonFile.swift */; };
+		98A72DF61DA3A1B900853CDD /* JsonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DF41DA3A1B900853CDD /* JsonFile.swift */; };
+		98A72DF81DA3A2D400853CDD /* SubmissionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DF71DA3A2D400853CDD /* SubmissionFile.swift */; };
+		98A72DF91DA3A2D400853CDD /* SubmissionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DF71DA3A2D400853CDD /* SubmissionFile.swift */; };
+		98A72DFC1DA3A34700853CDD /* InitialSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DFB1DA3A34700853CDD /* InitialSubmission.swift */; };
+		98A72E001DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DFF1DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift */; };
+		98A72E011DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DFF1DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift */; };
+		98A72E031DA3A8AD00853CDD /* SubmittedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */; };
+		98A72E061DA3A8BB00853CDD /* EncryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */; };
+		98A72E091DA3AACD00853CDD /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
 		98E2402C1D9E52B5000EDED2 /* ReactNativeNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +102,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptedSubmission.swift; sourceTree = "<group>"; };
 		985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeNettskjema.h; sourceTree = "<group>"; };
 		985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaSubmissionTest.swift; sourceTree = "<group>"; };
 		985FC2721D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaFormSubmissionFactory.swift; sourceTree = "<group>"; };
@@ -85,12 +122,30 @@
 		985FC2A01D9E75DC00958E97 /* NettskjemaCsrfRequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaCsrfRequestFactory.swift; sourceTree = "<group>"; };
 		985FC2A31D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaCsrfTokenFactory.swift; sourceTree = "<group>"; };
 		985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaFilledInForm.swift; sourceTree = "<group>"; };
-		98A72DD21D9EAC4E00853CDD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		988467B91DA4F7A500E2D1CB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		988467BC1DA50EFC00E2D1CB /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		988467C01DA52F6500E2D1CB /* TemporaryFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemporaryFile.swift; sourceTree = "<group>"; };
+		988467C31DA531FF00E2D1CB /* AlwaysSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlwaysSubmit.swift; sourceTree = "<group>"; };
+		988467C61DA5328200E2D1CB /* SubmissionStateFromFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionStateFromFile.swift; sourceTree = "<group>"; };
+		988467C91DA533C200E2D1CB /* NotASubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotASubmission.swift; sourceTree = "<group>"; };
+		988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSubmissionSetting.swift; sourceTree = "<group>"; };
+		988467CF1DA53B5900E2D1CB /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CsrfRequestTest.swift; sourceTree = "<group>"; };
 		98A72DD61DA25D7B00853CDD /* SerializationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationTest.swift; sourceTree = "<group>"; };
 		98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaJsonField.swift; sourceTree = "<group>"; };
 		98A72DDB1DA2805600853CDD /* StorageDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageDirectory.swift; sourceTree = "<group>"; };
 		98A72DDE1DA2913B00853CDD /* NettskjemaJsonFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaJsonFields.swift; sourceTree = "<group>"; };
+		98A72DE11DA38D2300853CDD /* MobileNettskjemaTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileNettskjemaTest.swift; sourceTree = "<group>"; };
+		98A72DE91DA39CEC00853CDD /* events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = events.swift; sourceTree = "<group>"; };
+		98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileNettskjema.swift; sourceTree = "<group>"; };
+		98A72DF01DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaQueueableFormSubmission.swift; sourceTree = "<group>"; };
+		98A72DF41DA3A1B900853CDD /* JsonFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonFile.swift; sourceTree = "<group>"; };
+		98A72DF71DA3A2D400853CDD /* SubmissionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmissionFile.swift; sourceTree = "<group>"; };
+		98A72DFB1DA3A34700853CDD /* InitialSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSubmission.swift; sourceTree = "<group>"; };
+		98A72DFF1DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitIfConnectionIsSatisfactory.swift; sourceTree = "<group>"; };
+		98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmittedSubmission.swift; sourceTree = "<group>"; };
+		98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptedSubmission.swift; sourceTree = "<group>"; };
+		98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletedSubmission.swift; sourceTree = "<group>"; };
 		98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactNativeNettskjema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E240261D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeNettskjemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98A72DD31D9EAC4E00853CDD /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E2402C1D9E52B5000EDED2 /* ReactNativeNettskjema.framework in Frameworks */,
+				988467BA1DA4F7A500E2D1CB /* Alamofire.framework in Frameworks */,
+				988467D01DA53B5900E2D1CB /* Reachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,12 +229,77 @@
 			name = answers;
 			sourceTree = "<group>";
 		};
+		988467BF1DA52F5400E2D1CB /* filemanagement */ = {
+			isa = PBXGroup;
+			children = (
+				98A72DDB1DA2805600853CDD /* StorageDirectory.swift */,
+				988467C01DA52F6500E2D1CB /* TemporaryFile.swift */,
+			);
+			name = filemanagement;
+			sourceTree = "<group>";
+		};
 		98A72DCC1D9EAA8F00853CDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98A72DD21D9EAC4E00853CDD /* Alamofire.framework */,
+				988467CF1DA53B5900E2D1CB /* Reachability.framework */,
+				988467B91DA4F7A500E2D1CB /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98A72DE81DA39CE300853CDD /* deferredsubmission */ = {
+			isa = PBXGroup;
+			children = (
+				988467BF1DA52F5400E2D1CB /* filemanagement */,
+				98A72DFE1DA3A80600853CDD /* submissiondecisions */,
+				98A72DFA1DA3A33A00853CDD /* submissionstates */,
+				98A72DF31DA3A1B000853CDD /* serialization */,
+				98A72DEF1DA3A0D500853CDD /* queueing */,
+				98A72DE91DA39CEC00853CDD /* events.swift */,
+			);
+			name = deferredsubmission;
+			sourceTree = "<group>";
+		};
+		98A72DEF1DA3A0D500853CDD /* queueing */ = {
+			isa = PBXGroup;
+			children = (
+				98A72DF01DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift */,
+				988467BC1DA50EFC00E2D1CB /* Queue.swift */,
+				988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */,
+			);
+			name = queueing;
+			sourceTree = "<group>";
+		};
+		98A72DF31DA3A1B000853CDD /* serialization */ = {
+			isa = PBXGroup;
+			children = (
+				98A72DF41DA3A1B900853CDD /* JsonFile.swift */,
+				98A72DF71DA3A2D400853CDD /* SubmissionFile.swift */,
+			);
+			name = serialization;
+			sourceTree = "<group>";
+		};
+		98A72DFA1DA3A33A00853CDD /* submissionstates */ = {
+			isa = PBXGroup;
+			children = (
+				98A72DFB1DA3A34700853CDD /* InitialSubmission.swift */,
+				98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */,
+				98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */,
+				98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */,
+				980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */,
+				988467C61DA5328200E2D1CB /* SubmissionStateFromFile.swift */,
+				988467C91DA533C200E2D1CB /* NotASubmission.swift */,
+			);
+			name = submissionstates;
+			sourceTree = "<group>";
+		};
+		98A72DFE1DA3A80600853CDD /* submissiondecisions */ = {
+			isa = PBXGroup;
+			children = (
+				98A72DFF1DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift */,
+				988467C31DA531FF00E2D1CB /* AlwaysSubmit.swift */,
+			);
+			name = submissiondecisions;
 			sourceTree = "<group>";
 		};
 		98E240181D9E52B5000EDED2 = {
@@ -203,11 +324,12 @@
 		98E240241D9E52B5000EDED2 /* ReactNativeNettskjema */ = {
 			isa = PBXGroup;
 			children = (
-				98A72DDB1DA2805600853CDD /* StorageDirectory.swift */,
+				98A72DE81DA39CE300853CDD /* deferredsubmission */,
 				985FC2701D9E5ED600958E97 /* submission */,
 				98E240261D9E52B5000EDED2 /* Info.plist */,
 				985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */,
 				985FC2751D9E601A00958E97 /* protocols.swift */,
+				98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */,
 			);
 			path = ReactNativeNettskjema;
 			sourceTree = "<group>";
@@ -220,6 +342,7 @@
 				985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */,
 				98A72DD61DA25D7B00853CDD /* SerializationTest.swift */,
 				98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */,
+				98A72DE11DA38D2300853CDD /* MobileNettskjemaTest.swift */,
 			);
 			path = ReactNativeNettskjemaTests;
 			sourceTree = "<group>";
@@ -263,6 +386,7 @@
 				98E240271D9E52B5000EDED2 /* Sources */,
 				98E240281D9E52B5000EDED2 /* Frameworks */,
 				98E240291D9E52B5000EDED2 /* Resources */,
+				988467BB1DA4F86C00E2D1CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -332,21 +456,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		988467BB1DA4F86C00E2D1CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		98E2401D1D9E52B5000EDED2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988467C41DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */,
 				985FC2A41D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */,
 				985FC2981D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
 				985FC29E1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
+				98A72DF51DA3A1B900853CDD /* JsonFile.swift in Sources */,
 				985FC28F1D9E6F7C00958E97 /* NettskjemaFieldIdentifier.swift in Sources */,
+				98A72DED1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */,
+				98A72E001DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */,
+				98A72DFC1DA3A34700853CDD /* InitialSubmission.swift in Sources */,
+				988467C71DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */,
 				98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */,
+				98A72E061DA3A8BB00853CDD /* EncryptedSubmission.swift in Sources */,
 				985FC27A1D9E60A100958E97 /* TestFile.swift in Sources */,
+				988467BD1DA50EFC00E2D1CB /* Queue.swift in Sources */,
+				98A72DEA1DA39CEC00853CDD /* events.swift in Sources */,
+				98A72DF81DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
 				985FC2891D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
+				988467CA1DA533C200E2D1CB /* NotASubmission.swift in Sources */,
 				985FC29B1D9E723800958E97 /* FileUploadForField.swift in Sources */,
 				985FC28C1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
 				985FC2851D9E668400958E97 /* NettskjemaForm.swift in Sources */,
+				98A72E091DA3AACD00853CDD /* DeletedSubmission.swift in Sources */,
+				988467C11DA52F6500E2D1CB /* TemporaryFile.swift in Sources */,
+				98A72DF11DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */,
 				985FC2951D9E70AF00958E97 /* RadioQuestion.swift in Sources */,
 				98A72DDC1DA2805600853CDD /* StorageDirectory.swift in Sources */,
 				985FC2821D9E641100958E97 /* MultipleChoiceQuestion.swift in Sources */,
@@ -355,6 +511,9 @@
 				985FC2A71D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
 				98A72DDF1DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
 				985FC2921D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
+				988467CD1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */,
+				980314391DA3B6D5005603E8 /* DecryptedSubmission.swift in Sources */,
+				98A72E031DA3A8AD00853CDD /* SubmittedSubmission.swift in Sources */,
 				985FC2731D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */,
 				985FC2761D9E601A00958E97 /* protocols.swift in Sources */,
 			);
@@ -364,29 +523,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9803143B1DA3B6DB005603E8 /* InitialSubmission.swift in Sources */,
 				98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */,
 				98A72DDA1DA278A500853CDD /* NettskjemaJsonField.swift in Sources */,
 				985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
 				985FC28D1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
+				988467CB1DA533C200E2D1CB /* NotASubmission.swift in Sources */,
+				9803143D1DA3B6DB005603E8 /* EncryptedSubmission.swift in Sources */,
 				985FC2961D9E70AF00958E97 /* RadioQuestion.swift in Sources */,
+				988467C81DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */,
+				988467BE1DA50EFF00E2D1CB /* Queue.swift in Sources */,
 				985FC2A51D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */,
 				985FC2831D9E641100958E97 /* MultipleChoiceQuestion.swift in Sources */,
 				985FC2861D9E668400958E97 /* NettskjemaForm.swift in Sources */,
+				988467CE1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */,
 				985FC2741D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */,
+				9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */,
+				988467C21DA52F6500E2D1CB /* TemporaryFile.swift in Sources */,
 				985FC29C1D9E723800958E97 /* FileUploadForField.swift in Sources */,
 				985FC2901D9E6F7C00958E97 /* NettskjemaFieldIdentifier.swift in Sources */,
+				98A72DF21DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */,
 				985FC2A21D9E75DC00958E97 /* NettskjemaCsrfRequestFactory.swift in Sources */,
+				988467C51DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */,
 				985FC26F1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift in Sources */,
 				985FC28A1D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
+				98A72DEB1DA39CEC00853CDD /* events.swift in Sources */,
+				9803143C1DA3B6DB005603E8 /* SubmittedSubmission.swift in Sources */,
+				9803143F1DA3B6DB005603E8 /* DecryptedSubmission.swift in Sources */,
 				985FC27B1D9E60A100958E97 /* TestFile.swift in Sources */,
 				985FC2991D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
 				98A72DDD1DA2805600853CDD /* StorageDirectory.swift in Sources */,
 				985FC2931D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
+				98A72DF91DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
 				985FC2771D9E601A00958E97 /* protocols.swift in Sources */,
+				98A72DE31DA38D2300853CDD /* MobileNettskjemaTest.swift in Sources */,
 				98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */,
 				985FC27F1D9E636000958E97 /* TestForm.swift in Sources */,
+				98A72E011DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */,
 				985FC29F1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
 				98A72DE01DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
+				98A72DEE1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */,
+				98A72DF61DA3A1B900853CDD /* JsonFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

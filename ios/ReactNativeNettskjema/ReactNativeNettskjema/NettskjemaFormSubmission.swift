@@ -35,18 +35,14 @@ class NettskjemaFormSubmission: FormSubmission {
         self.filledInForm = filledInForm
     }
     
-    func post(onComplete: (status: FormSubmissionStatus) -> Void) {
-        print("TEST: call to post")
+    func post(onComplete: (status: FormSubmissionStatus) -> Void ) {
         csrfRequestFactory.newRequest({ response in
-            print("TEST: in csrf response closure")
             switch response.result {
             case .Success(let data):
                 self.filledInForm.postRequest(self.csrfTokenFactory.newCsrfToken(data), onComplete: { encodingResult in
                     switch encodingResult {
                     case .Success(let upload, _, _):
-                        print("TEST: upload success")
                         upload.responseString { response in
-                            print ("TEST: upload response closure")
                             let stringResponse = String(response)
                             if stringResponse.containsString("failure") {
                                 onComplete(status: PostFailedStatus(error: stringResponse))
@@ -55,12 +51,10 @@ class NettskjemaFormSubmission: FormSubmission {
                             }
                         }
                     case .Failure(let encodingError):
-                        print("TEST: upload failed")
                         onComplete(status: PostFailedStatus(error: String(encodingError)))
                     }
                 })
             case .Failure(let error):
-                print("DBG: csrf request failed")
                 onComplete(status: PostFailedStatus(error: error.description))
             }
         })

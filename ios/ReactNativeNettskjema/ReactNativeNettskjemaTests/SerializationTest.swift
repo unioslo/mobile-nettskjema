@@ -30,7 +30,7 @@ class SerializationTest: XCTestCase {
     }
     
     func testFileUploadForField() {
-        let file = DocumentStorageDirectory().newFileWithName("uploaded.txt")
+        let file = try! LibraryCacheStorageDirectory().fileNamed("uploaded.txt")
         NSFileManager.defaultManager()
             .createFileAtPath(file.path!,
                               contents: "uploaded file contents".dataUsingEncoding(DEFAULT_ENCODING),

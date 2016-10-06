@@ -5,8 +5,8 @@ class TestFile {
     let kbSize: Int
     let fileManager = NSFileManager.defaultManager()
     
-    init(kbSize: Int) {
-        self.file = DocumentStorageDirectory().newFileWithName(String(kbSize) + "kbFile")
+    init(kbSize: Int) throws {
+        self.file = try LibraryCacheStorageDirectory().fileNamed(String(kbSize) + "kbFile")
         self.kbSize = kbSize
     }
     

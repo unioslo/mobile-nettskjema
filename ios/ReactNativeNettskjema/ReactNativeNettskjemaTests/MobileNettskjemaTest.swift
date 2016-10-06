@@ -22,7 +22,7 @@ class MobileNettskjemaTest: XCTestCase {
     
     private var mobileNettskjema: MobileNettskjema?
     private let eventSink = TestEventSink()
-    private let storageDirectory: DocumentStorageDirectory = DocumentStorageDirectory()
+    private let storageDirectory: LibraryCacheStorageDirectory = LibraryCacheStorageDirectory()
     private let fileManager = NSFileManager.defaultManager()
     
     override func setUp() {
@@ -45,7 +45,7 @@ class MobileNettskjemaTest: XCTestCase {
     }
     
     private func clearStorageDirectory() {
-        for url in storageDirectory.storedFiles {
+        for url in try! storageDirectory.storedFiles() {
             try! fileManager.removeItemAtURL(url)
         }
     }
@@ -58,7 +58,7 @@ class MobileNettskjemaTest: XCTestCase {
             eventWithKey("DELETED"),
             ]
         )
-        XCTAssertEqual(storageDirectory.storedFiles.count, 0)
+        XCTAssertEqual(try! storageDirectory.storedFiles().count, 0)
     }
     
     func testIncompleteSubmissionFailsAndEncrypts() {
@@ -69,7 +69,7 @@ class MobileNettskjemaTest: XCTestCase {
             eventWithKey("ENCRYPTED"),
             ]
         )
-        XCTAssertEqual(storageDirectory.storedFiles.count, 1)
+        XCTAssertEqual(try! storageDirectory.storedFiles().count, 1)
     }
     
     func testRetryFailedUploadsTriesToSubmitAgain() {
@@ -111,7 +111,7 @@ class MobileNettskjemaTest: XCTestCase {
     }
     
     func testRetryIgnoresIrrelevantFiles() {
-        let irrelevantFiles = [storageDirectory.newFileWithName("test.tull"), storageDirectory.newFileWithName("irrelevant.junk")]
+        let irrelevantFiles = [try! storageDirectory.fileNamed("test.tull"), try! storageDirectory.fileNamed("irrelevant.junk")]
         for url in irrelevantFiles {
             fileManager.createFileAtPath(url.path!, contents: "test".dataUsingEncoding(DEFAULT_ENCODING), attributes: nil)
         }
@@ -123,7 +123,7 @@ class MobileNettskjemaTest: XCTestCase {
     }
     
     func testRetryDeletesTemporaryFiles() {
-        let tempFiles = [storageDirectory.newFileWithName("submission1.queueTemp"), storageDirectory.newFileWithName("submission2.queueTemp")]
+        let tempFiles = [try! storageDirectory.fileNamed("submission1.queueTemp"), try! storageDirectory.fileNamed("submission2.queueTemp")]
         for url in tempFiles {
             fileManager.createFileAtPath(url.path!, contents: "test".dataUsingEncoding(DEFAULT_ENCODING), attributes: nil)
         }
@@ -141,8 +141,8 @@ class MobileNettskjemaTest: XCTestCase {
     
     private func submitValidSubmissionWithFiles() throws {
         let expectation = self.expectationWithDescription("Submission should be posted to nettskjema")
-        let testFile1 = TestFile(kbSize: 4)
-        let testFile2 = TestFile(kbSize: 8)
+        let testFile1 = try! TestFile(kbSize: 4)
+        let testFile2 = try! TestFile(kbSize: 8)
         try mobileNettskjema!.addToSubmissionQueue(
             NettskjemaFilledInForm(
                 form: TestForm.form,

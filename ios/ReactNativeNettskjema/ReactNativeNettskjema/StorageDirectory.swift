@@ -1,28 +1,41 @@
 import Foundation
 
-protocol StorageDirectory {
-    func newFileWithName(filename: String) -> NSURL
-    var storedFiles: [NSURL] { get }
+extension NSURL {
+    func fileNamed(filename: String) -> NSURL {
+        return self.URLByAppendingPathComponent(filename)!
+    }
 }
 
-class DocumentStorageDirectory: StorageDirectory {
+class LibraryCacheStorageDirectory: StorageDirectory {
     let fileManager = NSFileManager.defaultManager()
-
-    func newFileWithName(filename: String) -> NSURL {
-        return directory.URLByAppendingPathComponent(filename)!
+    
+    func fileNamed(filename: String) throws -> NSURL {
+        return try directory().fileNamed(filename)
     }
     
-    private var directory: NSURL {
+    func getOrCreateSubdirectory(name: String) throws -> NSURL {
+        let directoryUrl = rootDirectory.fileNamed(name)
+        if (fileManager.fileExistsAtPath(directoryUrl.path!)) {
+            return directoryUrl
+        } else {
+            try fileManager.createDirectoryAtURL(directoryUrl, withIntermediateDirectories: false, attributes: nil)
+            return directoryUrl
+        }
+    }
+    
+    private var rootDirectory: NSURL {
         get {
-            let directories: [NSURL] = fileManager.URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)
+            let directories: [NSURL] = fileManager.URLsForDirectory(NSSearchPathDirectory.CachesDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)
             return directories[0]
         }
     }
     
-    var storedFiles: [NSURL] {
-        get {
-            return try! fileManager.contentsOfDirectoryAtURL(directory, includingPropertiesForKeys: nil, options: [])
-        }
+    private func directory() throws -> NSURL {
+        return try getOrCreateSubdirectory("mobileNettskjema")
     }
-
+    
+    func storedFiles() throws -> [NSURL] {
+        return try fileManager.contentsOfDirectoryAtURL(directory(), includingPropertiesForKeys: nil, options: [])
+    }
+    
 }

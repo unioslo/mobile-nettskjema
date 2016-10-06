@@ -7,8 +7,8 @@ class NettskjemaSubmissionTest: XCTestCase {
     
     func testCompleteSubmissionWithFilesIsSuccessful() {
         let expectation = self.expectationWithDescription("Submission should be posted to nettskjema")
-        let testFile1 = TestFile(kbSize: 4)
-        let testFile2 = TestFile(kbSize: 8)
+        let testFile1 = try! TestFile(kbSize: 4)
+        let testFile2 = try! TestFile(kbSize: 8)
         let formSubmission = submissionFactory.newSubmission(
             TestForm.formId,
             filledInFormFields: [

@@ -3,11 +3,11 @@ import CryptoSwift
 import XCTest
 @testable import ReactNativeNettskjema
 
-private let STORAGE_DIRECTORY = DocumentStorageDirectory()
+private let STORAGE_DIRECTORY = try! LibraryCacheStorageDirectory().getOrCreateSubdirectory("encryptionTest")
 private let FILES = [
-    "original": STORAGE_DIRECTORY.newFileWithName("plaintext"),
-    "encrypted": STORAGE_DIRECTORY.newFileWithName("plaintext.encrypted"),
-    "decrypted": STORAGE_DIRECTORY.newFileWithName("plaintext.decrypted")
+    "original": STORAGE_DIRECTORY.fileNamed("plaintext"),
+    "encrypted": STORAGE_DIRECTORY.fileNamed("plaintext.encrypted"),
+    "decrypted": STORAGE_DIRECTORY.fileNamed("plaintext.decrypted")
 ]
 
 class EncryptionTest: XCTestCase {

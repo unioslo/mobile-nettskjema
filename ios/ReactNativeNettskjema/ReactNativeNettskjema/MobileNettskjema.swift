@@ -21,12 +21,12 @@ class MobileNettskjema {
     }
     
     func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
-        for url in storageDirectory.storedFiles {
+        for url in try storageDirectory.storedFiles() {
             if (url.isTemporary()) {
                 try NSFileManager.defaultManager().removeItemAtURL(url)
             }
         }
-        for url in storageDirectory.storedFiles {
+        for url in try storageDirectory.storedFiles() {
             try queue.process(SubmissionStateFromFile(file: url).withDecision(AlwaysSubmit()).next, eventSink: eventSink, onFirstProcessingComplete: onFirstProcessingComplete)
         }
     }

@@ -73,6 +73,12 @@ public protocol PostRequest {
     // TBD
 }
 
+protocol StorageDirectory {
+    func fileNamed(filename: String) throws -> NSURL
+    func storedFiles() throws -> [NSURL]
+}
+
+
 protocol SubmissionDecision {
     func nextSubmissionState(submissionFile: SubmissionFile) -> SubmissionState
 }

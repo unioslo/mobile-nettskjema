@@ -14,7 +14,7 @@ class NettskjemaQueueableFormSubmission {
     }
     
     func submit(onFirstProcessingComplete: () -> Void) throws {
-        let jsonFile = JsonFile(storageFile: storageDirectory.newFileWithName(NSUUID().UUIDString))
+        let jsonFile = try JsonFile(storageFile: storageDirectory.fileNamed(NSUUID().UUIDString))
         try jsonFile.store(filledInForm)
         let submissionFile = SubmissionFile(jsonFile: jsonFile)
         let submission = InitialSubmission(submissionFile: submissionFile, submissionDecision: SubmitIfConnectionIsSatisfactory())

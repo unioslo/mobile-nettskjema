@@ -11,7 +11,7 @@ class CsrfRequestTest: XCTestCase {
             switch response.result {
             case .Success(let data):
                 print("Request succeeded with data: \(data)")
-                XCTAssert(data.lengthOfBytesUsingEncoding(NSASCIIStringEncoding) == self.sampleToken.lengthOfBytesUsingEncoding(NSASCIIStringEncoding))
+                XCTAssert(data.lengthOfBytesUsingEncoding(DEFAULT_ENCODING) == self.sampleToken.lengthOfBytesUsingEncoding(DEFAULT_ENCODING))
                 expectation.fulfill()
             case .Failure(let error):
                 print("CSRF request failed with error: \(error)")

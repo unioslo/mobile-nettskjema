@@ -8,7 +8,7 @@ private class CsrfRequestField: MultipartRequestField {
     }
     
     func addTo(multipartFormData: KeyValueMedia) {
-        multipartFormData.write("NETTSKJEMA_CSRF_PREVENTION", value: rawToken.dataUsingEncoding(NSASCIIStringEncoding)!)
+        multipartFormData.write("NETTSKJEMA_CSRF_PREVENTION", value: rawToken.dataUsingEncoding(DEFAULT_ENCODING)!)
     }
 }
 

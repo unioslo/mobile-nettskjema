@@ -23,8 +23,8 @@ class ChaCha20Encryption: EncryptionMethod {
         let plaintextBytes = plaintext.arrayOfBytes()
         let iv = AES.randomIV(32/2).toHexString()
         let encryptedString = try crypto(iv).encrypt(plaintextBytes).toBase64()!
-        let ivBase64 = iv.dataUsingEncoding(NSUTF8StringEncoding)!.base64EncodedStringWithOptions([])
-        return (ivBase64 + encryptedString).dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+        let ivBase64 = iv.dataUsingEncoding(DEFAULT_ENCODING)!.base64EncodedStringWithOptions([])
+        return (ivBase64 + encryptedString).dataUsingEncoding(DEFAULT_ENCODING, allowLossyConversion: false)!
     }
     
     func decrypt(encryptedBase64: NSData) throws -> NSData {

@@ -31,7 +31,7 @@ class SubmissionFile {
     }
     
     var contents: String {
-        return String(data: NSData(contentsOfURL: file)!, encoding: NSUTF8StringEncoding)!
+        return String(data: NSData(contentsOfURL: file)!, encoding: DEFAULT_ENCODING)!
     }
     
     func encrypt() throws {

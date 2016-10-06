@@ -33,7 +33,7 @@ class SerializationTest: XCTestCase {
         let file = DocumentStorageDirectory().newFileWithName("uploaded.txt")
         NSFileManager.defaultManager()
             .createFileAtPath(file.path!,
-                              contents: "uploaded file contents".dataUsingEncoding(NSASCIIStringEncoding),
+                              contents: "uploaded file contents".dataUsingEncoding(DEFAULT_ENCODING),
                               attributes: nil)
         XCTAssert(deserializedEqualsOriginal(
             FileUploadForField(uploadQuestion: UploadQuestion(id: 123), file: file, mimeType: "text/txt")))
@@ -58,7 +58,7 @@ class SerializationTest: XCTestCase {
         let jsonSerializedForm: String = try! String(
             data: NSJSONSerialization.dataWithJSONObject(form.serialized,
                 options: NSJSONWritingOptions.PrettyPrinted),
-            encoding: NSASCIIStringEncoding)!
+            encoding: DEFAULT_ENCODING)!
         let deserializedForm = try! NettskjemaFilledInForm(json: jsonSerializedForm)
         XCTAssert(equalFilledInForms(deserializedForm, and: form))
         XCTAssert(!equalFilledInForms(deserializedForm, and: slightlyDifferentForm))

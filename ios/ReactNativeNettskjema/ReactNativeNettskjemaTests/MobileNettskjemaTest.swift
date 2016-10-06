@@ -113,7 +113,7 @@ class MobileNettskjemaTest: XCTestCase {
     func testRetryIgnoresIrrelevantFiles() {
         let irrelevantFiles = [storageDirectory.newFileWithName("test.tull"), storageDirectory.newFileWithName("irrelevant.junk")]
         for url in irrelevantFiles {
-            fileManager.createFileAtPath(url.path!, contents: "test".dataUsingEncoding(NSASCIIStringEncoding), attributes: nil)
+            fileManager.createFileAtPath(url.path!, contents: "test".dataUsingEncoding(DEFAULT_ENCODING), attributes: nil)
         }
         try! mobileNettskjema!.forceRetryAllSubmissions() {}
         XCTAssertEqual(eventSink.emittedEvents.count, 0)
@@ -125,7 +125,7 @@ class MobileNettskjemaTest: XCTestCase {
     func testRetryDeletesTemporaryFiles() {
         let tempFiles = [storageDirectory.newFileWithName("submission1.queueTemp"), storageDirectory.newFileWithName("submission2.queueTemp")]
         for url in tempFiles {
-            fileManager.createFileAtPath(url.path!, contents: "test".dataUsingEncoding(NSASCIIStringEncoding), attributes: nil)
+            fileManager.createFileAtPath(url.path!, contents: "test".dataUsingEncoding(DEFAULT_ENCODING), attributes: nil)
         }
         try! mobileNettskjema!.forceRetryAllSubmissions() {}
         for url in tempFiles {

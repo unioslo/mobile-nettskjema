@@ -12,7 +12,7 @@ class TestFile {
     
     var randomContent: NSURL {
         get {
-            let data = "".stringByPaddingToLength(kbSize * 1024, withString: " ", startingAtIndex: 0).dataUsingEncoding(NSASCIIStringEncoding)
+            let data = "".stringByPaddingToLength(kbSize * 1024, withString: " ", startingAtIndex: 0).dataUsingEncoding(DEFAULT_ENCODING)
             fileManager.createFileAtPath(self.file.path!, contents: data, attributes: nil)
             return self.file
         }

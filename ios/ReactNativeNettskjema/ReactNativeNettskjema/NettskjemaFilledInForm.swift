@@ -21,7 +21,7 @@ class NettskjemaFilledInForm: FilledInForm {
     
     init(json: String) throws {
         let jsonData = try NSJSONSerialization.JSONObjectWithData(
-            json.dataUsingEncoding(NSUTF8StringEncoding)!,
+            json.dataUsingEncoding(DEFAULT_ENCODING)!,
             options: [])
         self.form = NettskjemaForm(serialized: jsonData["form"] as! [String: AnyObject])
         self.filledInFormFields = try NettskjemaJsonFields(fields: jsonData["fields"] as! NSArray).asList

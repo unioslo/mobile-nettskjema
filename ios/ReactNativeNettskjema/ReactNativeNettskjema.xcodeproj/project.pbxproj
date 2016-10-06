@@ -108,6 +108,8 @@
 		98A72E031DA3A8AD00853CDD /* SubmittedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */; };
 		98A72E061DA3A8BB00853CDD /* EncryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */; };
 		98A72E091DA3AACD00853CDD /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
+		98FC2DB01DA6831B002E1C87 /* encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FC2DAF1DA6831B002E1C87 /* encoding.swift */; };
+		98FC2DB11DA6831B002E1C87 /* encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FC2DAF1DA6831B002E1C87 /* encoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +195,7 @@
 		98E240261D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeNettskjemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E240321D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98FC2DAF1DA6831B002E1C87 /* encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = encoding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +416,7 @@
 				985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */,
 				985FC2751D9E601A00958E97 /* protocols.swift */,
 				98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */,
+				98FC2DAF1DA6831B002E1C87 /* encoding.swift */,
 			);
 			path = ReactNativeNettskjema;
 			sourceTree = "<group>";
@@ -635,6 +639,7 @@
 				98A72DEA1DA39CEC00853CDD /* events.swift in Sources */,
 				98A72DF81DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
 				985FC2891D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
+				98FC2DB01DA6831B002E1C87 /* encoding.swift in Sources */,
 				988467CA1DA533C200E2D1CB /* NotASubmission.swift in Sources */,
 				988467DE1DA6402400E2D1CB /* EncryptionPipe.swift in Sources */,
 				985FC29B1D9E723800958E97 /* FileUploadForField.swift in Sources */,
@@ -696,6 +701,7 @@
 				98A72DEB1DA39CEC00853CDD /* events.swift in Sources */,
 				9803143C1DA3B6DB005603E8 /* SubmittedSubmission.swift in Sources */,
 				9803143F1DA3B6DB005603E8 /* DecryptedSubmission.swift in Sources */,
+				98FC2DB11DA6831B002E1C87 /* encoding.swift in Sources */,
 				985FC27B1D9E60A100958E97 /* TestFile.swift in Sources */,
 				985FC2991D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
 				98A72DDD1DA2805600853CDD /* StorageDirectory.swift in Sources */,
@@ -983,6 +989,7 @@
 				988467FF1DA67C3500E2D1CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98E2401C1D9E52B5000EDED2 /* Build configuration list for PBXProject "ReactNativeNettskjema" */ = {
 			isa = XCConfigurationList;

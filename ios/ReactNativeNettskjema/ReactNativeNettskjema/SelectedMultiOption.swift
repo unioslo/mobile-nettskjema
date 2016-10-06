@@ -15,7 +15,7 @@ class SelectedMultiOption: FilledInFormField {
     }
     
     func addTo(multipartFormData: KeyValueMedia) {
-        multipartFormData.write(identifier, value: String(selectedOption).dataUsingEncoding(NSASCIIStringEncoding)!)
+        multipartFormData.write(identifier, value: String(selectedOption).dataUsingEncoding(DEFAULT_ENCODING)!)
     }
     
     var serialized: [String : AnyObject] {

@@ -15,7 +15,7 @@ class TextQuestionAnswer: FilledInFormField {
     }
     
     func addTo(multipartFormData: KeyValueMedia) {
-        multipartFormData.write(identifier, value: answer.dataUsingEncoding(NSASCIIStringEncoding)!)
+        multipartFormData.write(identifier, value: answer.dataUsingEncoding(DEFAULT_ENCODING)!)
     }
     
     

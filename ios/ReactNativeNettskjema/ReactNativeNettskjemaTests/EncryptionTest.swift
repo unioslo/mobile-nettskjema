@@ -16,7 +16,7 @@ class EncryptionTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        fileManager.createFileAtPath(FILES["original"]!.path!, contents: "1test\n2test\n3test".dataUsingEncoding(NSUTF8StringEncoding), attributes: nil)
+        fileManager.createFileAtPath(FILES["original"]!.path!, contents: "1test\n2test\n3test".dataUsingEncoding(DEFAULT_ENCODING), attributes: nil)
     }
  
     override func tearDown() {
@@ -41,6 +41,6 @@ class EncryptionTest: XCTestCase {
         let encryptionMethod = ChaCha20Encryption(key: key)
         try! EncryptionPipe(encryptionMethod: encryptionMethod).connect(FILES["original"]!, outputFile: FILES["encrypted"]!)
         let retrievedIv = Base64IvAndCiphertext(data: NSData(contentsOfURL: FILES["encrypted"]!)!).decodedIv
-        XCTAssertEqual(retrievedIv.lengthOfBytesUsingEncoding(NSUTF8StringEncoding), 32)
+        XCTAssertEqual(retrievedIv.lengthOfBytesUsingEncoding(DEFAULT_ENCODING), 32)
     }
 }

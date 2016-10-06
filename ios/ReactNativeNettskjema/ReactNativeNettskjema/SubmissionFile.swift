@@ -3,9 +3,11 @@ import Foundation
 class SubmissionFile {
     
     private var file: NSURL
+    private let encryptionMethod: EncryptionMethod
     
     init(file: NSURL) {
         self.file = file
+        self.encryptionMethod = ChaCha20Encryption()
     }
     
     convenience init(jsonFile: JsonFile) {
@@ -30,6 +32,14 @@ class SubmissionFile {
     
     var contents: String {
         return String(data: NSData(contentsOfURL: file)!, encoding: NSUTF8StringEncoding)!
+    }
+    
+    func encrypt() throws {
+        try InplaceFileTransformation(originalFile: file, transformingPipe: EncryptionPipe(encryptionMethod: encryptionMethod)).perform()
+    }
+    
+    func decrypt() throws {
+        try InplaceFileTransformation(originalFile: file, transformingPipe: DecryptionPipe(encryptionMethod: encryptionMethod)).perform()
     }
     
 }

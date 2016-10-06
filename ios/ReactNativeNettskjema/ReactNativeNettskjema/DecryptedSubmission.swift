@@ -14,7 +14,7 @@ class DecryptedSubmission: SubmissionState {
     }
 
     func transformToState(eventSink: EventSink, onComplete: (nextState: SubmissionState) throws -> Void) throws {
-        // TBD
+        try submissionFile.decrypt()
         try submissionFile.markAs(SubmissionFileState.DECRYPTED, eventSink: eventSink)
         try onComplete(nextState: next)
     }

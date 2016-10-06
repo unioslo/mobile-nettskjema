@@ -1,2 +1,4 @@
 github "Alamofire/Alamofire" "3.5.0"
+github "krzyzanowskim/CryptoSwift" "0.5.2"
 github "ashleymills/Reachability.swift" "v2.4"
+github "exchangegroup/keychain-swift" "bd1f7dd023fb26f92a5a94d44e6450aa44dacc29"

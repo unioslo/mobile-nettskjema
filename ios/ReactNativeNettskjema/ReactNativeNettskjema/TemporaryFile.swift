@@ -9,18 +9,17 @@ extension NSURL {
 }
 
 class TemporaryFile {
-    private let originalPath: String
-    let file: NSURL
+    private let originalFile: NSURL
+    let tempFile: NSURL
     private let fileManager = NSFileManager.defaultManager()
     
     init(file: NSURL) {
-        self.originalPath = file.absoluteString!
-        self.file = NSURL(fileURLWithPath: originalPath + "." + tempExtension)
+        self.originalFile = file
+        self.tempFile = NSURL(fileURLWithPath: originalFile.path! + "." + tempExtension)
     }
     
     func replaceOriginalFile() throws {
-        try fileManager.copyItemAtURL(self.file, toURL: NSURL(fileURLWithPath: originalPath))
-        try fileManager.removeItemAtURL(self.file)
+        try fileManager.replaceItemAtURL(originalFile, withItemAtURL: tempFile, backupItemName: nil, options: NSFileManagerItemReplacementOptions.UsingNewMetadataOnly, resultingItemURL: nil)
     }
 
 }

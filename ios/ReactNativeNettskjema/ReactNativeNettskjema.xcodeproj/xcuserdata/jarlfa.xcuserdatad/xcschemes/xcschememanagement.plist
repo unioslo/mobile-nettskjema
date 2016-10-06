@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>dummytestingapp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>988467ED1DA67C3500E2D1CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>98E240211D9E52B5000EDED2</key>
 		<dict>
 			<key>primary</key>

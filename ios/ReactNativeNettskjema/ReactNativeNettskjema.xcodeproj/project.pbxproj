@@ -63,6 +63,30 @@
 		988467CD1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */; };
 		988467CE1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */; };
 		988467D01DA53B5900E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
+		988467D21DA6377A00E2D1CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467D11DA6377A00E2D1CB /* CryptoSwift.framework */; };
+		988467D51DA6380F00E2D1CB /* DecryptionPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D41DA6380F00E2D1CB /* DecryptionPipe.swift */; };
+		988467D61DA6380F00E2D1CB /* DecryptionPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D41DA6380F00E2D1CB /* DecryptionPipe.swift */; };
+		988467D81DA63D9C00E2D1CB /* EncryptionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D71DA63D9C00E2D1CB /* EncryptionMethod.swift */; };
+		988467D91DA63D9C00E2D1CB /* EncryptionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D71DA63D9C00E2D1CB /* EncryptionMethod.swift */; };
+		988467DB1DA63F3A00E2D1CB /* InplaceFileTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467DA1DA63F3A00E2D1CB /* InplaceFileTransformation.swift */; };
+		988467DC1DA63F3A00E2D1CB /* InplaceFileTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467DA1DA63F3A00E2D1CB /* InplaceFileTransformation.swift */; };
+		988467DE1DA6402400E2D1CB /* EncryptionPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467DD1DA6402400E2D1CB /* EncryptionPipe.swift */; };
+		988467DF1DA6402400E2D1CB /* EncryptionPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467DD1DA6402400E2D1CB /* EncryptionPipe.swift */; };
+		988467E11DA6407A00E2D1CB /* EncryptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E01DA6407A00E2D1CB /* EncryptionTest.swift */; };
+		988467E31DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E21DA6557900E2D1CB /* Base64IvAndCiphertext.swift */; };
+		988467E41DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E21DA6557900E2D1CB /* Base64IvAndCiphertext.swift */; };
+		988467E61DA6701900E2D1CB /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467E51DA6701900E2D1CB /* KeychainSwift.framework */; };
+		988467E81DA670E700E2D1CB /* EncryptionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E71DA670E700E2D1CB /* EncryptionKey.swift */; };
+		988467E91DA670E700E2D1CB /* EncryptionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E71DA670E700E2D1CB /* EncryptionKey.swift */; };
+		988467F11DA67C3500E2D1CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467F01DA67C3500E2D1CB /* AppDelegate.swift */; };
+		988467F31DA67C3500E2D1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467F21DA67C3500E2D1CB /* ViewController.swift */; };
+		988467F61DA67C3500E2D1CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988467F41DA67C3500E2D1CB /* Main.storyboard */; };
+		988467F81DA67C3500E2D1CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 988467F71DA67C3500E2D1CB /* Assets.xcassets */; };
+		988467FB1DA67C3500E2D1CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988467F91DA67C3500E2D1CB /* LaunchScreen.storyboard */; };
+		988468031DA67CAD00E2D1CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467B91DA4F7A500E2D1CB /* Alamofire.framework */; };
+		988468041DA67CAD00E2D1CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467D11DA6377A00E2D1CB /* CryptoSwift.framework */; };
+		988468051DA67CAD00E2D1CB /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467E51DA6701900E2D1CB /* KeychainSwift.framework */; };
+		988468061DA67CAD00E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
 		98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */; };
 		98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD61DA25D7B00853CDD /* SerializationTest.swift */; };
 		98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */; };
@@ -92,6 +116,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		988468011DA67C5300E2D1CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98E240191D9E52B5000EDED2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 988467ED1DA67C3500E2D1CB;
+			remoteInfo = dummytestingapp;
+		};
 		98E2402D1D9E52B5000EDED2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 98E240191D9E52B5000EDED2 /* Project object */;
@@ -130,6 +161,23 @@
 		988467C91DA533C200E2D1CB /* NotASubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotASubmission.swift; sourceTree = "<group>"; };
 		988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoSubmissionSetting.swift; sourceTree = "<group>"; };
 		988467CF1DA53B5900E2D1CB /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		988467D11DA6377A00E2D1CB /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		988467D41DA6380F00E2D1CB /* DecryptionPipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptionPipe.swift; sourceTree = "<group>"; };
+		988467D71DA63D9C00E2D1CB /* EncryptionMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionMethod.swift; sourceTree = "<group>"; };
+		988467DA1DA63F3A00E2D1CB /* InplaceFileTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InplaceFileTransformation.swift; sourceTree = "<group>"; };
+		988467DD1DA6402400E2D1CB /* EncryptionPipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionPipe.swift; sourceTree = "<group>"; };
+		988467E01DA6407A00E2D1CB /* EncryptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionTest.swift; sourceTree = "<group>"; };
+		988467E21DA6557900E2D1CB /* Base64IvAndCiphertext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64IvAndCiphertext.swift; sourceTree = "<group>"; };
+		988467E51DA6701900E2D1CB /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
+		988467E71DA670E700E2D1CB /* EncryptionKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionKey.swift; sourceTree = "<group>"; };
+		988467EE1DA67C3500E2D1CB /* dummytestingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dummytestingapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		988467F01DA67C3500E2D1CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		988467F21DA67C3500E2D1CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		988467F51DA67C3500E2D1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		988467F71DA67C3500E2D1CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		988467FA1DA67C3500E2D1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		988467FC1DA67C3500E2D1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988468001DA67C4200E2D1CB /* dummytestingapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dummytestingapp.entitlements; sourceTree = "<group>"; };
 		98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CsrfRequestTest.swift; sourceTree = "<group>"; };
 		98A72DD61DA25D7B00853CDD /* SerializationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerializationTest.swift; sourceTree = "<group>"; };
 		98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaJsonField.swift; sourceTree = "<group>"; };
@@ -153,6 +201,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		988467EB1DA67C3500E2D1CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988468031DA67CAD00E2D1CB /* Alamofire.framework in Frameworks */,
+				988468041DA67CAD00E2D1CB /* CryptoSwift.framework in Frameworks */,
+				988468051DA67CAD00E2D1CB /* KeychainSwift.framework in Frameworks */,
+				988468061DA67CAD00E2D1CB /* Reachability.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98E2401E1D9E52B5000EDED2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +226,8 @@
 				98E2402C1D9E52B5000EDED2 /* ReactNativeNettskjema.framework in Frameworks */,
 				988467BA1DA4F7A500E2D1CB /* Alamofire.framework in Frameworks */,
 				988467D01DA53B5900E2D1CB /* Reachability.framework in Frameworks */,
+				988467D21DA6377A00E2D1CB /* CryptoSwift.framework in Frameworks */,
+				988467E61DA6701900E2D1CB /* KeychainSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +299,38 @@
 			name = filemanagement;
 			sourceTree = "<group>";
 		};
+		988467D31DA6380400E2D1CB /* encryption */ = {
+			isa = PBXGroup;
+			children = (
+				988467D41DA6380F00E2D1CB /* DecryptionPipe.swift */,
+				988467DD1DA6402400E2D1CB /* EncryptionPipe.swift */,
+				988467D71DA63D9C00E2D1CB /* EncryptionMethod.swift */,
+				988467DA1DA63F3A00E2D1CB /* InplaceFileTransformation.swift */,
+				988467E21DA6557900E2D1CB /* Base64IvAndCiphertext.swift */,
+				988467E71DA670E700E2D1CB /* EncryptionKey.swift */,
+			);
+			name = encryption;
+			sourceTree = "<group>";
+		};
+		988467EF1DA67C3500E2D1CB /* dummytestingapp */ = {
+			isa = PBXGroup;
+			children = (
+				988468001DA67C4200E2D1CB /* dummytestingapp.entitlements */,
+				988467F01DA67C3500E2D1CB /* AppDelegate.swift */,
+				988467F21DA67C3500E2D1CB /* ViewController.swift */,
+				988467F41DA67C3500E2D1CB /* Main.storyboard */,
+				988467F71DA67C3500E2D1CB /* Assets.xcassets */,
+				988467F91DA67C3500E2D1CB /* LaunchScreen.storyboard */,
+				988467FC1DA67C3500E2D1CB /* Info.plist */,
+			);
+			path = dummytestingapp;
+			sourceTree = "<group>";
+		};
 		98A72DCC1D9EAA8F00853CDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				988467E51DA6701900E2D1CB /* KeychainSwift.framework */,
+				988467D11DA6377A00E2D1CB /* CryptoSwift.framework */,
 				988467CF1DA53B5900E2D1CB /* Reachability.framework */,
 				988467B91DA4F7A500E2D1CB /* Alamofire.framework */,
 			);
@@ -250,6 +340,7 @@
 		98A72DE81DA39CE300853CDD /* deferredsubmission */ = {
 			isa = PBXGroup;
 			children = (
+				988467D31DA6380400E2D1CB /* encryption */,
 				988467BF1DA52F5400E2D1CB /* filemanagement */,
 				98A72DFE1DA3A80600853CDD /* submissiondecisions */,
 				98A72DFA1DA3A33A00853CDD /* submissionstates */,
@@ -307,6 +398,7 @@
 			children = (
 				98E240241D9E52B5000EDED2 /* ReactNativeNettskjema */,
 				98E2402F1D9E52B5000EDED2 /* ReactNativeNettskjemaTests */,
+				988467EF1DA67C3500E2D1CB /* dummytestingapp */,
 				98E240231D9E52B5000EDED2 /* Products */,
 				98A72DCC1D9EAA8F00853CDD /* Frameworks */,
 			);
@@ -317,6 +409,7 @@
 			children = (
 				98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */,
 				98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */,
+				988467EE1DA67C3500E2D1CB /* dummytestingapp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,6 +436,7 @@
 				98A72DD61DA25D7B00853CDD /* SerializationTest.swift */,
 				98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */,
 				98A72DE11DA38D2300853CDD /* MobileNettskjemaTest.swift */,
+				988467E01DA6407A00E2D1CB /* EncryptionTest.swift */,
 			);
 			path = ReactNativeNettskjemaTests;
 			sourceTree = "<group>";
@@ -361,6 +455,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		988467ED1DA67C3500E2D1CB /* dummytestingapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 988467FD1DA67C3500E2D1CB /* Build configuration list for PBXNativeTarget "dummytestingapp" */;
+			buildPhases = (
+				988467EA1DA67C3500E2D1CB /* Sources */,
+				988467EB1DA67C3500E2D1CB /* Frameworks */,
+				988467EC1DA67C3500E2D1CB /* Resources */,
+				988468071DA67CC000E2D1CB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dummytestingapp;
+			productName = dummytestingapp;
+			productReference = 988467EE1DA67C3500E2D1CB /* dummytestingapp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		98E240211D9E52B5000EDED2 /* ReactNativeNettskjema */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98E240361D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "ReactNativeNettskjema" */;
@@ -392,6 +504,7 @@
 			);
 			dependencies = (
 				98E2402E1D9E52B5000EDED2 /* PBXTargetDependency */,
+				988468021DA67C5300E2D1CB /* PBXTargetDependency */,
 			);
 			name = ReactNativeNettskjemaTests;
 			productName = ReactNativeNettskjemaTests;
@@ -408,6 +521,16 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "University of Oslo, Norway";
 				TargetAttributes = {
+					988467ED1DA67C3500E2D1CB = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L6H6YNBUBK;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
 					98E240211D9E52B5000EDED2 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L6H6YNBUBK;
@@ -418,6 +541,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L6H6YNBUBK;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 988467ED1DA67C3500E2D1CB;
 					};
 				};
 			};
@@ -427,6 +551,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 98E240181D9E52B5000EDED2;
 			productRefGroup = 98E240231D9E52B5000EDED2 /* Products */;
@@ -435,11 +560,22 @@
 			targets = (
 				98E240211D9E52B5000EDED2 /* ReactNativeNettskjema */,
 				98E2402A1D9E52B5000EDED2 /* ReactNativeNettskjemaTests */,
+				988467ED1DA67C3500E2D1CB /* dummytestingapp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		988467EC1DA67C3500E2D1CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988467FB1DA67C3500E2D1CB /* LaunchScreen.storyboard in Resources */,
+				988467F81DA67C3500E2D1CB /* Assets.xcassets in Resources */,
+				988467F61DA67C3500E2D1CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98E240201D9E52B5000EDED2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +601,25 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		988468071DA67CC000E2D1CB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -475,6 +630,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		988467EA1DA67C3500E2D1CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				988467F31DA67C3500E2D1CB /* ViewController.swift in Sources */,
+				988467F11DA67C3500E2D1CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		98E2401D1D9E52B5000EDED2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,7 +646,9 @@
 				988467C41DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */,
 				985FC2A41D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */,
 				985FC2981D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
+				988467E81DA670E700E2D1CB /* EncryptionKey.swift in Sources */,
 				985FC29E1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
+				988467D51DA6380F00E2D1CB /* DecryptionPipe.swift in Sources */,
 				98A72DF51DA3A1B900853CDD /* JsonFile.swift in Sources */,
 				985FC28F1D9E6F7C00958E97 /* NettskjemaFieldIdentifier.swift in Sources */,
 				98A72DED1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */,
@@ -491,13 +657,16 @@
 				988467C71DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */,
 				98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */,
 				98A72E061DA3A8BB00853CDD /* EncryptedSubmission.swift in Sources */,
+				988467D81DA63D9C00E2D1CB /* EncryptionMethod.swift in Sources */,
 				985FC27A1D9E60A100958E97 /* TestFile.swift in Sources */,
 				988467BD1DA50EFC00E2D1CB /* Queue.swift in Sources */,
 				98A72DEA1DA39CEC00853CDD /* events.swift in Sources */,
 				98A72DF81DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
 				985FC2891D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
 				988467CA1DA533C200E2D1CB /* NotASubmission.swift in Sources */,
+				988467DE1DA6402400E2D1CB /* EncryptionPipe.swift in Sources */,
 				985FC29B1D9E723800958E97 /* FileUploadForField.swift in Sources */,
+				988467E31DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */,
 				985FC28C1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
 				985FC2851D9E668400958E97 /* NettskjemaForm.swift in Sources */,
 				98A72E091DA3AACD00853CDD /* DeletedSubmission.swift in Sources */,
@@ -514,6 +683,7 @@
 				988467CD1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */,
 				980314391DA3B6D5005603E8 /* DecryptedSubmission.swift in Sources */,
 				98A72E031DA3A8AD00853CDD /* SubmittedSubmission.swift in Sources */,
+				988467DB1DA63F3A00E2D1CB /* InplaceFileTransformation.swift in Sources */,
 				985FC2731D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */,
 				985FC2761D9E601A00958E97 /* protocols.swift in Sources */,
 			);
@@ -524,6 +694,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9803143B1DA3B6DB005603E8 /* InitialSubmission.swift in Sources */,
+				988467DC1DA63F3A00E2D1CB /* InplaceFileTransformation.swift in Sources */,
+				988467E91DA670E700E2D1CB /* EncryptionKey.swift in Sources */,
 				98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */,
 				98A72DDA1DA278A500853CDD /* NettskjemaJsonField.swift in Sources */,
 				985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
@@ -538,6 +710,7 @@
 				985FC2861D9E668400958E97 /* NettskjemaForm.swift in Sources */,
 				988467CE1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */,
 				985FC2741D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */,
+				988467D91DA63D9C00E2D1CB /* EncryptionMethod.swift in Sources */,
 				9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */,
 				988467C21DA52F6500E2D1CB /* TemporaryFile.swift in Sources */,
 				985FC29C1D9E723800958E97 /* FileUploadForField.swift in Sources */,
@@ -545,6 +718,7 @@
 				98A72DF21DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */,
 				985FC2A21D9E75DC00958E97 /* NettskjemaCsrfRequestFactory.swift in Sources */,
 				988467C51DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */,
+				988467E11DA6407A00E2D1CB /* EncryptionTest.swift in Sources */,
 				985FC26F1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift in Sources */,
 				985FC28A1D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
 				98A72DEB1DA39CEC00853CDD /* events.swift in Sources */,
@@ -558,11 +732,14 @@
 				985FC2771D9E601A00958E97 /* protocols.swift in Sources */,
 				98A72DE31DA38D2300853CDD /* MobileNettskjemaTest.swift in Sources */,
 				98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */,
+				988467E41DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */,
 				985FC27F1D9E636000958E97 /* TestForm.swift in Sources */,
 				98A72E011DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */,
 				985FC29F1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
 				98A72DE01DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
+				988467DF1DA6402400E2D1CB /* EncryptionPipe.swift in Sources */,
 				98A72DEE1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */,
+				988467D61DA6380F00E2D1CB /* DecryptionPipe.swift in Sources */,
 				98A72DF61DA3A1B900853CDD /* JsonFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +747,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		988468021DA67C5300E2D1CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 988467ED1DA67C3500E2D1CB /* dummytestingapp */;
+			targetProxy = 988468011DA67C5300E2D1CB /* PBXContainerItemProxy */;
+		};
 		98E2402E1D9E52B5000EDED2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 98E240211D9E52B5000EDED2 /* ReactNativeNettskjema */;
@@ -577,7 +759,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		988467F41DA67C3500E2D1CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				988467F51DA67C3500E2D1CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		988467F91DA67C3500E2D1CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				988467FA1DA67C3500E2D1CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		988467FE1DA67C3500E2D1CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = dummytestingapp/dummytestingapp.entitlements;
+				DEVELOPMENT_TEAM = L6H6YNBUBK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = dummytestingapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.dummytestingapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		988467FF1DA67C3500E2D1CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = dummytestingapp/dummytestingapp.entitlements;
+				DEVELOPMENT_TEAM = L6H6YNBUBK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = dummytestingapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.dummytestingapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
 		98E240341D9E52B5000EDED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -742,6 +979,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.ReactNativeNettskjemaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dummytestingapp.app/dummytestingapp";
 			};
 			name = Debug;
 		};
@@ -759,12 +997,21 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.ReactNativeNettskjemaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dummytestingapp.app/dummytestingapp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		988467FD1DA67C3500E2D1CB /* Build configuration list for PBXNativeTarget "dummytestingapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				988467FE1DA67C3500E2D1CB /* Debug */,
+				988467FF1DA67C3500E2D1CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		98E2401C1D9E52B5000EDED2 /* Build configuration list for PBXProject "ReactNativeNettskjema" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

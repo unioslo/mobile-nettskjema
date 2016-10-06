@@ -1,2 +1,4 @@
 github "Alamofire/Alamofire" ~> 3.0
 github "ashleymills/Reachability.swift" ~> 2.4
+github "krzyzanowskim/CryptoSwift" ~> 0.5
+github "exchangegroup/keychain-swift" "swift_2_3"

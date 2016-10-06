@@ -49,7 +49,6 @@
 		985FC2A51D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A31D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift */; };
 		985FC2A71D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */; };
 		985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2A61D9E771800958E97 /* NettskjemaFilledInForm.swift */; };
-		988467BA1DA4F7A500E2D1CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467B91DA4F7A500E2D1CB /* Alamofire.framework */; };
 		988467BD1DA50EFC00E2D1CB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467BC1DA50EFC00E2D1CB /* Queue.swift */; };
 		988467BE1DA50EFF00E2D1CB /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467BC1DA50EFC00E2D1CB /* Queue.swift */; };
 		988467C11DA52F6500E2D1CB /* TemporaryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C01DA52F6500E2D1CB /* TemporaryFile.swift */; };
@@ -62,8 +61,6 @@
 		988467CB1DA533C200E2D1CB /* NotASubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467C91DA533C200E2D1CB /* NotASubmission.swift */; };
 		988467CD1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */; };
 		988467CE1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467CC1DA5372E00E2D1CB /* AutoSubmissionSetting.swift */; };
-		988467D01DA53B5900E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
-		988467D21DA6377A00E2D1CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467D11DA6377A00E2D1CB /* CryptoSwift.framework */; };
 		988467D51DA6380F00E2D1CB /* DecryptionPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D41DA6380F00E2D1CB /* DecryptionPipe.swift */; };
 		988467D61DA6380F00E2D1CB /* DecryptionPipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D41DA6380F00E2D1CB /* DecryptionPipe.swift */; };
 		988467D81DA63D9C00E2D1CB /* EncryptionMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467D71DA63D9C00E2D1CB /* EncryptionMethod.swift */; };
@@ -75,7 +72,6 @@
 		988467E11DA6407A00E2D1CB /* EncryptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E01DA6407A00E2D1CB /* EncryptionTest.swift */; };
 		988467E31DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E21DA6557900E2D1CB /* Base64IvAndCiphertext.swift */; };
 		988467E41DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E21DA6557900E2D1CB /* Base64IvAndCiphertext.swift */; };
-		988467E61DA6701900E2D1CB /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467E51DA6701900E2D1CB /* KeychainSwift.framework */; };
 		988467E81DA670E700E2D1CB /* EncryptionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E71DA670E700E2D1CB /* EncryptionKey.swift */; };
 		988467E91DA670E700E2D1CB /* EncryptionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467E71DA670E700E2D1CB /* EncryptionKey.swift */; };
 		988467F11DA67C3500E2D1CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467F01DA67C3500E2D1CB /* AppDelegate.swift */; };
@@ -112,7 +108,6 @@
 		98A72E031DA3A8AD00853CDD /* SubmittedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */; };
 		98A72E061DA3A8BB00853CDD /* EncryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */; };
 		98A72E091DA3AACD00853CDD /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
-		98E2402C1D9E52B5000EDED2 /* ReactNativeNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,11 +218,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98E2402C1D9E52B5000EDED2 /* ReactNativeNettskjema.framework in Frameworks */,
-				988467BA1DA4F7A500E2D1CB /* Alamofire.framework in Frameworks */,
-				988467D01DA53B5900E2D1CB /* Reachability.framework in Frameworks */,
-				988467D21DA6377A00E2D1CB /* CryptoSwift.framework in Frameworks */,
-				988467E61DA6701900E2D1CB /* KeychainSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +488,6 @@
 				98E240271D9E52B5000EDED2 /* Sources */,
 				98E240281D9E52B5000EDED2 /* Frameworks */,
 				98E240291D9E52B5000EDED2 /* Resources */,
-				988467BB1DA4F86C00E2D1CB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -593,23 +582,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		988467BB1DA4F86C00E2D1CB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		988468071DA67CC000E2D1CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

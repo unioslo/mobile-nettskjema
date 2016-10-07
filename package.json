@@ -10,5 +10,8 @@
     "nettskjema"
   ],
   "author": "Jarle Fagerheim",
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "react-native": "^0.34.1"
+  }
 }

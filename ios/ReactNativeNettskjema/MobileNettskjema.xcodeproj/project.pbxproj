@@ -191,9 +191,9 @@
 		98A72E021DA3A8AD00853CDD /* SubmittedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmittedSubmission.swift; sourceTree = "<group>"; };
 		98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptedSubmission.swift; sourceTree = "<group>"; };
 		98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletedSubmission.swift; sourceTree = "<group>"; };
-		98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReactNativeNettskjema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E240221D9E52B5000EDED2 /* MobileNettskjema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobileNettskjema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E240261D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeNettskjemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E2402B1D9E52B5000EDED2 /* MobileNettskjemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileNettskjemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E240321D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98FC2DAF1DA6831B002E1C87 /* encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = encoding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -389,8 +389,8 @@
 		98E240181D9E52B5000EDED2 = {
 			isa = PBXGroup;
 			children = (
-				98E240241D9E52B5000EDED2 /* ReactNativeNettskjema */,
-				98E2402F1D9E52B5000EDED2 /* ReactNativeNettskjemaTests */,
+				98E240241D9E52B5000EDED2 /* MobileNettskjema */,
+				98E2402F1D9E52B5000EDED2 /* MobileNettskjemaTests */,
 				988467EF1DA67C3500E2D1CB /* dummytestingapp */,
 				98E240231D9E52B5000EDED2 /* Products */,
 				98A72DCC1D9EAA8F00853CDD /* Frameworks */,
@@ -400,14 +400,14 @@
 		98E240231D9E52B5000EDED2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */,
-				98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */,
+				98E240221D9E52B5000EDED2 /* MobileNettskjema.framework */,
+				98E2402B1D9E52B5000EDED2 /* MobileNettskjemaTests.xctest */,
 				988467EE1DA67C3500E2D1CB /* dummytestingapp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		98E240241D9E52B5000EDED2 /* ReactNativeNettskjema */ = {
+		98E240241D9E52B5000EDED2 /* MobileNettskjema */ = {
 			isa = PBXGroup;
 			children = (
 				98A72DE81DA39CE300853CDD /* deferredsubmission */,
@@ -418,10 +418,11 @@
 				98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */,
 				98FC2DAF1DA6831B002E1C87 /* encoding.swift */,
 			);
+			name = MobileNettskjema;
 			path = ReactNativeNettskjema;
 			sourceTree = "<group>";
 		};
-		98E2402F1D9E52B5000EDED2 /* ReactNativeNettskjemaTests */ = {
+		98E2402F1D9E52B5000EDED2 /* MobileNettskjemaTests */ = {
 			isa = PBXGroup;
 			children = (
 				985FC2781D9E608E00958E97 /* testdata */,
@@ -432,6 +433,7 @@
 				98A72DE11DA38D2300853CDD /* MobileNettskjemaTest.swift */,
 				988467E01DA6407A00E2D1CB /* EncryptionTest.swift */,
 			);
+			name = MobileNettskjemaTests;
 			path = ReactNativeNettskjemaTests;
 			sourceTree = "<group>";
 		};
@@ -467,9 +469,9 @@
 			productReference = 988467EE1DA67C3500E2D1CB /* dummytestingapp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		98E240211D9E52B5000EDED2 /* ReactNativeNettskjema */ = {
+		98E240211D9E52B5000EDED2 /* MobileNettskjema */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98E240361D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "ReactNativeNettskjema" */;
+			buildConfigurationList = 98E240361D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "MobileNettskjema" */;
 			buildPhases = (
 				98E2401D1D9E52B5000EDED2 /* Sources */,
 				98E2401E1D9E52B5000EDED2 /* Frameworks */,
@@ -480,14 +482,14 @@
 			);
 			dependencies = (
 			);
-			name = ReactNativeNettskjema;
+			name = MobileNettskjema;
 			productName = ReactNativeNettskjema;
-			productReference = 98E240221D9E52B5000EDED2 /* ReactNativeNettskjema.framework */;
+			productReference = 98E240221D9E52B5000EDED2 /* MobileNettskjema.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		98E2402A1D9E52B5000EDED2 /* ReactNativeNettskjemaTests */ = {
+		98E2402A1D9E52B5000EDED2 /* MobileNettskjemaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98E240391D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "ReactNativeNettskjemaTests" */;
+			buildConfigurationList = 98E240391D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "MobileNettskjemaTests" */;
 			buildPhases = (
 				98E240271D9E52B5000EDED2 /* Sources */,
 				98E240281D9E52B5000EDED2 /* Frameworks */,
@@ -499,9 +501,9 @@
 				98E2402E1D9E52B5000EDED2 /* PBXTargetDependency */,
 				988468021DA67C5300E2D1CB /* PBXTargetDependency */,
 			);
-			name = ReactNativeNettskjemaTests;
+			name = MobileNettskjemaTests;
 			productName = ReactNativeNettskjemaTests;
-			productReference = 98E2402B1D9E52B5000EDED2 /* ReactNativeNettskjemaTests.xctest */;
+			productReference = 98E2402B1D9E52B5000EDED2 /* MobileNettskjemaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -538,7 +540,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 98E2401C1D9E52B5000EDED2 /* Build configuration list for PBXProject "ReactNativeNettskjema" */;
+			buildConfigurationList = 98E2401C1D9E52B5000EDED2 /* Build configuration list for PBXProject "MobileNettskjema" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -551,8 +553,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				98E240211D9E52B5000EDED2 /* ReactNativeNettskjema */,
-				98E2402A1D9E52B5000EDED2 /* ReactNativeNettskjemaTests */,
+				98E240211D9E52B5000EDED2 /* MobileNettskjema */,
+				98E2402A1D9E52B5000EDED2 /* MobileNettskjemaTests */,
 				988467ED1DA67C3500E2D1CB /* dummytestingapp */,
 			);
 		};
@@ -732,7 +734,7 @@
 		};
 		98E2402E1D9E52B5000EDED2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 98E240211D9E52B5000EDED2 /* ReactNativeNettskjema */;
+			target = 98E240211D9E52B5000EDED2 /* MobileNettskjema */;
 			targetProxy = 98E2402D1D9E52B5000EDED2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -991,7 +993,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98E2401C1D9E52B5000EDED2 /* Build configuration list for PBXProject "ReactNativeNettskjema" */ = {
+		98E2401C1D9E52B5000EDED2 /* Build configuration list for PBXProject "MobileNettskjema" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98E240341D9E52B5000EDED2 /* Debug */,
@@ -1000,7 +1002,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98E240361D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "ReactNativeNettskjema" */ = {
+		98E240361D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "MobileNettskjema" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98E240371D9E52B5000EDED2 /* Debug */,
@@ -1009,7 +1011,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		98E240391D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "ReactNativeNettskjemaTests" */ = {
+		98E240391D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "MobileNettskjemaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				98E2403A1D9E52B5000EDED2 /* Debug */,

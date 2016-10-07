@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98FC2DD61DA79362002E1C87 /* ReactNativeNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 98FC2DD51DA79362002E1C87 /* ReactNativeNettskjema.m */; };
-		98FC2DD71DA79362002E1C87 /* ReactNativeNettskjema.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98FC2DD41DA79362002E1C87 /* ReactNativeNettskjema.h */; };
-		98FC2DDF1DA7939A002E1C87 /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FC2DDE1DA7939A002E1C87 /* MobileNettskjema.framework */; };
+		983209851DA7B2CA00424C1A /* RNEventSink.m in Sources */ = {isa = PBXBuildFile; fileRef = 983209841DA7B2CA00424C1A /* RNEventSink.m */; };
+		98320A4E1DA7D37100424C1A /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98320A4C1DA7D36A00424C1A /* MobileNettskjema.framework */; };
+		98FC2DD61DA79362002E1C87 /* MobileNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 98FC2DD51DA79362002E1C87 /* MobileNettskjema.m */; };
+		98FC2DD71DA79362002E1C87 /* MobileNettskjema.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98FC2DD41DA79362002E1C87 /* MobileNettskjema.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,17 +20,19 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				98FC2DD71DA79362002E1C87 /* ReactNativeNettskjema.h in CopyFiles */,
+				98FC2DD71DA79362002E1C87 /* MobileNettskjema.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		983209831DA7B29300424C1A /* RNEventSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEventSink.h; sourceTree = "<group>"; };
+		983209841DA7B2CA00424C1A /* RNEventSink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEventSink.m; sourceTree = "<group>"; };
+		98320A4C1DA7D36A00424C1A /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileNettskjema.framework; sourceTree = "<group>"; };
 		98FC2DD11DA79362002E1C87 /* libReactNativeNettskjema.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeNettskjema.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		98FC2DD41DA79362002E1C87 /* ReactNativeNettskjema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactNativeNettskjema.h; sourceTree = "<group>"; };
-		98FC2DD51DA79362002E1C87 /* ReactNativeNettskjema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeNettskjema.m; sourceTree = "<group>"; };
-		98FC2DDE1DA7939A002E1C87 /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileNettskjema.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/MobileNettskjema-hfmxqnvrfmymezeyrdpsphnampri/Build/Products/Debug-iphonesimulator/MobileNettskjema.framework"; sourceTree = "<group>"; };
+		98FC2DD41DA79362002E1C87 /* MobileNettskjema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileNettskjema.h; sourceTree = "<group>"; };
+		98FC2DD51DA79362002E1C87 /* MobileNettskjema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileNettskjema.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98FC2DDF1DA7939A002E1C87 /* MobileNettskjema.framework in Frameworks */,
+				98320A4E1DA7D37100424C1A /* MobileNettskjema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +67,10 @@
 		98FC2DD31DA79362002E1C87 /* ReactNativeNettskjema */ = {
 			isa = PBXGroup;
 			children = (
-				98FC2DD41DA79362002E1C87 /* ReactNativeNettskjema.h */,
-				98FC2DD51DA79362002E1C87 /* ReactNativeNettskjema.m */,
+				98FC2DD41DA79362002E1C87 /* MobileNettskjema.h */,
+				98FC2DD51DA79362002E1C87 /* MobileNettskjema.m */,
+				983209831DA7B29300424C1A /* RNEventSink.h */,
+				983209841DA7B2CA00424C1A /* RNEventSink.m */,
 			);
 			path = ReactNativeNettskjema;
 			sourceTree = "<group>";
@@ -73,7 +78,7 @@
 		98FC2DDD1DA7939A002E1C87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98FC2DDE1DA7939A002E1C87 /* MobileNettskjema.framework */,
+				98320A4C1DA7D36A00424C1A /* MobileNettskjema.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -137,7 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98FC2DD61DA79362002E1C87 /* ReactNativeNettskjema.m in Sources */,
+				98FC2DD61DA79362002E1C87 /* MobileNettskjema.m in Sources */,
+				983209851DA7B2CA00424C1A /* RNEventSink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,9 +191,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -227,7 +233,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -240,7 +246,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L6H6YNBUBK;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../node_modules/react-native/React/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -257,7 +270,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = L6H6YNBUBK;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../node_modules/react-native/React/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../react-native/React/**",
+					"$(SRCROOT)/../../node_modules/react-native/React/**",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,6 +306,7 @@
 				98FC2DDC1DA79362002E1C87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

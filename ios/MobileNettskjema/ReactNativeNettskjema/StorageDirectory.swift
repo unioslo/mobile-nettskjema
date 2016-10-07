@@ -6,10 +6,10 @@ extension NSURL {
     }
 }
 
-class LibraryCacheStorageDirectory: StorageDirectory {
+@objc public class LibraryCacheStorageDirectory: NSObject, StorageDirectory {
     let fileManager = NSFileManager.defaultManager()
     
-    func fileNamed(filename: String) throws -> NSURL {
+    @objc public func fileNamed(filename: String) throws -> NSURL {
         return try directory().fileNamed(filename)
     }
     
@@ -34,7 +34,7 @@ class LibraryCacheStorageDirectory: StorageDirectory {
         return try getOrCreateSubdirectory("mobileNettskjema")
     }
     
-    func storedFiles() throws -> [NSURL] {
+    @objc public func storedFiles() throws -> [NSURL] {
         return try fileManager.contentsOfDirectoryAtURL(directory(), includingPropertiesForKeys: nil, options: [])
     }
     

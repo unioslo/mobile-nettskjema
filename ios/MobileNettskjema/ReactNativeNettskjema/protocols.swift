@@ -9,11 +9,11 @@ protocol CsrfTokenFactory {
     func newCsrfToken(rawToken: String) -> MultipartRequestField
 }
 
-protocol Event {
+@objc public protocol Event {
     var key: String { get }
 }
 
-protocol EventSink {
+@objc public protocol EventSink {
     func put(event: Event)
 }
 
@@ -73,7 +73,7 @@ public protocol PostRequest {
     // TBD
 }
 
-protocol StorageDirectory {
+@objc public protocol StorageDirectory {
     func fileNamed(filename: String) throws -> NSURL
     func storedFiles() throws -> [NSURL]
 }

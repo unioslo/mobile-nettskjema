@@ -1,7 +1,7 @@
 import Foundation
 import CryptoSwift
 import XCTest
-@testable import ReactNativeNettskjema
+@testable import MobileNettskjema
 
 private let STORAGE_DIRECTORY = try! LibraryCacheStorageDirectory().getOrCreateSubdirectory("encryptionTest")
 private let FILES = [

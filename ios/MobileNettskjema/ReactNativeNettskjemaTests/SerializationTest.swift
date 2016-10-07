@@ -1,5 +1,5 @@
 import XCTest
-@testable import ReactNativeNettskjema
+@testable import MobileNettskjema
 
 private class MockMultipartFormData: KeyValueMedia {
     let media = NSMutableDictionary()

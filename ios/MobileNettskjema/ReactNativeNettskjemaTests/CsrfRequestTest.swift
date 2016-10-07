@@ -1,5 +1,5 @@
 import XCTest
-@testable import ReactNativeNettskjema
+@testable import MobileNettskjema
 
 class CsrfRequestTest: XCTestCase {
     private let csrfRequestFactory = NettskjemaCsrfRequestFactory()

@@ -126,6 +126,7 @@ SWIFT_CLASS("_TtC16MobileNettskjema28LibraryCacheStorageDirectory")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSArray;
 
 SWIFT_CLASS("_TtC16MobileNettskjema20MobileNettskjemaObjC")
 @interface MobileNettskjemaObjC : NSObject
@@ -133,6 +134,7 @@ SWIFT_CLASS("_TtC16MobileNettskjema20MobileNettskjemaObjC")
 - (BOOL)addToSubmissionQueue:(NSDictionary<NSString *, id> * _Nonnull)filledInForm error:(NSError * _Nullable * _Null_unspecified)error onFirstProcessingComplete:(void (^ _Nonnull)(void))onFirstProcessingComplete;
 - (BOOL)forceRetryAllSubmissionsAndReturnError:(NSError * _Nullable * _Null_unspecified)error :(void (^ _Nonnull)(void))onFirstProcessingComplete;
 - (void)setAutoSubmissionsPreference:(NSString * _Nonnull)value;
+- (NSArray * _Nullable)submissionStatesAndReturnError:(NSError * _Nullable * _Null_unspecified)error;
 @end
 
 

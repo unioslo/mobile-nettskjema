@@ -47,12 +47,18 @@ RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejec
 RCT_EXPORT_METHOD(setAutoSubmissionsPreference:(NSString *)value resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema setAutoSubmissionsPreference:value];
-    resolve(nil); // FIXME
+    resolve(nil);
 }
 
 RCT_EXPORT_METHOD(stateOfSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    resolve(nil); // FIXME
+    NSError *error;
+    NSArray *result = [mobileNettskjema submissionStatesAndReturnError:&error];
+    if (result == nil) {
+        reject(@"state_of_submissions_failed", @"Getting submission states failed", error);
+    } else {
+        resolve(result);
+    }
 }
 
 @end

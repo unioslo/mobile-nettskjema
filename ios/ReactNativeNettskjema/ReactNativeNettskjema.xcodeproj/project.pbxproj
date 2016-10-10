@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		983209851DA7B2CA00424C1A /* RNEventSink.m in Sources */ = {isa = PBXBuildFile; fileRef = 983209841DA7B2CA00424C1A /* RNEventSink.m */; };
-		98320A4E1DA7D37100424C1A /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98320A4C1DA7D36A00424C1A /* MobileNettskjema.framework */; };
+		9856B22E1DAB8C31003BC3ED /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9856B22D1DAB8C31003BC3ED /* MobileNettskjema.framework */; };
 		98FC2DD61DA79362002E1C87 /* MobileNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 98FC2DD51DA79362002E1C87 /* MobileNettskjema.m */; };
 		98FC2DD71DA79362002E1C87 /* MobileNettskjema.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98FC2DD41DA79362002E1C87 /* MobileNettskjema.h */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,7 @@
 /* Begin PBXFileReference section */
 		983209831DA7B29300424C1A /* RNEventSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNEventSink.h; sourceTree = "<group>"; };
 		983209841DA7B2CA00424C1A /* RNEventSink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNEventSink.m; sourceTree = "<group>"; };
-		98320A4C1DA7D36A00424C1A /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileNettskjema.framework; sourceTree = "<group>"; };
+		9856B22D1DAB8C31003BC3ED /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileNettskjema.framework; sourceTree = "<group>"; };
 		98FC2DD11DA79362002E1C87 /* libReactNativeNettskjema.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeNettskjema.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FC2DD41DA79362002E1C87 /* MobileNettskjema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileNettskjema.h; sourceTree = "<group>"; };
 		98FC2DD51DA79362002E1C87 /* MobileNettskjema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileNettskjema.m; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98320A4E1DA7D37100424C1A /* MobileNettskjema.framework in Frameworks */,
+				9856B22E1DAB8C31003BC3ED /* MobileNettskjema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +78,7 @@
 		98FC2DDD1DA7939A002E1C87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98320A4C1DA7D36A00424C1A /* MobileNettskjema.framework */,
+				9856B22D1DAB8C31003BC3ED /* MobileNettskjema.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

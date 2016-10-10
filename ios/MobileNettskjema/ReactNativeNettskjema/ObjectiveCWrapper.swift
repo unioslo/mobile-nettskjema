@@ -3,13 +3,10 @@ import Foundation
 @objc
 public class MobileNettskjemaObjC: NSObject {
     
-    private let storageDirectory: StorageDirectory
-    private let queue = Queue()
-    private let eventSink: EventSink
+    private let mobileNettskjema: MobileNettskjema
     
     @objc public init(storageDirectory: StorageDirectory, eventSink: EventSink) {
-        self.storageDirectory = storageDirectory
-        self.eventSink = eventSink
+        self.mobileNettskjema = MobileNettskjema(storageDirectory: storageDirectory, eventSink: eventSink)
     }
     
     @objc public func addToSubmissionQueue(filledInForm: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
@@ -22,19 +19,20 @@ public class MobileNettskjemaObjC: NSObject {
     }
     
     @objc public func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
-        for url in try storageDirectory.storedFiles() {
-            if (url.isTemporary()) {
-                try NSFileManager.defaultManager().removeItemAtURL(url)
-            }
-        }
-        for url in try storageDirectory.storedFiles() {
-            try queue.process(SubmissionStateFromFile(file: url).withDecision(AlwaysSubmit()).next, eventSink: eventSink, onFirstProcessingComplete: onFirstProcessingComplete)
-        }
+        try mobileNettskjema.forceRetryAllSubmissions(onFirstProcessingComplete)
     }
     
     @objc public func setAutoSubmissionsPreference(value: String) {
         let setting = AutoSubmissionSetting(rawValue: value)!
-        NSUserDefaults.standardUserDefaults().setObject(setting.rawValue, forKey: autoSubmissionSettingKey)
+        return mobileNettskjema.setAutoSubmissionsPreference(setting)
+    }
+    
+    @objc public func submissionStates() throws -> NSArray {
+        var result: [String] = []
+        for submissionState in try mobileNettskjema.submissionStates() {
+            result.append(String(submissionState.dynamicType))
+        }
+        return result
     }
     
 }

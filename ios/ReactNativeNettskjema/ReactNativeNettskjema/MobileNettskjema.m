@@ -20,18 +20,38 @@
 }
 
 RCT_EXPORT_MODULE();
+
 RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    [mobileNettskjema addToSubmissionQueue:submission error:nil onFirstProcessingComplete:^{ }];
-    resolve(nil); // FIXME
+    NSError *error;
+    BOOL success = [mobileNettskjema addToSubmissionQueue:submission error:&error onFirstProcessingComplete:^{ }];
+    if (!success) {
+        reject(@"add_to_queue_failed", @"Adding submission to queue failed", error);
+    } else {
+        resolve(nil);
+    }
 }
-RCT_EXPORT_METHOD(stateOfSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+
+RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    resolve(nil); // FIXME
+    NSError *error;
+    BOOL success = [mobileNettskjema forceRetryAllSubmissionsAndReturnError:&error :^{ }];
+    if (!success) {
+        reject(@"force_retry_failed", @"Force retry all submissions failed", error);
+    } else {
+        resolve(nil);
+    }
 }
+
+
 RCT_EXPORT_METHOD(setAutoSubmissionsPreference:(NSString *)value resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema setAutoSubmissionsPreference:value];
+    resolve(nil); // FIXME
+}
+
+RCT_EXPORT_METHOD(stateOfSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
     resolve(nil); // FIXME
 }
 

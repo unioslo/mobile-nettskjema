@@ -19,12 +19,16 @@ class NettskjemaFilledInForm: FilledInForm {
         self.filledInFormFields = filledInFormFields
     }
     
-    init(json: String) throws {
+    convenience init(json: String) throws {
         let jsonData = try NSJSONSerialization.JSONObjectWithData(
             json.dataUsingEncoding(DEFAULT_ENCODING)!,
             options: [])
-        self.form = NettskjemaForm(serialized: jsonData["form"] as! [String: AnyObject])
-        self.filledInFormFields = try NettskjemaJsonFields(fields: jsonData["fields"] as! NSArray).asList
+        try self.init(fromDictionary: jsonData as! [String: AnyObject])
+    }
+    
+    convenience init(fromDictionary: [String: AnyObject]) throws {
+        self.init(form: NettskjemaForm(serialized: fromDictionary["form"] as! [String: AnyObject]),
+                  filledInFormFields: try NettskjemaJsonFields(fields: fromDictionary["fields"] as! NSArray).asList)
     }
     
     func postRequest(csrfToken: MultipartRequestField, onComplete: (Manager.MultipartFormDataEncodingResult -> Void)) {

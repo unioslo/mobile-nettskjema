@@ -10,12 +10,7 @@ public class MobileNettskjemaObjC: NSObject {
     }
     
     @objc public func addToSubmissionQueue(filledInForm: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
-        /*    try NettskjemaQueueableFormSubmission(
-         eventSink: eventSink,
-         filledInForm: filledInForm,
-         storageDirectory: storageDirectory,
-         queue: queue
-         ).submit(onFirstProcessingComplete);*/
+        try mobileNettskjema.addToSubmissionQueue(filledInForm, onFirstProcessingComplete: onFirstProcessingComplete)
     }
     
     @objc public func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {

@@ -20,6 +20,11 @@ class MobileNettskjema {
         ).submit(onFirstProcessingComplete);
     }
     
+    func addToSubmissionQueue(filledInForm: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
+        try addToSubmissionQueue(NettskjemaFilledInForm(fromDictionary: filledInForm), onFirstProcessingComplete: onFirstProcessingComplete)
+    }
+
+    
     func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
         for url in try storageDirectory.storedFiles() {
             if (url.isTemporary()) {

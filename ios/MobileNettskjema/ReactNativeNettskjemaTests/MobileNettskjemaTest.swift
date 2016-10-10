@@ -4,7 +4,7 @@ import XCTest
 private class TestEventSink: EventSink {
     var emittedEvents: [String] = []
 
-    func put(event: Event) {
+    @objc func put(event: Event) {
         NSLog("EVENT: " + event.key)
         emittedEvents.append(event.key)
     }

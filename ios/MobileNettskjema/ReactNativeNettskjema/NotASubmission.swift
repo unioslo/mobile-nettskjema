@@ -6,4 +6,6 @@ class NotASubmission: SubmissionState {
     var next: SubmissionState { get { return NotASubmission() } }
     
     let isEndOfProcessing: Bool = true
+    let indicatesSemiPermanentStorageOnDevice: Bool = false
+
 }

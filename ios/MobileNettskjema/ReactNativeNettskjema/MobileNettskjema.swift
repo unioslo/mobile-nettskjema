@@ -35,4 +35,10 @@ class MobileNettskjema {
         NSUserDefaults.standardUserDefaults().setObject(value.rawValue, forKey: autoSubmissionSettingKey)
     }
     
+    func submissionStates() throws -> [SubmissionState] {
+        return try storageDirectory.storedFiles()
+            .map { url in return SubmissionStateFromFile(file: url).withDecision(NeverSubmit()) }
+            .filter { submissionState in return submissionState.indicatesSemiPermanentStorageOnDevice }
+    }
+    
 }

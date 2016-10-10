@@ -19,6 +19,8 @@ class InitialSubmission: SubmissionState {
     }
     
     let isEndOfProcessing: Bool = false
+    let indicatesSemiPermanentStorageOnDevice: Bool = true
+
     var next: SubmissionState {
         get {
             return submissionDecision.nextSubmissionState(submissionFile)

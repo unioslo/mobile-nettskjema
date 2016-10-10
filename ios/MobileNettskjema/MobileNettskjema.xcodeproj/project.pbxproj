@@ -28,6 +28,8 @@
 		9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
 		9803143F1DA3B6DB005603E8 /* DecryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */; };
 		9832097E1DA7B04200424C1A /* ObjectiveCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */; };
+		9856B22B1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
+		9856B22C1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		985FC26D1D9E5B2700958E97 /* ReactNativeNettskjema.h in Headers */ = {isa = PBXBuildFile; fileRef = 985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		985FC26F1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */; };
 		985FC2731D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC2721D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift */; };
@@ -147,6 +149,7 @@
 /* Begin PBXFileReference section */
 		980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptedSubmission.swift; sourceTree = "<group>"; };
 		9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCWrapper.swift; sourceTree = "<group>"; };
+		9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeverSubmit.swift; sourceTree = "<group>"; };
 		985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeNettskjema.h; sourceTree = "<group>"; };
 		985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaSubmissionTest.swift; sourceTree = "<group>"; };
 		985FC2721D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaFormSubmissionFactory.swift; sourceTree = "<group>"; };
@@ -398,6 +401,7 @@
 			children = (
 				98A72DFF1DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift */,
 				988467C31DA531FF00E2D1CB /* AlwaysSubmit.swift */,
+				9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */,
 			);
 			name = submissiondecisions;
 			sourceTree = "<group>";
@@ -693,6 +697,7 @@
 				985FC2821D9E641100958E97 /* MultipleChoiceQuestion.swift in Sources */,
 				985FC2A11D9E75DC00958E97 /* NettskjemaCsrfRequestFactory.swift in Sources */,
 				985FC27E1D9E636000958E97 /* TestForm.swift in Sources */,
+				9856B22B1DAB878E003BC3ED /* NeverSubmit.swift in Sources */,
 				985FC2A71D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
 				98A72DDF1DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
 				985FC2921D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
@@ -747,6 +752,7 @@
 				985FC2931D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
 				98A72DF91DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
 				985FC2771D9E601A00958E97 /* protocols.swift in Sources */,
+				9856B22C1DAB878E003BC3ED /* NeverSubmit.swift in Sources */,
 				98A72DE31DA38D2300853CDD /* MobileNettskjemaTest.swift in Sources */,
 				98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */,
 				988467E41DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */,
@@ -1046,6 +1052,7 @@
 				983209F51DA7C7AB00424C1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		988467FD1DA67C3500E2D1CB /* Build configuration list for PBXNativeTarget "dummytestingapp" */ = {
 			isa = XCConfigurationList;

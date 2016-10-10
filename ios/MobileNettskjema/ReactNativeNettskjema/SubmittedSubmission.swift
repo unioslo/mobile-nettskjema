@@ -35,5 +35,7 @@ class SubmittedSubmission: SubmissionState {
     }
     
     let isEndOfProcessing: Bool = false
+    let indicatesSemiPermanentStorageOnDevice: Bool = false
+
     
 }

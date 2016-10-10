@@ -27,5 +27,6 @@ class EncryptedSubmission: SubmissionState {
     }
     
     let isEndOfProcessing: Bool = true
+    let indicatesSemiPermanentStorageOnDevice: Bool = true
 
 }

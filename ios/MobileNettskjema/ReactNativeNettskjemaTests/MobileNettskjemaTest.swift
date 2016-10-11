@@ -132,13 +132,13 @@ class MobileNettskjemaTest: XCTestCase {
             XCTAssertFalse(fileManager.fileExistsAtPath(url.path!))
         }
     }
-    
+
     private func forceRetryExpectingOneUpload() throws {
         let expectation = self.expectationWithDescription("An attempt should be made to re-post to nettskjema")
         try mobileNettskjema!.forceRetryAllSubmissions() { expectation.fulfill() }
         self.waitForExpectationsWithTimeout(5, handler: nil)
     }
-    
+
     private func submitValidSubmissionWithFiles() throws {
         let expectation = self.expectationWithDescription("Submission should be posted to nettskjema")
         let testFile1 = try! TestFile(kbSize: 4)

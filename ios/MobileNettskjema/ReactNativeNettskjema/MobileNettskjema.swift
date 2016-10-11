@@ -20,8 +20,8 @@ class MobileNettskjema {
         ).submit(onFirstProcessingComplete);
     }
     
-    func addToSubmissionQueue(filledInForm: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
-        try addToSubmissionQueue(NettskjemaFilledInForm(fromDictionary: filledInForm), onFirstProcessingComplete: onFirstProcessingComplete)
+    func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
+        try addToSubmissionQueue(RNFilledInForm(submission: submission).bridged, onFirstProcessingComplete: onFirstProcessingComplete)
     }
 
     

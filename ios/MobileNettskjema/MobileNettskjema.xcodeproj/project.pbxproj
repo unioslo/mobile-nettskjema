@@ -28,6 +28,20 @@
 		9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
 		9803143F1DA3B6DB005603E8 /* DecryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */; };
 		9832097E1DA7B04200424C1A /* ObjectiveCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */; };
+		9846EFEA1DACDE24004B801C /* RNFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFE91DACDE24004B801C /* RNFilledInForm.swift */; };
+		9846EFEB1DACDE24004B801C /* RNFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFE91DACDE24004B801C /* RNFilledInForm.swift */; };
+		9846EFED1DACDEE8004B801C /* NettskjemaRNFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFEC1DACDEE8004B801C /* NettskjemaRNFields.swift */; };
+		9846EFEE1DACDEE8004B801C /* NettskjemaRNFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFEC1DACDEE8004B801C /* NettskjemaRNFields.swift */; };
+		9846EFF01DACDF66004B801C /* NettskjemaRNField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFEF1DACDF66004B801C /* NettskjemaRNField.swift */; };
+		9846EFF11DACDF66004B801C /* NettskjemaRNField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFEF1DACDF66004B801C /* NettskjemaRNField.swift */; };
+		9846EFF41DACE053004B801C /* RNTextQuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF31DACE053004B801C /* RNTextQuestionAnswer.swift */; };
+		9846EFF51DACE053004B801C /* RNTextQuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF31DACE053004B801C /* RNTextQuestionAnswer.swift */; };
+		9846EFF71DACF694004B801C /* RNSelectedRadioOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF61DACF694004B801C /* RNSelectedRadioOption.swift */; };
+		9846EFF81DACF694004B801C /* RNSelectedRadioOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF61DACF694004B801C /* RNSelectedRadioOption.swift */; };
+		9846EFFA1DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF91DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift */; };
+		9846EFFB1DACF73D004B801C /* RNSelectedMultipleChoiceOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF91DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift */; };
+		9846EFFD1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */; };
+		9846EFFE1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */; };
 		9856B22B1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		9856B22C1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		985FC26D1D9E5B2700958E97 /* ReactNativeNettskjema.h in Headers */ = {isa = PBXBuildFile; fileRef = 985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -149,6 +163,13 @@
 /* Begin PBXFileReference section */
 		980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptedSubmission.swift; sourceTree = "<group>"; };
 		9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCWrapper.swift; sourceTree = "<group>"; };
+		9846EFE91DACDE24004B801C /* RNFilledInForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNFilledInForm.swift; sourceTree = "<group>"; };
+		9846EFEC1DACDEE8004B801C /* NettskjemaRNFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaRNFields.swift; sourceTree = "<group>"; };
+		9846EFEF1DACDF66004B801C /* NettskjemaRNField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaRNField.swift; sourceTree = "<group>"; };
+		9846EFF31DACE053004B801C /* RNTextQuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNTextQuestionAnswer.swift; sourceTree = "<group>"; };
+		9846EFF61DACF694004B801C /* RNSelectedRadioOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSelectedRadioOption.swift; sourceTree = "<group>"; };
+		9846EFF91DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSelectedMultipleChoiceOption.swift; sourceTree = "<group>"; };
+		9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNFileUploadForField.swift; sourceTree = "<group>"; };
 		9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeverSubmit.swift; sourceTree = "<group>"; };
 		985FC26C1D9E5B2700958E97 /* ReactNativeNettskjema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeNettskjema.h; sourceTree = "<group>"; };
 		985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaSubmissionTest.swift; sourceTree = "<group>"; };
@@ -246,6 +267,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9846EFE81DACDE09004B801C /* reactnativeapi */ = {
+			isa = PBXGroup;
+			children = (
+				9846EFF31DACE053004B801C /* RNTextQuestionAnswer.swift */,
+				9846EFE91DACDE24004B801C /* RNFilledInForm.swift */,
+				9846EFEC1DACDEE8004B801C /* NettskjemaRNFields.swift */,
+				9846EFEF1DACDF66004B801C /* NettskjemaRNField.swift */,
+				9846EFF61DACF694004B801C /* RNSelectedRadioOption.swift */,
+				9846EFF91DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift */,
+				9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */,
+			);
+			name = reactnativeapi;
+			sourceTree = "<group>";
+		};
 		985FC2701D9E5ED600958E97 /* submission */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +465,7 @@
 		98E240241D9E52B5000EDED2 /* MobileNettskjema */ = {
 			isa = PBXGroup;
 			children = (
+				9846EFE81DACDE09004B801C /* reactnativeapi */,
 				98A72DE81DA39CE300853CDD /* deferredsubmission */,
 				985FC2701D9E5ED600958E97 /* submission */,
 				98E240261D9E52B5000EDED2 /* Info.plist */,
@@ -661,6 +697,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9846EFFA1DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift in Sources */,
+				9846EFED1DACDEE8004B801C /* NettskjemaRNFields.swift in Sources */,
 				988467C41DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */,
 				985FC2A41D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */,
 				985FC2981D9E71CA00958E97 /* UploadQuestion.swift in Sources */,
@@ -670,6 +708,7 @@
 				98A72DF51DA3A1B900853CDD /* JsonFile.swift in Sources */,
 				985FC28F1D9E6F7C00958E97 /* NettskjemaFieldIdentifier.swift in Sources */,
 				98A72DED1DA39DEC00853CDD /* MobileNettskjema.swift in Sources */,
+				9846EFF41DACE053004B801C /* RNTextQuestionAnswer.swift in Sources */,
 				98A72E001DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */,
 				98A72DFC1DA3A34700853CDD /* InitialSubmission.swift in Sources */,
 				988467C71DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */,
@@ -681,6 +720,7 @@
 				98A72DEA1DA39CEC00853CDD /* events.swift in Sources */,
 				98A72DF81DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
 				9832097E1DA7B04200424C1A /* ObjectiveCWrapper.swift in Sources */,
+				9846EFEA1DACDE24004B801C /* RNFilledInForm.swift in Sources */,
 				985FC2891D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
 				98FC2DB01DA6831B002E1C87 /* encoding.swift in Sources */,
 				988467CA1DA533C200E2D1CB /* NotASubmission.swift in Sources */,
@@ -688,9 +728,11 @@
 				985FC29B1D9E723800958E97 /* FileUploadForField.swift in Sources */,
 				988467E31DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */,
 				985FC28C1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
+				9846EFF01DACDF66004B801C /* NettskjemaRNField.swift in Sources */,
 				985FC2851D9E668400958E97 /* NettskjemaForm.swift in Sources */,
 				98A72E091DA3AACD00853CDD /* DeletedSubmission.swift in Sources */,
 				988467C11DA52F6500E2D1CB /* TemporaryFile.swift in Sources */,
+				9846EFF71DACF694004B801C /* RNSelectedRadioOption.swift in Sources */,
 				98A72DF11DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */,
 				985FC2951D9E70AF00958E97 /* RadioQuestion.swift in Sources */,
 				98A72DDC1DA2805600853CDD /* StorageDirectory.swift in Sources */,
@@ -699,6 +741,7 @@
 				985FC27E1D9E636000958E97 /* TestForm.swift in Sources */,
 				9856B22B1DAB878E003BC3ED /* NeverSubmit.swift in Sources */,
 				985FC2A71D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
+				9846EFFD1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */,
 				98A72DDF1DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,
 				985FC2921D9E701000958E97 /* SelectedMultiOption.swift in Sources */,
 				988467CD1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */,
@@ -722,21 +765,26 @@
 				985FC2A81D9E771800958E97 /* NettskjemaFilledInForm.swift in Sources */,
 				985FC28D1D9E6EF400958E97 /* TextQuestion.swift in Sources */,
 				988467CB1DA533C200E2D1CB /* NotASubmission.swift in Sources */,
+				9846EFFB1DACF73D004B801C /* RNSelectedMultipleChoiceOption.swift in Sources */,
 				9803143D1DA3B6DB005603E8 /* EncryptedSubmission.swift in Sources */,
 				985FC2961D9E70AF00958E97 /* RadioQuestion.swift in Sources */,
 				988467C81DA5328200E2D1CB /* SubmissionStateFromFile.swift in Sources */,
 				988467BE1DA50EFF00E2D1CB /* Queue.swift in Sources */,
 				985FC2A51D9E764900958E97 /* NettskjemaCsrfTokenFactory.swift in Sources */,
+				9846EFF81DACF694004B801C /* RNSelectedRadioOption.swift in Sources */,
 				985FC2831D9E641100958E97 /* MultipleChoiceQuestion.swift in Sources */,
 				985FC2861D9E668400958E97 /* NettskjemaForm.swift in Sources */,
+				9846EFF11DACDF66004B801C /* NettskjemaRNField.swift in Sources */,
 				988467CE1DA5372E00E2D1CB /* AutoSubmissionSetting.swift in Sources */,
 				985FC2741D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift in Sources */,
 				988467D91DA63D9C00E2D1CB /* EncryptionMethod.swift in Sources */,
 				9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */,
 				988467C21DA52F6500E2D1CB /* TemporaryFile.swift in Sources */,
+				9846EFEE1DACDEE8004B801C /* NettskjemaRNFields.swift in Sources */,
 				985FC29C1D9E723800958E97 /* FileUploadForField.swift in Sources */,
 				985FC2901D9E6F7C00958E97 /* NettskjemaFieldIdentifier.swift in Sources */,
 				98A72DF21DA3A0E000853CDD /* NettskjemaQueueableFormSubmission.swift in Sources */,
+				9846EFFE1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */,
 				985FC2A21D9E75DC00958E97 /* NettskjemaCsrfRequestFactory.swift in Sources */,
 				988467C51DA531FF00E2D1CB /* AlwaysSubmit.swift in Sources */,
 				988467E11DA6407A00E2D1CB /* EncryptionTest.swift in Sources */,
@@ -754,9 +802,11 @@
 				985FC2771D9E601A00958E97 /* protocols.swift in Sources */,
 				9856B22C1DAB878E003BC3ED /* NeverSubmit.swift in Sources */,
 				98A72DE31DA38D2300853CDD /* MobileNettskjemaTest.swift in Sources */,
+				9846EFEB1DACDE24004B801C /* RNFilledInForm.swift in Sources */,
 				98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */,
 				988467E41DA6557900E2D1CB /* Base64IvAndCiphertext.swift in Sources */,
 				985FC27F1D9E636000958E97 /* TestForm.swift in Sources */,
+				9846EFF51DACE053004B801C /* RNTextQuestionAnswer.swift in Sources */,
 				98A72E011DA3A82300853CDD /* SubmitIfConnectionIsSatisfactory.swift in Sources */,
 				985FC29F1D9E732900958E97 /* NettskjemaFormSubmission.swift in Sources */,
 				98A72DE01DA2913B00853CDD /* NettskjemaJsonFields.swift in Sources */,

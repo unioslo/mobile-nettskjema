@@ -73,6 +73,11 @@ public protocol PostRequest {
     // TBD
 }
 
+protocol RNApiBridge {
+    associatedtype T
+    var bridged: T { get }
+}
+
 @objc public protocol StorageDirectory {
     func fileNamed(filename: String) throws -> NSURL
     func storedFiles() throws -> [NSURL]

@@ -23,14 +23,10 @@ class NettskjemaFilledInForm: FilledInForm {
         let jsonData = try NSJSONSerialization.JSONObjectWithData(
             json.dataUsingEncoding(DEFAULT_ENCODING)!,
             options: [])
-        try self.init(fromDictionary: jsonData as! [String: AnyObject])
+        self.init(form: NettskjemaForm(serialized: jsonData["form"] as! [String: AnyObject]),
+                  filledInFormFields: try NettskjemaJsonFields(fields: jsonData["fields"] as! NSArray).asList)
     }
-    
-    convenience init(fromDictionary: [String: AnyObject]) throws {
-        self.init(form: NettskjemaForm(serialized: fromDictionary["form"] as! [String: AnyObject]),
-                  filledInFormFields: try NettskjemaJsonFields(fields: fromDictionary["fields"] as! NSArray).asList)
-    }
-    
+        
     func postRequest(csrfToken: MultipartRequestField, onComplete: (Manager.MultipartFormDataEncodingResult -> Void)) {
         return Alamofire.upload(
             .POST,

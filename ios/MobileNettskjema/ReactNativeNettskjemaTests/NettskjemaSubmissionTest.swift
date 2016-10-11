@@ -22,10 +22,61 @@ class NettskjemaSubmissionTest: XCTestCase {
         )
         formSubmission.post { formSubmissionStatus in
             expectation.fulfill()
-            print("DBG: " + formSubmissionStatus.description)
             XCTAssert(formSubmissionStatus.statusCode == FormSubmissionStatusCode.POST_SUCCESSFUL)
         }
         waitForExpectationsWithTimeout(5.0, handler:nil)
+    }
+    
+    func testSubmitWithDictionary() {
+        let expectation = self.expectationWithDescription("Submission should be posted to nettskjema")
+        let testFile1 = try! TestFile(kbSize: 4)
+        let testFile2 = try! TestFile(kbSize: 8)
+        let filledInForm = try! RNFilledInForm(submission: [
+            "form": [ "id": TestForm.formId ],
+            "fields": [
+                [
+                    "type": "text",
+                    "questionId": TestForm.textQuestionId,
+                    "answer": "iOS queueing test run on " + NSDate().description + " with serialized input"
+                ],
+                [
+                    "type": "radio",
+                    "questionId": TestForm.radioQuestionId,
+                    "selectedOptionId": TestForm.radioQuestionSelectedId
+                ],
+                [
+                    "type": "multipleChoice",
+                    "questionId": TestForm.multipleChoiceQuestionId,
+                    "selectedOptionId": TestForm.multipleChoiceQuestionSelectedOptionIds[0]
+                ],
+                [
+                    "type": "multipleChoice",
+                    "questionId": TestForm.multipleChoiceQuestionId,
+                    "selectedOptionId": TestForm.multipleChoiceQuestionSelectedOptionIds[1]
+                ],
+                [
+                    "type": "upload",
+                    "questionId": TestForm.uploadField1Id,
+                    "mediaType": "text/txt",
+                    "filepath": testFile1.randomContent.path!,
+                ],
+                [
+                    "type": "upload",
+                    "questionId": TestForm.uploadField2Id,
+                    "mediaType": "text/txt",
+                    "filepath": testFile2.randomContent.path!,
+                ]
+                ] as [[String: Any]],
+            ]
+        ).bridged
+        let submission = submissionFactory.newSubmission(filledInForm)
+        submission.post { formSubmissionStatus in
+            expectation.fulfill()
+            XCTAssert(formSubmissionStatus.statusCode == FormSubmissionStatusCode.POST_SUCCESSFUL)
+        }
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+        testFile1.delete()
+        testFile2.delete()
     }
     
 }

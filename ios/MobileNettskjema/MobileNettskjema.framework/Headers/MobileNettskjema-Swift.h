@@ -131,7 +131,7 @@ SWIFT_CLASS("_TtC16MobileNettskjema28LibraryCacheStorageDirectory")
 SWIFT_CLASS("_TtC16MobileNettskjema20MobileNettskjemaObjC")
 @interface MobileNettskjemaObjC : NSObject
 - (nonnull instancetype)initWithStorageDirectory:(id <StorageDirectory> _Nonnull)storageDirectory eventSink:(id <EventSink> _Nonnull)eventSink OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)addToSubmissionQueue:(NSDictionary<NSString *, id> * _Nonnull)filledInForm error:(NSError * _Nullable * _Null_unspecified)error onFirstProcessingComplete:(void (^ _Nonnull)(void))onFirstProcessingComplete;
+- (BOOL)addToSubmissionQueue:(NSDictionary<NSString *, id> * _Nonnull)submission error:(NSError * _Nullable * _Null_unspecified)error onFirstProcessingComplete:(void (^ _Nonnull)(void))onFirstProcessingComplete;
 - (BOOL)forceRetryAllSubmissionsAndReturnError:(NSError * _Nullable * _Null_unspecified)error :(void (^ _Nonnull)(void))onFirstProcessingComplete;
 - (void)setAutoSubmissionsPreference:(NSString * _Nonnull)value;
 - (NSArray * _Nullable)submissionStatesAndReturnError:(NSError * _Nullable * _Null_unspecified)error;

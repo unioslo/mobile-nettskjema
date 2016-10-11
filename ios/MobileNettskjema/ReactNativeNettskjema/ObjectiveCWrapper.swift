@@ -9,8 +9,9 @@ public class MobileNettskjemaObjC: NSObject {
         self.mobileNettskjema = MobileNettskjema(storageDirectory: storageDirectory, eventSink: eventSink)
     }
     
-    @objc public func addToSubmissionQueue(filledInForm: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
-        try mobileNettskjema.addToSubmissionQueue(filledInForm, onFirstProcessingComplete: onFirstProcessingComplete)
+    @objc public func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
+        NSLog("DBG: " + submission.debugDescription)
+        try mobileNettskjema.addToSubmissionQueue(submission, onFirstProcessingComplete: onFirstProcessingComplete)
     }
     
     @objc public func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {

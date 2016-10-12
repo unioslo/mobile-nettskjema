@@ -1,3 +1,5 @@
+import Foundation
+
 enum ProgrammerError: ErrorType {
     case InvalidFieldType
 }
@@ -10,6 +12,7 @@ class NettskjemaRNField {
     }
     
     func deserialized() throws -> FilledInFormField {
+        NSLog("NettskjemaRNField: " + field.debugDescription)
         switch(field["type"]! as! String) {
         case "upload": return RNFileUploadForField(field: field).bridged
         case "radio": return RNSelectedRadioOption(field: field).bridged

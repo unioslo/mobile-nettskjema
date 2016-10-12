@@ -1,8 +1,11 @@
+import Foundation
+
 class RNSelectedMultipleChoiceOption: RNApiBridge {
     private let questionId: Int
     private let selectedOptionId: Int
     
     init(field: [String: AnyObject]) {
+        NSLog("RNSelectedMultipleChoiceOptiong: " + field.debugDescription)
         self.questionId = field["questionId"] as! Int
         self.selectedOptionId = field["selectedOptionId"] as! Int
     }

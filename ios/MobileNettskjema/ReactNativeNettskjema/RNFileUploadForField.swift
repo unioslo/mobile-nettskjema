@@ -7,6 +7,7 @@ class RNFileUploadForField: RNApiBridge {
     private let questionId: Int
     
     init(field: [String: AnyObject]) {
+        NSLog("RNFileUploadForField: " + field.debugDescription)
         self.mediaType = field["mediaType"] as! String
         self.questionId = field["questionId"] as! Int
         self.file = NSURL(fileURLWithPath: field["filepath"] as! String)

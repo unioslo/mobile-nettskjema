@@ -9,8 +9,8 @@ class RNFilledInForm: RNApiBridge {
     
     init(submission: [String: AnyObject]) throws {
         NSLog("RNFilledInForm: " + submission.debugDescription)
-        self.form = NettskjemaForm(id: (submission["form"] as! [String: Int])["id"]!)
-        self.filledInFormFields = try NettskjemaRNFields(fields: submission["fields"] as! [[String: AnyObject]]).asList
+        self.form = NettskjemaForm(id: (submission["form"]! as! [String: Int])["id"]!)
+        self.filledInFormFields = try NettskjemaRNFields(fields: submission["fields"]! as! [[String: AnyObject]]).asList
     }
     
     var bridged: FilledInForm {

@@ -44,6 +44,7 @@
 		9846EFFE1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */; };
 		9846F0391DAD1512004B801C /* MobileNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 9846F0291DAD14B0004B801C /* MobileNettskjema.m */; };
 		9846F03A1DAD1512004B801C /* RNEventSink.m in Sources */ = {isa = PBXBuildFile; fileRef = 9846F02B1DAD14B0004B801C /* RNEventSink.m */; };
+		9846F0891DAE2215004B801C /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9846F0881DAE2202004B801C /* MobileNettskjema.framework */; };
 		9856B22B1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		9856B22C1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		985FC26F1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */; };
@@ -188,7 +189,7 @@
 		9846F02A1DAD14B0004B801C /* RNEventSink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNEventSink.h; sourceTree = "<group>"; };
 		9846F02B1DAD14B0004B801C /* RNEventSink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNEventSink.m; sourceTree = "<group>"; };
 		9846F0301DAD1507004B801C /* libReactNativeNettskjema.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeNettskjema.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9846F0871DAE2131004B801C /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileNettskjema.framework; path = ../../../../../Desktop/MobileNettskjema.framework; sourceTree = "<group>"; };
+		9846F0881DAE2202004B801C /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileNettskjema.framework; path = ../../../../../Desktop/MobileNettskjema.framework; sourceTree = "<group>"; };
 		9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeverSubmit.swift; sourceTree = "<group>"; };
 		985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaSubmissionTest.swift; sourceTree = "<group>"; };
 		985FC2721D9E5F3100958E97 /* NettskjemaFormSubmissionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaFormSubmissionFactory.swift; sourceTree = "<group>"; };
@@ -261,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9846F0891DAE2215004B801C /* MobileNettskjema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +312,7 @@
 		9846F0241DAD1425004B801C /* CompiledFramework */ = {
 			isa = PBXGroup;
 			children = (
-				9846F0871DAE2131004B801C /* MobileNettskjema.framework */,
+				9846F0881DAE2202004B801C /* MobileNettskjema.framework */,
 			);
 			name = CompiledFramework;
 			sourceTree = "<group>";

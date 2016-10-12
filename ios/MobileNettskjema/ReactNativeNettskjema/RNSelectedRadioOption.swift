@@ -3,7 +3,7 @@ class RNSelectedRadioOption: RNApiBridge {
     private let questionId: Int
     private let selectedOptionId: Int
     
-    init(field: [String: Any]) {
+    init(field: [String: AnyObject]) {
         self.questionId = field["questionId"] as! Int
         self.selectedOptionId = field["selectedOptionId"] as! Int
     }

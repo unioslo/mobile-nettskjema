@@ -10,7 +10,7 @@ public class MobileNettskjemaObjC: NSObject {
     }
     
     @objc public func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
-        NSLog("DBG: " + submission.debugDescription)
+        NSLog("MobileNettskjemaObjC: " + submission.debugDescription)
         try mobileNettskjema.addToSubmissionQueue(submission, onFirstProcessingComplete: onFirstProcessingComplete)
     }
     

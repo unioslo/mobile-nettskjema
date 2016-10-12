@@ -66,7 +66,7 @@ class NettskjemaSubmissionTest: XCTestCase {
                     "mediaType": "text/txt",
                     "filepath": testFile2.randomContent.path!,
                 ]
-                ] as [[String: Any]],
+                ] as [[String: AnyObject]],
             ]
         ).bridged
         let submission = submissionFactory.newSubmission(filledInForm)

@@ -3,9 +3,9 @@ enum ProgrammerError: ErrorType {
 }
 
 class NettskjemaRNField {
-    private let field: [String: Any]
+    private let field: [String: AnyObject]
     
-    init(field: [String: Any]) {
+    init(field: [String: AnyObject]) {
         self.field = field
     }
     

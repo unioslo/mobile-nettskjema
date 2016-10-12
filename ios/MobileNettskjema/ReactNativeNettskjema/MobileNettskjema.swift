@@ -20,8 +20,8 @@ class MobileNettskjema {
         ).submit(onFirstProcessingComplete);
     }
     
-    func addToSubmissionQueue(submission: [String: Any], onFirstProcessingComplete: () -> Void) throws {
-        NSLog("DBG: " + submission.debugDescription)
+    func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
+        NSLog("MobileNettskjema: " + submission.debugDescription)
         try addToSubmissionQueue(RNFilledInForm(submission: submission).bridged, onFirstProcessingComplete: onFirstProcessingComplete)
     }
 

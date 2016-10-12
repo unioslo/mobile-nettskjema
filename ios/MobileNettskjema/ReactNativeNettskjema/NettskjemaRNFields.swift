@@ -1,7 +1,7 @@
 class NettskjemaRNFields {
     private var deserializedFields: [FilledInFormField] = []
     
-    init(fields: [[String: Any]]) throws {
+    init(fields: [[String: AnyObject]]) throws {
         for field in fields {
             try deserializedFields.append(NettskjemaRNField(field: field).deserialized())
         }

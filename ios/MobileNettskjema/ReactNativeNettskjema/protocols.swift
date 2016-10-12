@@ -10,7 +10,8 @@ protocol CsrfTokenFactory {
 }
 
 @objc public protocol Event {
-    var key: String { get }
+    var name: String { get }
+    var data: AnyObject { get }
 }
 
 @objc public protocol EventSink {

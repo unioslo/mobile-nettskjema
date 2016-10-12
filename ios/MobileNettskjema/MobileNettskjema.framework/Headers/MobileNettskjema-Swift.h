@@ -101,7 +101,8 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_PROTOCOL("_TtP16MobileNettskjema5Event_")
 @protocol Event
-@property (nonatomic, readonly, copy) NSString * _Nonnull key;
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+@property (nonatomic, readonly, strong) id _Nonnull data;
 @end
 
 

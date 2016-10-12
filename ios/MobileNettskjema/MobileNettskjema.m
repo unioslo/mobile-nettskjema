@@ -1,5 +1,5 @@
 #import "MobileNettskjema.h"
-#import "RNEventSink.h"
+#import "JSEventSink.h"
 @import MobileNettskjema;
 
 
@@ -13,11 +13,16 @@
     self = [super init];
     if (self) {
         LibraryCacheStorageDirectory *directory = [[LibraryCacheStorageDirectory alloc] init];
-        RNEventSink *eventSink = [[RNEventSink alloc] init];
+        JSEventSink *eventSink = [[JSEventSink alloc] initWithEmitter:&*self];
         mobileNettskjema = [[MobileNettskjemaObjC alloc] initWithStorageDirectory:directory eventSink:eventSink];
     }
     return self;
 }
+
+- (NSArray<NSString *>*)supportedEvents {
+    return @[ @"submissionStateChanged"];
+}
+
 
 RCT_EXPORT_MODULE();
 

@@ -5,8 +5,7 @@ private class TestEventSink: EventSink {
     var emittedEvents: [String] = []
 
     @objc func put(event: Event) {
-        NSLog("EVENT: " + event.key)
-        emittedEvents.append(event.key)
+        emittedEvents.append(event.name + "." + (event.data as! String))
     }
     
     func clear() {
@@ -14,8 +13,8 @@ private class TestEventSink: EventSink {
     }
 }
 
-private func eventWithKey(key: String) -> String {
-    return "no.uio.mobileapps.mobilenettskjema.submissionStateChanged."	 + key
+private func submissionStateChangeEvent(key: String) -> String {
+    return "submissionStateChanged." + key
 }
 
 class MobileNettskjemaTest: XCTestCase {
@@ -53,9 +52,9 @@ class MobileNettskjemaTest: XCTestCase {
     func testCompleteSubmissionWithFilesSubmitsAndIsDeleted() {
         try! self.submitValidSubmissionWithFiles()
         XCTAssertEqual(eventSink.emittedEvents, [
-            eventWithKey("UNENCRYPTED"),
-            eventWithKey("SUBMITTED"),
-            eventWithKey("DELETED"),
+            submissionStateChangeEvent("UNENCRYPTED"),
+            submissionStateChangeEvent("SUBMITTED"),
+            submissionStateChangeEvent("DELETED"),
             ]
         )
         XCTAssertEqual(try! storageDirectory.storedFiles().count, 0)
@@ -64,9 +63,9 @@ class MobileNettskjemaTest: XCTestCase {
     func testIncompleteSubmissionFailsAndEncrypts() {
         try! self.submitInvalidSubmission()
         XCTAssertEqual(eventSink.emittedEvents, [
-            eventWithKey("UNENCRYPTED"),
-            eventWithKey("SUBMISSION_FAILED"),
-            eventWithKey("ENCRYPTED"),
+            submissionStateChangeEvent("UNENCRYPTED"),
+            submissionStateChangeEvent("SUBMISSION_FAILED"),
+            submissionStateChangeEvent("ENCRYPTED"),
             ]
         )
         XCTAssertEqual(try! storageDirectory.storedFiles().count, 1)
@@ -76,12 +75,12 @@ class MobileNettskjemaTest: XCTestCase {
         try! self.submitInvalidSubmission()
         try! self.forceRetryExpectingOneUpload()
         XCTAssertEqual(eventSink.emittedEvents, [
-            eventWithKey("UNENCRYPTED"),
-            eventWithKey("SUBMISSION_FAILED"),
-            eventWithKey("ENCRYPTED"),
-            eventWithKey("DECRYPTED"),
-            eventWithKey("SUBMISSION_FAILED"),
-            eventWithKey("ENCRYPTED")
+            submissionStateChangeEvent("UNENCRYPTED"),
+            submissionStateChangeEvent("SUBMISSION_FAILED"),
+            submissionStateChangeEvent("ENCRYPTED"),
+            submissionStateChangeEvent("DECRYPTED"),
+            submissionStateChangeEvent("SUBMISSION_FAILED"),
+            submissionStateChangeEvent("ENCRYPTED")
             ]
         )
     }
@@ -90,8 +89,8 @@ class MobileNettskjemaTest: XCTestCase {
         mobileNettskjema!.setAutoSubmissionsPreference(AutoSubmissionSetting.NEVER)
         try! self.submitValidSubmission()
         XCTAssertEqual(eventSink.emittedEvents, [
-            eventWithKey("UNENCRYPTED"),
-            eventWithKey("ENCRYPTED"),
+            submissionStateChangeEvent("UNENCRYPTED"),
+            submissionStateChangeEvent("ENCRYPTED"),
             ]
         )
     }
@@ -101,11 +100,11 @@ class MobileNettskjemaTest: XCTestCase {
         try! self.submitValidSubmission()
         try! self.forceRetryExpectingOneUpload()
         XCTAssertEqual(eventSink.emittedEvents, [
-            eventWithKey("UNENCRYPTED"),
-            eventWithKey("ENCRYPTED"),
-            eventWithKey("DECRYPTED"),
-            eventWithKey("SUBMITTED"),
-            eventWithKey("DELETED")
+            submissionStateChangeEvent("UNENCRYPTED"),
+            submissionStateChangeEvent("ENCRYPTED"),
+            submissionStateChangeEvent("DECRYPTED"),
+            submissionStateChangeEvent("SUBMITTED"),
+            submissionStateChangeEvent("DELETED")
             ]
         )
     }

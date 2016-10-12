@@ -8,16 +8,22 @@ class SubmissionStateChanged: Event {
         self.description = submissionFileState.rawValue
     }
     
-    @objc var key: String {
+    @objc var name: String {
         get {
-            return submissionStateChangedKey + "." + description
+            return "submissionStateChanged"
+        }
+    }
+    
+    @objc var data: AnyObject {
+        get {
+            return description
         }
     }
 }
 
 class IOSNotificationCenterEventSink: EventSink {
     @objc func put(event: Event) {
-        NSNotificationCenter.defaultCenter().postNotificationName(event.key, object: self)
+        NSNotificationCenter.defaultCenter().postNotificationName(event.name + "." + (event.data as! String), object: self)
     }
 }
 

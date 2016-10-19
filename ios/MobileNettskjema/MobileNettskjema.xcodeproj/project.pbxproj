@@ -114,6 +114,7 @@
 		988468041DA67CAD00E2D1CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467D11DA6377A00E2D1CB /* CryptoSwift.framework */; };
 		988468051DA67CAD00E2D1CB /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467E51DA6701900E2D1CB /* KeychainSwift.framework */; };
 		988468061DA67CAD00E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
+		98878DD61DB7611A0015C9B8 /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D3A66A1DAE4E6D00876E20 /* MobileNettskjema.framework */; };
 		98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */; };
 		98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD61DA25D7B00853CDD /* SerializationTest.swift */; };
 		98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */; };
@@ -261,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98878DD61DB7611A0015C9B8 /* MobileNettskjema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

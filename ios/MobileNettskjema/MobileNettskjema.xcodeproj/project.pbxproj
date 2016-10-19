@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		983209F21DA7C7AA00424C1A /* Build framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 983209F31DA7C7AB00424C1A /* Build configuration list for PBXAggregateTarget "Build framework" */;
-			buildPhases = (
-				983209F61DA7C7BD00424C1A /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "Build framework";
-			productName = "Build framework";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		980314391DA3B6D5005603E8 /* DecryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */; };
 		9803143B1DA3B6DB005603E8 /* InitialSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DFB1DA3A34700853CDD /* InitialSubmission.swift */; };
@@ -114,7 +100,6 @@
 		988468041DA67CAD00E2D1CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467D11DA6377A00E2D1CB /* CryptoSwift.framework */; };
 		988468051DA67CAD00E2D1CB /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467E51DA6701900E2D1CB /* KeychainSwift.framework */; };
 		988468061DA67CAD00E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
-		98878DD61DB7611A0015C9B8 /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D3A66A1DAE4E6D00876E20 /* MobileNettskjema.framework */; };
 		98A72DD51DA23BFC00853CDD /* CsrfRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD41DA23BFC00853CDD /* CsrfRequestTest.swift */; };
 		98A72DD71DA25D7B00853CDD /* SerializationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD61DA25D7B00853CDD /* SerializationTest.swift */; };
 		98A72DD91DA26F9F00853CDD /* NettskjemaJsonField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72DD81DA26F9F00853CDD /* NettskjemaJsonField.swift */; };
@@ -249,7 +234,6 @@
 		98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeletedSubmission.swift; sourceTree = "<group>"; };
 		98D3A6671DAE48C400876E20 /* JSEventSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEventSink.h; sourceTree = "<group>"; };
 		98D3A6681DAE48C400876E20 /* JSEventSink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEventSink.m; sourceTree = "<group>"; };
-		98D3A66A1DAE4E6D00876E20 /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileNettskjema.framework; sourceTree = "<group>"; };
 		98E240221D9E52B5000EDED2 /* MobileNettskjema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobileNettskjema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E240261D9E52B5000EDED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98E2402B1D9E52B5000EDED2 /* MobileNettskjemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileNettskjemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,7 +246,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98878DD61DB7611A0015C9B8 /* MobileNettskjema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,20 +292,11 @@
 			path = ReactNativeNettskjema;
 			sourceTree = "<group>";
 		};
-		9846F0241DAD1425004B801C /* CompiledFramework */ = {
-			isa = PBXGroup;
-			children = (
-				98D3A66A1DAE4E6D00876E20 /* MobileNettskjema.framework */,
-			);
-			name = CompiledFramework;
-			sourceTree = "<group>";
-		};
 		9846F0251DAD1470004B801C /* ReactNative */ = {
 			isa = PBXGroup;
 			children = (
 				9846F0271DAD14A5004B801C /* bridge */,
 				9846EFE81DACDE09004B801C /* api */,
-				9846F0241DAD1425004B801C /* CompiledFramework */,
 			);
 			name = ReactNative;
 			sourceTree = "<group>";
@@ -646,11 +620,6 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "University of Oslo, Norway";
 				TargetAttributes = {
-					983209F21DA7C7AA00424C1A = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L6H6YNBUBK;
-						ProvisioningStyle = Automatic;
-					};
 					9846F02F1DAD1507004B801C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L6H6YNBUBK;
@@ -696,7 +665,6 @@
 				98E240211D9E52B5000EDED2 /* MobileNettskjema */,
 				98E2402A1D9E52B5000EDED2 /* MobileNettskjemaTests */,
 				988467ED1DA67C3500E2D1CB /* dummytestingapp */,
-				983209F21DA7C7AA00424C1A /* Build framework */,
 				9846F02F1DAD1507004B801C /* ReactNativeNettskjema */,
 			);
 		};
@@ -730,19 +698,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		983209F61DA7C7BD00424C1A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "# Merge Script\n\n# 1\n# Set bash script to exit immediately if any commands fail.\nset -e\n\n# 2\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"MobileNettskjema\"\n\n# 3\n# If remnants from a previous build exist, delete them.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi\n\n# 4\n# Build the framework for device and for simulator (using\n# all needed architectures).\nTOOLCHAINS=com.apple.dt.toolchain.Swift_2_3 xcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes -sdk \"iphoneos\"\nTOOLCHAINS=com.apple.dt.toolchain.Swift_2_3 xcodebuild -target \"${FRAMEWORK_NAME}\" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes -sdk \"iphonesimulator\"\n\n# 5\n# Remove .framework file if exists on Desktop from previous run.\nif [ -d \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\nfi\n\n# 6\n# Copy the device version of framework to Desktop.\ncp -r \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework\"\n\n# 7\n# Replace the framework executable within the framework with\n# a new version created by merging the device and simulator\n# frameworks' executables with lipo.\nlipo -create -output \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n\n# 8\n# Copy the Swift module mappings for the simulator into the\n# framework.  The device mappings already exist from step 6.\ncp -r \"${SRCROOT}/build/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${HOME}/Desktop/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# 9\n# Delete the most recent build.\nif [ -d \"${SRCROOT}/build\" ]; then\nrm -rf \"${SRCROOT}/build\"\nfi";
-		};
 		988468071DA67CC000E2D1CB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -940,22 +895,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		983209F41DA7C7AB00424C1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = L6H6YNBUBK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		983209F51DA7C7AB00424C1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = L6H6YNBUBK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		9846F0371DAD1507004B801C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1224,15 +1163,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		983209F31DA7C7AB00424C1A /* Build configuration list for PBXAggregateTarget "Build framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				983209F41DA7C7AB00424C1A /* Debug */,
-				983209F51DA7C7AB00424C1A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9846F0361DAD1507004B801C /* Build configuration list for PBXNativeTarget "ReactNativeNettskjema" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

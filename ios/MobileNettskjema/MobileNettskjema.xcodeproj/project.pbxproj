@@ -13,7 +13,6 @@
 		9803143D1DA3B6DB005603E8 /* EncryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E051DA3A8BB00853CDD /* EncryptedSubmission.swift */; };
 		9803143E1DA3B6DB005603E8 /* DeletedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A72E081DA3AACD00853CDD /* DeletedSubmission.swift */; };
 		9803143F1DA3B6DB005603E8 /* DecryptedSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */; };
-		9832097E1DA7B04200424C1A /* ObjectiveCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */; };
 		9846EFEA1DACDE24004B801C /* RNFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFE91DACDE24004B801C /* RNFilledInForm.swift */; };
 		9846EFEB1DACDE24004B801C /* RNFilledInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFE91DACDE24004B801C /* RNFilledInForm.swift */; };
 		9846EFED1DACDEE8004B801C /* NettskjemaRNFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFEC1DACDEE8004B801C /* NettskjemaRNFields.swift */; };
@@ -28,7 +27,7 @@
 		9846EFFB1DACF73D004B801C /* RNSelectedMultipleChoiceOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFF91DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift */; };
 		9846EFFD1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */; };
 		9846EFFE1DACF7DE004B801C /* RNFileUploadForField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */; };
-		9846F0391DAD1512004B801C /* MobileNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 9846F0291DAD14B0004B801C /* MobileNettskjema.m */; };
+		9846F0391DAD1512004B801C /* RNNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 9846F0291DAD14B0004B801C /* RNNettskjema.m */; };
 		9856B22B1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		9856B22C1DAB878E003BC3ED /* NeverSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */; };
 		985FC26F1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */; };
@@ -161,7 +160,6 @@
 
 /* Begin PBXFileReference section */
 		980314381DA3B6D5005603E8 /* DecryptedSubmission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptedSubmission.swift; sourceTree = "<group>"; };
-		9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCWrapper.swift; sourceTree = "<group>"; };
 		9846EFE91DACDE24004B801C /* RNFilledInForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNFilledInForm.swift; sourceTree = "<group>"; };
 		9846EFEC1DACDEE8004B801C /* NettskjemaRNFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaRNFields.swift; sourceTree = "<group>"; };
 		9846EFEF1DACDF66004B801C /* NettskjemaRNField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaRNField.swift; sourceTree = "<group>"; };
@@ -169,8 +167,8 @@
 		9846EFF61DACF694004B801C /* RNSelectedRadioOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSelectedRadioOption.swift; sourceTree = "<group>"; };
 		9846EFF91DACF73C004B801C /* RNSelectedMultipleChoiceOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSelectedMultipleChoiceOption.swift; sourceTree = "<group>"; };
 		9846EFFC1DACF7DE004B801C /* RNFileUploadForField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNFileUploadForField.swift; sourceTree = "<group>"; };
-		9846F0281DAD14B0004B801C /* MobileNettskjema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileNettskjema.h; sourceTree = "<group>"; };
-		9846F0291DAD14B0004B801C /* MobileNettskjema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileNettskjema.m; sourceTree = "<group>"; };
+		9846F0281DAD14B0004B801C /* RNNettskjema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNNettskjema.h; sourceTree = "<group>"; };
+		9846F0291DAD14B0004B801C /* RNNettskjema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNNettskjema.m; sourceTree = "<group>"; };
 		9846F0301DAD1507004B801C /* libReactNativeNettskjema.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativeNettskjema.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9856B22A1DAB878E003BC3ED /* NeverSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeverSubmit.swift; sourceTree = "<group>"; };
 		985FC26E1D9E5CFE00958E97 /* NettskjemaSubmissionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NettskjemaSubmissionTest.swift; sourceTree = "<group>"; };
@@ -304,8 +302,8 @@
 		9846F0271DAD14A5004B801C /* bridge */ = {
 			isa = PBXGroup;
 			children = (
-				9846F0281DAD14B0004B801C /* MobileNettskjema.h */,
-				9846F0291DAD14B0004B801C /* MobileNettskjema.m */,
+				9846F0281DAD14B0004B801C /* RNNettskjema.h */,
+				9846F0291DAD14B0004B801C /* RNNettskjema.m */,
 				98D3A6671DAE48C400876E20 /* JSEventSink.h */,
 				98D3A6681DAE48C400876E20 /* JSEventSink.m */,
 			);
@@ -504,7 +502,6 @@
 				985FC2751D9E601A00958E97 /* protocols.swift */,
 				98A72DEC1DA39DEC00853CDD /* MobileNettskjema.swift */,
 				98FC2DAF1DA6831B002E1C87 /* encoding.swift */,
-				9832097D1DA7B04200424C1A /* ObjectiveCWrapper.swift */,
 			);
 			name = MobileNettskjema;
 			path = ReactNativeNettskjema;
@@ -723,7 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98D3A6691DAE48C400876E20 /* JSEventSink.m in Sources */,
-				9846F0391DAD1512004B801C /* MobileNettskjema.m in Sources */,
+				9846F0391DAD1512004B801C /* RNNettskjema.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,7 +759,6 @@
 				988467BD1DA50EFC00E2D1CB /* Queue.swift in Sources */,
 				98A72DEA1DA39CEC00853CDD /* events.swift in Sources */,
 				98A72DF81DA3A2D400853CDD /* SubmissionFile.swift in Sources */,
-				9832097E1DA7B04200424C1A /* ObjectiveCWrapper.swift in Sources */,
 				9846EFEA1DACDE24004B801C /* RNFilledInForm.swift in Sources */,
 				985FC2891D9E6E9600958E97 /* TextQuestionAnswer.swift in Sources */,
 				98FC2DB01DA6831B002E1C87 /* encoding.swift in Sources */,

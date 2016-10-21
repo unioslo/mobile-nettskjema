@@ -104,7 +104,7 @@ enum SubmissionFileState: String {
     }
 }
 
-protocol SubmissionState {
+public protocol SubmissionState {
     func transformToState(eventSink: EventSink, onComplete: (nextState: SubmissionState) throws -> Void) throws
     var next: SubmissionState { get }
     var isEndOfProcessing: Bool { get }

@@ -1,17 +1,17 @@
 import Foundation
 
-class MobileNettskjema {
+@objc public class MobileNettskjema: NSObject {
     
     private let storageDirectory: StorageDirectory
     private let queue = Queue()
     private let eventSink: EventSink
     
-    init(storageDirectory: StorageDirectory, eventSink: EventSink) {
+    public init(storageDirectory: StorageDirectory, eventSink: EventSink) {
         self.storageDirectory = storageDirectory
         self.eventSink = eventSink
     }
     
-    func addToSubmissionQueue(filledInForm: FilledInForm, onFirstProcessingComplete: () -> Void) throws {
+    public func addToSubmissionQueue(filledInForm: FilledInForm, onFirstProcessingComplete: () -> Void) throws {
         try NettskjemaQueueableFormSubmission(
             eventSink: eventSink,
             filledInForm: filledInForm,
@@ -20,13 +20,12 @@ class MobileNettskjema {
         ).submit(onFirstProcessingComplete);
     }
     
-    func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
-        NSLog("MobileNettskjema: " + submission.debugDescription)
+    @objc public func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
         try addToSubmissionQueue(RNFilledInForm(submission: submission).bridged, onFirstProcessingComplete: onFirstProcessingComplete)
     }
 
     
-    func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
+    @objc public func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
         for url in try storageDirectory.storedFiles() {
             if (url.isTemporary()) {
                 try NSFileManager.defaultManager().removeItemAtURL(url)
@@ -37,14 +36,27 @@ class MobileNettskjema {
         }
     }
     
-    func setAutoSubmissionsPreference(value: AutoSubmissionSetting) {
+    public func setAutoSubmissionsPreference(value: AutoSubmissionSetting) {
         NSUserDefaults.standardUserDefaults().setObject(value.rawValue, forKey: autoSubmissionSettingKey)
     }
     
-    func submissionStates() throws -> [SubmissionState] {
+    @objc public func setAutoSubmissionsPreference(value: String) {
+        let setting = AutoSubmissionSetting(rawValue: value)!
+        return self.setAutoSubmissionsPreference(setting)
+    }
+    
+    public func submissionStates() throws -> [SubmissionState] {
         return try storageDirectory.storedFiles()
             .map { url in return SubmissionStateFromFile(file: url).withDecision(NeverSubmit()) }
             .filter { submissionState in return submissionState.indicatesSemiPermanentStorageOnDevice }
+    }
+    
+    @objc public func submissionStateStrings() throws -> NSArray {
+        var result: [String] = []
+        for submissionState in try self.submissionStates() {
+            result.append(String(submissionState.dynamicType))
+        }
+        return result
     }
     
 }

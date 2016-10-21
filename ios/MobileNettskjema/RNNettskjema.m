@@ -1,12 +1,12 @@
-#import "MobileNettskjema.h"
+#import "RNNettskjema.h"
 #import "JSEventSink.h"
 @import MobileNettskjema;
 
 
-@implementation MobileNettskjema
+@implementation RNNettskjema
 
 {
-    MobileNettskjemaObjC *mobileNettskjema;
+    MobileNettskjema *mobileNettskjema;
 }
 
 - (id)init {
@@ -14,7 +14,7 @@
     if (self) {
         LibraryCacheStorageDirectory *directory = [[LibraryCacheStorageDirectory alloc] init];
         JSEventSink *eventSink = [[JSEventSink alloc] initWithEmitter:&*self];
-        mobileNettskjema = [[MobileNettskjemaObjC alloc] initWithStorageDirectory:directory eventSink:eventSink];
+        mobileNettskjema = [[MobileNettskjema alloc] initWithStorageDirectory:directory eventSink:eventSink];
     }
     return self;
 }
@@ -58,7 +58,7 @@ RCT_EXPORT_METHOD(setAutoSubmissionsPreference:(NSString *)value resolver:(RCTPr
 RCT_EXPORT_METHOD(stateOfSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     NSError *error;
-    NSArray *result = [mobileNettskjema submissionStatesAndReturnError:&error];
+    NSArray *result = [mobileNettskjema submissionStateStringsAndReturnError:&error];
     if (result == nil) {
         reject(@"state_of_submissions_failed", @"Getting submission states failed", error);
     } else {

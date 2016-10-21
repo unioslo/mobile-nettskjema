@@ -32,11 +32,11 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.SubmissionState;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.queueing.AutoSubmissionSetting;
 
-public class MobileNettskjemaModule extends ReactContextBaseJavaModule {
+public class RNNettskjemaModule extends ReactContextBaseJavaModule {
 
     private final MobileNettskjema mobileNettskjema;
 
-    public MobileNettskjemaModule(final ReactApplicationContext reactContext) {
+    public RNNettskjemaModule(final ReactApplicationContext reactContext) {
         super(reactContext);
         this.mobileNettskjema = new MobileNettskjema(
                 new StorageDirectory() {
@@ -46,13 +46,13 @@ public class MobileNettskjemaModule extends ReactContextBaseJavaModule {
                     }
                 },
                 reactContext,
-                new ReactNativeEventSink(this, reactContext)
+                new RNEventSink(this, reactContext)
         );
     }
 
     @Override
     public String getName() {
-        return "MobileNettskjema";
+        return "RNNettskjema";
     }
 
     @ReactMethod

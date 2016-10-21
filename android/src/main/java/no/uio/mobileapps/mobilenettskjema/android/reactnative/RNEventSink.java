@@ -25,12 +25,12 @@ import com.facebook.react.modules.core.DeviceEventManagerModule;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.Event;
 import no.uio.mobileapps.mobilenettskjema.interfaces.EventSink;
 
-class ReactNativeEventSink implements EventSink {
+class RNEventSink implements EventSink {
 
     private final String prefix;
     private final ReactContext reactContext;
 
-    ReactNativeEventSink(ReactContextBaseJavaModule module, ReactContext reactContext) {
+    RNEventSink(ReactContextBaseJavaModule module, ReactContext reactContext) {
         this.prefix = module.getName();
         this.reactContext = reactContext;
     }

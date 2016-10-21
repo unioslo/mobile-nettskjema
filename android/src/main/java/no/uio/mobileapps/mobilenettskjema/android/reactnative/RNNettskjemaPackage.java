@@ -25,11 +25,11 @@ import com.facebook.react.uimanager.ViewManager;
 import java.util.Collections;
 import java.util.List;
 
-public class MobileNettskjemaPackage implements ReactPackage {
+public class RNNettskjemaPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-        return Collections.<NativeModule>singletonList(new MobileNettskjemaModule(reactContext));
+        return Collections.<NativeModule>singletonList(new RNNettskjemaModule(reactContext));
     }
 
     @Override

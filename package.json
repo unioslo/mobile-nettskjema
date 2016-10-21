@@ -1,6 +1,6 @@
 {
   "name": "react-native-nettskjema",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Library for posting submissions to Nettskjema",
   "repository": {
     "type": "git",

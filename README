@@ -30,6 +30,9 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 </dict>
 ```
 
+### Troubleshooting
+
+If the app will build, but not archive: Select "MobileNettskjema" as your build target in Xcode and press CMD-B. Then select your app as the build target and archive should (might) work.
 
 ## React Native usage
 

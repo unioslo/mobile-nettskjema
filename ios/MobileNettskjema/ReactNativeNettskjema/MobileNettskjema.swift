@@ -23,14 +23,17 @@ import Foundation
     @objc public func addToSubmissionQueue(submission: [String: AnyObject], onFirstProcessingComplete: () -> Void) throws {
         try addToSubmissionQueue(RNFilledInForm(submission: submission).bridged, onFirstProcessingComplete: onFirstProcessingComplete)
     }
-
     
-    @objc public func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
+    @objc public func clearTemporaryFiles() throws {
         for url in try storageDirectory.storedFiles() {
             if (url.isTemporary()) {
                 try NSFileManager.defaultManager().removeItemAtURL(url)
             }
         }
+    }
+    
+    @objc public func forceRetryAllSubmissions(onFirstProcessingComplete: () -> Void) throws {
+        try clearTemporaryFiles()
         for url in try storageDirectory.storedFiles() {
             try queue.process(SubmissionStateFromFile(file: url).withDecision(AlwaysSubmit()).next, eventSink: eventSink, onFirstProcessingComplete: onFirstProcessingComplete)
         }

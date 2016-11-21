@@ -37,6 +37,17 @@ RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTP
     }
 }
 
+RCT_EXPORT_METHOD(clearTemporaryFiles:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    NSError *error;
+    BOOL success = [mobileNettskjema clearTemporaryFilesAndReturnError:&error];
+    if (!success) {
+        reject(@"clear_temporary_files_failed", @"Clear temporary files failed", error);
+    } else {
+        resolve(nil);
+    }
+}
+
 RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     NSError *error;

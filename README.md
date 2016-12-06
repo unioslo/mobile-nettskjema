@@ -9,7 +9,7 @@ In the project root folder (not the `ios` or `android` folder), run
 
 Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 
-* `open node_modules/react-native-nettskjema/ios/MobileNettskjema/`. This opens a Finder window.
+* `open node_modules/mobile-nettskjema/ios/MobileNettskjema/`. This opens a Finder window.
 * Drag the `MobileNettskjema.xcodeproj` file from the Finder window to the *Libraries* group of your Xcode project. Do *not* check "Copy items if needed".
 * Add `libReactNativeNettskjema.a` to *Linked Frameworks and Libraries* and `MobileNettskjema.framework` to *Embedded Binaries* in the Xcode build target settings for your project.
 * Copy the contents of `Cartfile` in the opened Finder window to the Cartfile of your project. (If you don't already use Carthage, just copy the file to the to the `ios` folder).
@@ -17,7 +17,7 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 * Add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
 
 * Add the following to  *Framework Search Paths* in the Xcode build target settings for your project:
-  - `$(PROJECT_DIR)/../node_modules/react-native-nettskjema` (_recursive_)
+  - `$(PROJECT_DIR)/../node_modules/mobile-nettskjema` (_recursive_)
   -  `$(PROJECT_DIR)/Carthage/Build/iOS` (_non-recursive_)
 
 * Add the following inside the `dict` tag of `NSExceptionDomains` in your project's Info.plist file:

@@ -92,4 +92,14 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         }
         promise.resolve(output);
     }
+
+    @ReactMethod
+    public void clearTemporaryFiles(Promise promise) {
+	try {
+	    mobileNettskjema.clearTemporaryFiles();
+	} catch (MobileNettskjemaException e) {
+	    promise.reject(e);
+	}
+	promise.resolve(null);
+    }
 }

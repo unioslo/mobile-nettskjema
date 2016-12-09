@@ -108,4 +108,13 @@ public class MobileNettskjema {
         }
         return output;
     }
+
+    public void clearTemporaryFiles() throws MobileNettskjemaException {
+        for (File file: filesInStorageDirectory()) {
+            if (TemporaryFile.isTemporary(file)) {
+                boolean deleted = file.delete();
+                if (!deleted) throw new MobileNettskjemaException("Unable to delete temporary file " + file);
+            }
+        }
+    }
 }

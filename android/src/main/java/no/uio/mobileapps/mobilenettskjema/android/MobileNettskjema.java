@@ -77,12 +77,8 @@ public class MobileNettskjema {
     }
 
     public void forceRetryAllSubmissions() throws MobileNettskjemaException {
-        for (File file: filesInStorageDirectory()) {
-            if (TemporaryFile.isTemporary(file)) {
-                boolean deleted = file.delete();
-                if (!deleted) throw new MobileNettskjemaException("Unable to delete temporary file " + file);
-            }
-        }
+        clearTemporaryFiles();
+
         for (File file: filesInStorageDirectory()) {
             Intent intent = new Intent(context, QueueService.class);
             SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(new AlwaysSubmit()).next(context);

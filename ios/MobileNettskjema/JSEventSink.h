@@ -1,4 +1,4 @@
-@import MobileNettskjema;
+@import MobileNettskjemaIOS;
 #import "RCTEventEmitter.h"
 
 

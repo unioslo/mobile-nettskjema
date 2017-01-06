@@ -1,6 +1,6 @@
 #import "RNNettskjema.h"
 #import "JSEventSink.h"
-@import MobileNettskjema;
+@import MobileNettskjemaIOS;
 
 
 @implementation RNNettskjema

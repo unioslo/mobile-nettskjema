@@ -44,6 +44,21 @@ async function deliverTestData() {
         questionId: 577795,
         answer: 'Hello from React Native',
       },
+      {
+        type: "radio",
+        questionId: 577800,
+        selectedOptionId: 1226117,
+      },
+      {
+        type: "multipleChoice",
+        questionId: 577801,
+        selectedOptionId: 1226127,
+      },
+      {
+        type: "multipleChoice",
+        questionId: 577801,
+        selectedOptionId: 1226128,
+      },
     ],
   }
 

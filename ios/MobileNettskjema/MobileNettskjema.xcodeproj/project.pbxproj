@@ -305,10 +305,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework",
+				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/CryptoSwift.framework",
+				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/KeychainSwift.framework",
 			);
 			outputPaths = (
 			);

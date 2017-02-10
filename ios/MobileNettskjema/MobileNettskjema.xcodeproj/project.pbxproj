@@ -8,28 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9846F0391DAD1512004B801C /* RNNettskjema.m in Sources */ = {isa = PBXBuildFile; fileRef = 9846F0291DAD14B0004B801C /* RNNettskjema.m */; };
-		988467F11DA67C3500E2D1CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467F01DA67C3500E2D1CB /* AppDelegate.swift */; };
-		988467F31DA67C3500E2D1CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988467F21DA67C3500E2D1CB /* ViewController.swift */; };
-		988467F61DA67C3500E2D1CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988467F41DA67C3500E2D1CB /* Main.storyboard */; };
-		988467F81DA67C3500E2D1CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 988467F71DA67C3500E2D1CB /* Assets.xcassets */; };
-		988467FB1DA67C3500E2D1CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 988467F91DA67C3500E2D1CB /* LaunchScreen.storyboard */; };
-		988468031DA67CAD00E2D1CB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467B91DA4F7A500E2D1CB /* Alamofire.framework */; };
-		988468041DA67CAD00E2D1CB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467D11DA6377A00E2D1CB /* CryptoSwift.framework */; };
-		988468051DA67CAD00E2D1CB /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467E51DA6701900E2D1CB /* KeychainSwift.framework */; };
-		988468061DA67CAD00E2D1CB /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988467CF1DA53B5900E2D1CB /* Reachability.framework */; };
 		9884CE791E1F9DF000BD0A71 /* MobileNettskjema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9884CE781E1F9DF000BD0A71 /* MobileNettskjema.framework */; };
 		98D3A6691DAE48C400876E20 /* JSEventSink.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D3A6681DAE48C400876E20 /* JSEventSink.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		988468011DA67C5300E2D1CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98E240191D9E52B5000EDED2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 988467ED1DA67C3500E2D1CB;
-			remoteInfo = dummytestingapp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9846F02E1DAD1507004B801C /* CopyFiles */ = {
@@ -51,14 +32,6 @@
 		988467CF1DA53B5900E2D1CB /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		988467D11DA6377A00E2D1CB /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		988467E51DA6701900E2D1CB /* KeychainSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainSwift.framework; path = Carthage/Build/iOS/KeychainSwift.framework; sourceTree = "<group>"; };
-		988467EE1DA67C3500E2D1CB /* dummytestingapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dummytestingapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		988467F01DA67C3500E2D1CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		988467F21DA67C3500E2D1CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		988467F51DA67C3500E2D1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		988467F71DA67C3500E2D1CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		988467FA1DA67C3500E2D1CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		988467FC1DA67C3500E2D1CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		988468001DA67C4200E2D1CB /* dummytestingapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dummytestingapp.entitlements; sourceTree = "<group>"; };
 		9884CE781E1F9DF000BD0A71 /* MobileNettskjema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileNettskjema.framework; path = Carthage/Build/iOS/MobileNettskjema.framework; sourceTree = "<group>"; };
 		98D3A6671DAE48C400876E20 /* JSEventSink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEventSink.h; sourceTree = "<group>"; };
 		98D3A6681DAE48C400876E20 /* JSEventSink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEventSink.m; sourceTree = "<group>"; };
@@ -71,17 +44,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9884CE791E1F9DF000BD0A71 /* MobileNettskjema.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		988467EB1DA67C3500E2D1CB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				988468031DA67CAD00E2D1CB /* Alamofire.framework in Frameworks */,
-				988468041DA67CAD00E2D1CB /* CryptoSwift.framework in Frameworks */,
-				988468051DA67CAD00E2D1CB /* KeychainSwift.framework in Frameworks */,
-				988468061DA67CAD00E2D1CB /* Reachability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,20 +76,6 @@
 			name = bridge;
 			sourceTree = "<group>";
 		};
-		988467EF1DA67C3500E2D1CB /* dummytestingapp */ = {
-			isa = PBXGroup;
-			children = (
-				988468001DA67C4200E2D1CB /* dummytestingapp.entitlements */,
-				988467F01DA67C3500E2D1CB /* AppDelegate.swift */,
-				988467F21DA67C3500E2D1CB /* ViewController.swift */,
-				988467F41DA67C3500E2D1CB /* Main.storyboard */,
-				988467F71DA67C3500E2D1CB /* Assets.xcassets */,
-				988467F91DA67C3500E2D1CB /* LaunchScreen.storyboard */,
-				988467FC1DA67C3500E2D1CB /* Info.plist */,
-			);
-			path = dummytestingapp;
-			sourceTree = "<group>";
-		};
 		98A72DCC1D9EAA8F00853CDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +93,6 @@
 			children = (
 				9846F0251DAD1470004B801C /* ReactNative */,
 				98E2402F1D9E52B5000EDED2 /* MobileNettskjemaTests */,
-				988467EF1DA67C3500E2D1CB /* dummytestingapp */,
 				98E240231D9E52B5000EDED2 /* Products */,
 				98A72DCC1D9EAA8F00853CDD /* Frameworks */,
 			);
@@ -155,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				98E2402B1D9E52B5000EDED2 /* MobileNettskjemaTests.xctest */,
-				988467EE1DA67C3500E2D1CB /* dummytestingapp.app */,
 				9846F0301DAD1507004B801C /* libReactNativeNettskjema.a */,
 			);
 			name = Products;
@@ -189,24 +135,6 @@
 			productReference = 9846F0301DAD1507004B801C /* libReactNativeNettskjema.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		988467ED1DA67C3500E2D1CB /* dummytestingapp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 988467FD1DA67C3500E2D1CB /* Build configuration list for PBXNativeTarget "dummytestingapp" */;
-			buildPhases = (
-				988467EA1DA67C3500E2D1CB /* Sources */,
-				988467EB1DA67C3500E2D1CB /* Frameworks */,
-				988467EC1DA67C3500E2D1CB /* Resources */,
-				988468071DA67CC000E2D1CB /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = dummytestingapp;
-			productName = dummytestingapp;
-			productReference = 988467EE1DA67C3500E2D1CB /* dummytestingapp.app */;
-			productType = "com.apple.product-type.application";
-		};
 		98E2402A1D9E52B5000EDED2 /* MobileNettskjemaTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98E240391D9E52B5000EDED2 /* Build configuration list for PBXNativeTarget "MobileNettskjemaTests" */;
@@ -218,7 +146,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				988468021DA67C5300E2D1CB /* PBXTargetDependency */,
 			);
 			name = MobileNettskjemaTests;
 			productName = ReactNativeNettskjemaTests;
@@ -239,16 +166,6 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = L6H6YNBUBK;
 						ProvisioningStyle = Automatic;
-					};
-					988467ED1DA67C3500E2D1CB = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = L6H6YNBUBK;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Keychain = {
-								enabled = 1;
-							};
-						};
 					};
 					98E2402A1D9E52B5000EDED2 = {
 						CreatedOnToolsVersion = 8.0;
@@ -272,23 +189,12 @@
 			projectRoot = "";
 			targets = (
 				98E2402A1D9E52B5000EDED2 /* MobileNettskjemaTests */,
-				988467ED1DA67C3500E2D1CB /* dummytestingapp */,
 				9846F02F1DAD1507004B801C /* ReactNativeNettskjema */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		988467EC1DA67C3500E2D1CB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				988467FB1DA67C3500E2D1CB /* LaunchScreen.storyboard in Resources */,
-				988467F81DA67C3500E2D1CB /* Assets.xcassets in Resources */,
-				988467F61DA67C3500E2D1CB /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		98E240291D9E52B5000EDED2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,26 +203,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		988468071DA67CC000E2D1CB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/Reachability.framework",
-				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/CryptoSwift.framework",
-				"$(SRCROOT)/../../../../ios/Carthage/Build/iOS/KeychainSwift.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9846F02C1DAD1507004B801C /* Sources */ = {
@@ -328,15 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		988467EA1DA67C3500E2D1CB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				988467F31DA67C3500E2D1CB /* ViewController.swift in Sources */,
-				988467F11DA67C3500E2D1CB /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		98E240271D9E52B5000EDED2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,33 +222,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		988468021DA67C5300E2D1CB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 988467ED1DA67C3500E2D1CB /* dummytestingapp */;
-			targetProxy = 988468011DA67C5300E2D1CB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		988467F41DA67C3500E2D1CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				988467F51DA67C3500E2D1CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		988467F91DA67C3500E2D1CB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				988467FA1DA67C3500E2D1CB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9846F0371DAD1507004B801C /* Debug */ = {
@@ -414,42 +264,6 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		988467FE1DA67C3500E2D1CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = dummytestingapp/dummytestingapp.entitlements;
-				DEVELOPMENT_TEAM = L6H6YNBUBK;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = dummytestingapp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.dummytestingapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
-			};
-			name = Debug;
-		};
-		988467FF1DA67C3500E2D1CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = dummytestingapp/dummytestingapp.entitlements;
-				DEVELOPMENT_TEAM = L6H6YNBUBK;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = dummytestingapp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.dummytestingapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -557,7 +371,6 @@
 		98E2403A1D9E52B5000EDED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L6H6YNBUBK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -568,14 +381,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.ReactNativeNettskjemaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dummytestingapp.app/dummytestingapp";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
 		98E2403B1D9E52B5000EDED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L6H6YNBUBK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.uio.mobileapps.ReactNativeNettskjemaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dummytestingapp.app/dummytestingapp";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
@@ -598,15 +410,6 @@
 			buildConfigurations = (
 				9846F0371DAD1507004B801C /* Debug */,
 				9846F0381DAD1507004B801C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		988467FD1DA67C3500E2D1CB /* Build configuration list for PBXNativeTarget "dummytestingapp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				988467FE1DA67C3500E2D1CB /* Debug */,
-				988467FF1DA67C3500E2D1CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

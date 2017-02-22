@@ -16,3 +16,5 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+
+npm-debug.log

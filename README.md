@@ -12,7 +12,6 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 ### Install the MobileNettskjemaIOS support library
 * Add the following to the `Cartfile` of your project: `git "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema-ios.git"`
 * Run Carthage and add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
-n
 
 ### Install the React Native module
 * `open node_modules/mobile-nettskjema/ios/MobileNettskjema/`. This opens a Finder window.

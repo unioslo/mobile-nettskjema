@@ -12,9 +12,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-        LibraryCacheStorageDirectory *directory = [[LibraryCacheStorageDirectory alloc] init];
         JSEventSink *eventSink = [[JSEventSink alloc] initWithEmitter:&*self];
-        mobileNettskjema = [[MobileNettskjema alloc] initWithStorageDirectory:directory eventSink:eventSink];
+        mobileNettskjema = [[ProductionMobileNettskjema alloc] initWithEventSink:eventSink];
     }
     return self;
 }
@@ -29,7 +28,7 @@ RCT_EXPORT_MODULE();
 RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     NSError *error;
-    BOOL success = [mobileNettskjema addToSubmissionQueue:submission error:&error onFirstProcessingComplete:^{ }];
+    BOOL success = [mobileNettskjema addToSubmissionQueue:submission error:&error onComplete: ^void (NSString *_) { } onFailure: ^void (NSString *_) { }];
     if (!success) {
         reject(@"add_to_queue_failed", @"Adding submission to queue failed", error);
     } else {
@@ -51,7 +50,7 @@ RCT_EXPORT_METHOD(clearTemporaryFiles:(RCTPromiseResolveBlock)resolve rejecter:(
 RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     NSError *error;
-    BOOL success = [mobileNettskjema forceRetryAllSubmissionsAndReturnError:&error :^{ }];
+    BOOL success = [mobileNettskjema forceRetryAllSubmissionsAndReturnError:&error onComplete: ^void (NSString *_) { } onFailure: ^void (NSString *_) { }];
     if (!success) {
         reject(@"force_retry_failed", @"Force retry all submissions failed", error);
     } else {

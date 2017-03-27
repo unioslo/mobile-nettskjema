@@ -27,35 +27,34 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSError *error;
-    BOOL success = [mobileNettskjema addToSubmissionQueue:submission error:&error onComplete: ^void (NSString *_) { } onFailure: ^void (NSString *_) { }];
-    if (!success) {
-        reject(@"add_to_queue_failed", @"Adding submission to queue failed", error);
-    } else {
-        resolve(nil);
-    }
+    [mobileNettskjema
+     addToSubmissionQueue:submission
+     onComplete: ^void (NSString *submission) {
+         resolve(submission);
+     }
+     onFailure: ^void (NSString *reason) {
+        reject(@"add_to_queue_failed", reason, nil);
+     }];
 }
 
 RCT_EXPORT_METHOD(clearTemporaryFiles:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSError *error;
-    BOOL success = [mobileNettskjema clearTemporaryFilesAndReturnError:&error];
-    if (!success) {
-        reject(@"clear_temporary_files_failed", @"Clear temporary files failed", error);
-    } else {
+    [mobileNettskjema clearTemporaryFilesOnComplete:^(void) {
         resolve(nil);
-    }
+    } onFailure: ^void (NSString *reason) {
+        reject(@"clear_temporary_files_failed", reason, nil);
+    }];
 }
 
 RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSError *error;
-    BOOL success = [mobileNettskjema forceRetryAllSubmissionsAndReturnError:&error onComplete: ^void (NSString *_) { } onFailure: ^void (NSString *_) { }];
-    if (!success) {
-        reject(@"force_retry_failed", @"Force retry all submissions failed", error);
-    } else {
-        resolve(nil);
-    }
+    [mobileNettskjema
+     forceRetryAllSubmissionsOnComplete:^void (NSArray<NSString *> *results) {
+         resolve(results);
+     }
+     onFailure:^void (NSString *reason) {
+         reject(@"force_retry_failed", reason, nil);
+     }];
 }
 
 
@@ -67,13 +66,11 @@ RCT_EXPORT_METHOD(setAutoSubmissionsPreference:(NSString *)value resolver:(RCTPr
 
 RCT_EXPORT_METHOD(stateOfSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
-    NSError *error;
-    NSArray *result = [mobileNettskjema submissionStateStringsAndReturnError:&error];
-    if (result == nil) {
-        reject(@"state_of_submissions_failed", @"Getting submission states failed", error);
-    } else {
-        resolve(result);
-    }
+    [mobileNettskjema submissionStateStringsOnComplete:^void (NSArray<NSString *> *results) {
+        resolve(results);
+    } onFailure: ^void (NSString *reason) {
+        reject(@"state_of_submissions_failed", reason, nil);
+    }];
 }
 
 @end

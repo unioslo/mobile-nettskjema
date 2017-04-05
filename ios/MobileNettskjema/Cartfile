@@ -1,1 +1,1 @@
-git "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema-ios.git" "error-handling-with-callbacks"
+git "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema-ios.git" >= 1.2

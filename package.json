@@ -1,6 +1,6 @@
 {
   "name": "mobile-nettskjema",
-  "version": "1.1.2",
+  "version": "2.1",
   "description": "Cross-platform library for posting submissions to Nettskjema from mobile apps, with optional React Native support",
   "repository": {
     "type": "git",

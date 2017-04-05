@@ -2,8 +2,8 @@
 
 In the project root folder (not the `ios` or `android` folder), run
 
-* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.0.2` or
-`npm i --save git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.0.2`
+* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.1.0` or
+`npm i --save git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.1.0`
 
 ## iOS specific steps
 

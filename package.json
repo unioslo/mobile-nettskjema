@@ -6,6 +6,7 @@
     "type": "git",
     "url": "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git"
   },
+  "main": "mobileNettskjema.js",
   "keywords": [
     "nettskjema"
   ],

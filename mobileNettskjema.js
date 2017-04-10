@@ -1,5 +1,8 @@
-import { NativeModules } from 'react-native'
+import { NativeEventEmitter, NativeModules } from 'react-native'
 const { RNNettskjema } = NativeModules
+import formSpec from './common/formSpecification'
+import getFormInfo from './common/formInfo'
+import submissionCreator from './common/submissionCreator'
 
 export async function addToSubmissionQueue(submission) {
   return await RNNettskjema.addToSubmissionQueue(submission)
@@ -24,4 +27,24 @@ export async function setAutoSubmissionsPreference(preference) {
 
 export async function stateOfSubmissions() {
   return await RNNettskjema.stateOfSubmissions()
+}
+
+export async function formSpecification(formId) {
+  return formSpec(await getFormInfo(formId))
+}
+
+export function createSubmission(spec, data) {
+  return submissionCreator(spec)(data)
+}
+
+export const eventEmitter = new NativeEventEmitter(RNNettskjema)
+
+export default {
+  addToSubmissionQueue,
+  clearTemporaryFiles,
+  forceRetryAllSubmissions,
+  setAutoSubmissionsPreference,
+  stateOfSubmissions,
+  formSpecification,
+  createSubmission,
 }

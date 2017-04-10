@@ -2,8 +2,7 @@
 
 In the project root folder (not the `ios` or `android` folder), run
 
-* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.1.0` or
-`npm i --save git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.1.0`
+* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.1.0`
 
 ## iOS specific steps
 
@@ -15,6 +14,7 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 
 ### Install the React Native module
 * `open node_modules/mobile-nettskjema/ios/MobileNettskjema/`. This opens a Finder window.
+* Drag `MobileNettskjema.xcodeproj` to the Libraries group in the Xcode project.
 * Add `libReactNativeNettskjema.a` to *Linked Frameworks and Libraries* in the Xcode build target settings for your project.
 
 ### Allow connections to Nettskjema

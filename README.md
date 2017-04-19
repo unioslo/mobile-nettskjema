@@ -2,7 +2,7 @@
 
 In the project root folder (not the `ios` or `android` folder), run
 
-* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.1.0`
+* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.2.0`
 
 ## iOS specific steps
 
@@ -31,38 +31,34 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 ## React Native example usage
 
 ```
-import { NativeModules } from 'react-native'
-const { RNNettskjema } = NativeModules
+import Nettskjema from 'mobile-nettskjema'
+
 
 async function deliverTestData() {
-  const submission = {
-    form: { id: 75319 },
-    fields: [
-      {
-        type: "text",
-        questionId: 577795,
-        answer: 'Hello from React Native',
-      },
-      {
-        type: "radio",
-        questionId: 577800,
-        selectedOptionId: 1226117,
-      },
-      {
-        type: "multipleChoice",
-        questionId: 577801,
-        selectedOptionId: 1226127,
-      },
-      {
-        type: "multipleChoice",
-        questionId: 577801,
-        selectedOptionId: 1226128,
-      },
-    ],
+  try {
+    const spec = await Nettskjema.formSpecification('mytestform')
+  } catch(e) {
+    console.log(e)
+    return
+  }
+  try {
+    const submission = Nettskjema.createSubmission(spec, {
+      'codebook-value-of-text-field': 'Some text',
+      'codebook-value-of-radio-field': 'codebook-value-of-selected-radio',
+      'codebook-value-of-multichoice-field': ['codebook-value-of-selected-box-1', 'codebook-value-of-selected-box-2'],
+      'codebook-value-of-attachment-field': {
+          'filePath': '/path/to/file/on/device',
+          'mimeType': 'text/txt',
+       }
+    }
+  } catch(e) {
+    // createSubmission will throw if the data object does not correspond to the specification, hopefully with a helpful error message
+    console.log(e)
+    return
   }
 
-  await RNNettskjema.setAutoSubmissionsPreference("ALWAYS") // or "NEVER" or "ONLY_WITH_WIFI"
-  await RNNettskjema.addToSubmissionQueue(submission)
+  await Nettskjema.setAutoSubmissionsPreference("ALWAYS") // or "NEVER" or "ONLY_WITH_WIFI"
+  await Nettskjema.addToSubmissionQueue(submission)
 }
 
 ```

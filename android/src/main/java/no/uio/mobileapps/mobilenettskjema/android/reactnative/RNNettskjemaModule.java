@@ -72,6 +72,7 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         } catch (MobileNettskjemaException e) {
             promise.reject(e);
         }
+        promise.resolve(null);
     }
 
     @ReactMethod

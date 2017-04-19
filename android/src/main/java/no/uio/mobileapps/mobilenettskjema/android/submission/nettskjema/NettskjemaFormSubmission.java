@@ -16,8 +16,6 @@
  */
 package no.uio.mobileapps.mobilenettskjema.android.submission.nettskjema;
 
-import android.util.Log;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,11 +24,11 @@ import java.io.IOException;
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjemaException;
 import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.CsrfRequestFactory;
 import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.CsrfTokenFactory;
-import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.MultipartRequestField;
+import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.FilledInForm;
 import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.FormSubmission;
 import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.FormSubmissionStatus;
 import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.FormSubmissionStatusCode;
-import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.FilledInForm;
+import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.MultipartRequestField;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
 
@@ -56,15 +54,11 @@ class NettskjemaFormSubmission implements FormSubmission {
             MultipartRequestField csrfToken = csrfTokenFactory.newCsrfToken(csrfResponse.body().string());
 
             Response response = client.newCall(filledInForm.postRequest(csrfToken)).execute();
-            this.responseString = removeTextAreaTag(response.body().string());
+            this.responseString = response.body().string();
         } catch (IOException e) {
             throw new MobileNettskjemaException(e);
         }
 
-    }
-
-    private static String removeTextAreaTag(String completeStringResponse) {
-        return completeStringResponse.substring(10, completeStringResponse.length() - 11);
     }
 
     @Override

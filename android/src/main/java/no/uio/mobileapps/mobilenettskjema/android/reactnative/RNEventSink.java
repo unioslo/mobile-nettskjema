@@ -16,10 +16,7 @@
  */
 package no.uio.mobileapps.mobilenettskjema.android.reactnative;
 
-import android.support.annotation.NonNull;
-
 import com.facebook.react.bridge.ReactContext;
-import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.Event;
@@ -27,11 +24,9 @@ import no.uio.mobileapps.mobilenettskjema.interfaces.EventSink;
 
 class RNEventSink implements EventSink {
 
-    private final String prefix;
     private final ReactContext reactContext;
 
-    RNEventSink(ReactContextBaseJavaModule module, ReactContext reactContext) {
-        this.prefix = module.getName();
+    RNEventSink(ReactContext reactContext) {
         this.reactContext = reactContext;
     }
 
@@ -39,11 +34,7 @@ class RNEventSink implements EventSink {
     public void put(Event event) {
         reactContext
                 .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                .emit(emittedEventName(event), null);
+                .emit(event.name(), null);
     }
 
-    @NonNull
-    private String emittedEventName(Event event) {
-        return prefix + ":" + event.name();
-    }
 }

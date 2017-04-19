@@ -46,7 +46,7 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
                     }
                 },
                 reactContext,
-                new RNEventSink(this, reactContext)
+                new RNEventSink(reactContext)
         );
     }
 

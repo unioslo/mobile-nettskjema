@@ -56,7 +56,7 @@ class NettskjemaFormSubmission implements FormSubmission {
             Response response = client.newCall(filledInForm.postRequest(csrfToken)).execute();
             this.responseString = response.body().string();
         } catch (IOException e) {
-            throw new MobileNettskjemaException(e);
+            this.responseString = null;
         }
 
     }

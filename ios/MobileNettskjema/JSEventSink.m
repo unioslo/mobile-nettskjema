@@ -8,7 +8,7 @@
     self->emitter = rctEmitter;
     return self;
 }
--(void)put:(id<Event>)event {
+-(void)putWithEvent:(id<Event>)event {
     [emitter sendEventWithName:event.name body:event.data];
 }
 @end

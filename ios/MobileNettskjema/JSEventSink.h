@@ -6,5 +6,5 @@
     RCTEventEmitter *emitter;
 }
 - (id)initWithEmitter:(RCTEventEmitter*)emitter;
-- (void)put:(id<Event>)event;
+- (void)putWithEvent:(id<Event>)event;
 @end

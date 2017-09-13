@@ -1,5 +1,5 @@
 @import MobileNettskjemaIOS;
-#import "RCTEventEmitter.h"
+#import <React/RCTEventEmitter.h>
 
 
 @interface JSEventSink: NSObject <EventSink> {

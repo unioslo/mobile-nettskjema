@@ -1,5 +1,5 @@
-#import <React/RCTBridgeModule.h>
-#import <React/RCTEventEmitter.h>
+#import "RNNettskjema.h"
+#import "JSEventSink.h"
 @import MobileNettskjemaIOS;
 
 

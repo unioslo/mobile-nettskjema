@@ -35,14 +35,17 @@ import Nettskjema from 'mobile-nettskjema'
 
 
 async function deliverTestData() {
+  let spec
+  let submission
+
   try {
-    const spec = await Nettskjema.formSpecification('mytestform')
+    spec = await Nettskjema.formSpecification('mytestform')
   } catch(e) {
     console.log(e)
     return
   }
   try {
-    const submission = Nettskjema.createSubmission(spec, {
+    submission = Nettskjema.createSubmission(spec, {
       'codebook-value-of-text-field': 'Some text',
       'codebook-value-of-radio-field': 'codebook-value-of-selected-radio',
       'codebook-value-of-multichoice-field': ['codebook-value-of-selected-box-1', 'codebook-value-of-selected-box-2'],

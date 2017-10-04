@@ -50,7 +50,7 @@ async function deliverTestData() {
           'filePath': '/path/to/file/on/device',
           'mimeType': 'text/txt',
        }
-    }
+    })
   } catch(e) {
     // createSubmission will throw if the data object does not correspond to the specification, hopefully with a helpful error message
     console.log(e)

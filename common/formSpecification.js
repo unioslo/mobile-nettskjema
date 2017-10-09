@@ -1,8 +1,12 @@
 const fieldTypes = {
   'ATTACHMENT': 'upload',
   'CHECKBOX': 'multipleChoice',
+  'MATRIX_CHECKBOX': 'multipleChoice',
   'RADIO': 'radio',
+  'MATRIX_RADIO': 'radio',
+  'SELECT': 'radio',
   'QUESTION': 'text',
+  'QUESTION_MULTILINE': 'text',
 }
 
 function formSpec(answerJson) {

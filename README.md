@@ -2,7 +2,24 @@
 
 In the project root folder (not the `ios` or `android` folder), run
 
-* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.2.0`
+* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.4.3`
+* `react-native link`
+
+## Android specific steps
+
+* In the file `MainApplication.java`, change this import
+`no.uio.mobileapps.mobilenettskjema.android.RNNettskjemaPackage` to
+`no.uio.mobileapps.mobilenettskjema.android.reactnative.RNNettskjemaPackage`
+* Add this inside the `Application` tag in `AndroidManifest.xml`:
+
+```
+<!-- Mobile nettskjema -->
+<service
+    android:name="no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.queueing.QueueService"
+    android:enabled="true"
+    android:exported="false"
+    android:label="Queue Service" />
+```
 
 ## iOS specific steps
 
@@ -10,12 +27,10 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 
 ### Install the MobileNettskjemaIOS support library
 * Add the following to the `Cartfile` of your project: `git "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema-ios.git"`
-* Run Carthage and add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
+* Run Carthage (`carthage update --platform ios`) and add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) (step 3 and onwards)
 
-### Install the React Native module
-* `open node_modules/mobile-nettskjema/ios/MobileNettskjema/`. This opens a Finder window.
-* Drag `MobileNettskjema.xcodeproj` to the Libraries group in the Xcode project.
-* Add `libReactNativeNettskjema.a` to *Linked Frameworks and Libraries* in the Xcode build target settings for your project.
+### Embed standard swift libraries
+* In Xcode, go to `Build settings` and search for `Always Embed Swift Standard Libraries` and make sure this is set to `Yes`
 
 ### Allow connections to Nettskjema
 * Add the following inside the `dict` tag of `NSExceptionDomains` in your project's Info.plist file:

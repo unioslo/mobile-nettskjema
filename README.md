@@ -27,7 +27,7 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 
 ### Install the MobileNettskjemaIOS support library
 * Add the following to the `Cartfile` of your project: `git "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema-ios.git"`
-* Run Carthage (`carthage update --platform ios`) and add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) (step 3 and onwards)
+* Run Carthage (from the ios-folder: `carthage update --platform ios`) and add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) (step 3 and onwards)
 
 ### Embed standard swift libraries
 * In Xcode, go to `Build settings` and search for `Always Embed Swift Standard Libraries` and make sure this is set to `Yes`

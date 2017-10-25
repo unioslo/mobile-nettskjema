@@ -7,9 +7,6 @@ In the project root folder (not the `ios` or `android` folder), run
 
 ## Android specific steps
 
-* In the file `MainApplication.java`, change this import
-`no.uio.mobileapps.mobilenettskjema.android.RNNettskjemaPackage` to
-`no.uio.mobileapps.mobilenettskjema.android.reactnative.RNNettskjemaPackage`
 * Add this inside the `Application` tag in `AndroidManifest.xml`:
 
 ```

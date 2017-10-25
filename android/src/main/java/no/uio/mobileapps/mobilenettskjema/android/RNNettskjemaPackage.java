@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License along with "UiO Software Information Inventory". If
  * not, see <http://www.gnu.org/licenses/>
  */
-package no.uio.mobileapps.mobilenettskjema.android.reactnative;
+package no.uio.mobileapps.mobilenettskjema.android;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
@@ -24,6 +24,8 @@ import com.facebook.react.uimanager.ViewManager;
 
 import java.util.Collections;
 import java.util.List;
+
+import no.uio.mobileapps.mobilenettskjema.android.reactnative.RNNettskjemaModule;
 
 public class RNNettskjemaPackage implements ReactPackage {
 

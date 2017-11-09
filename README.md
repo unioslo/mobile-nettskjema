@@ -2,7 +2,7 @@
 
 In the project root folder (not the `ios` or `android` folder), run
 
-* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#2.4.3`
+* `yarn add git+ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema.git#3.0.0`
 * `react-native link`
 
 ## Android specific steps

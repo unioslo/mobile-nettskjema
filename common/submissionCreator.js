@@ -3,7 +3,7 @@ function submissionCreator(spec) {
   return (fieldNameValueMap={}) => {
     for (const providedFieldName of Object.keys(fieldNameValueMap)) {
       if (spec.fields.find(field => field.name === providedFieldName) == null) {
-        throw `Provided field '${providedFieldName}' does not exist in form specification`
+        throw new Error(`Provided field '${providedFieldName}' does not exist in form specification`)
       }
     }
 
@@ -13,7 +13,7 @@ function submissionCreator(spec) {
       const { type, questionId, name, required } = specField
       const value = fieldNameValueMap[name]
       if ((value == null || value === "") && required) {
-        throw `Value not provided for field of type '${type}' named '${name}'`
+        throw new Error(`Value not provided for field of type '${type}' named '${name}'`)
       }
       const basicFieldValues = {
         type: type,
@@ -22,7 +22,7 @@ function submissionCreator(spec) {
       if (type === "text"){
         const valueType = typeof value
         if (value != null && valueType !== "string") {
-          throw `Value for text field must be of a string, instead got an instance of '${valueType}'`
+          throw new Error(`Value for text field must be of a string, instead got an instance of '${valueType}'`)
         }
         if (value != null) {
           addFields = [{
@@ -35,10 +35,10 @@ function submissionCreator(spec) {
         if (value != null) {
           const { filePath, mimeType } = value
           if (filePath == null || typeof filePath !== "string") {
-            throw `'filepath' (string) must be provided for attachment`
+            throw new Error(`'filepath' (string) must be provided for attachment`)
           }
           if (mimeType == null || typeof mimeType !== "string") {
-            throw `'mimeType' (string) must be provided for attachment`
+            throw new Error(`'mimeType' (string) must be provided for attachment`)
           }
           addFields = [{
             ...basicFieldValues,
@@ -52,7 +52,7 @@ function submissionCreator(spec) {
         if (optionName != null) {
           const selectedOption = specField.options.find(opt => opt.name === optionName)
           if (selectedOption == null) {
-            throw `Selected option must be one of [${specField.options.map(opt=>`'${opt.name}'`).toString()}], instead got '${optionName}'`
+            throw new Error(`Selected option must be one of [${specField.options.map(opt=>`'${opt.name}'`).toString()}], instead got '${optionName}'`)
           }
           addFields = [{
             ...basicFieldValues,
@@ -64,11 +64,11 @@ function submissionCreator(spec) {
         const optionNames = value
         if (optionNames != null) {
           if (!Array.isArray(optionNames)) {
-            throw `Selected options for multiple choice field '${name}' must be provided in an array, instead got an instance of ${typeof optionNames}`
+            throw new Error(`Selected options for multiple choice field '${name}' must be provided in an array, instead got an instance of ${typeof optionNames}`)
           }
           for (const selectedOption of optionNames) {
             if (specField.options.find(opt=>opt.name === selectedOption) == null) {
-              throw `Selected option must be one of [${specField.options.map(opt=>`'${opt.name}'`).toString()}], instead got '${selectedOption}'`
+              throw new Error(`Selected option must be one of [${specField.options.map(opt=>`'${opt.name}'`).toString()}], instead got '${selectedOption}'`)
             }
           }
           const selectedOptions = specField.options.filter(opt => optionNames.indexOf(opt.name) !== -1)
@@ -79,7 +79,7 @@ function submissionCreator(spec) {
         }
       }
       else {
-        throw `Unknown type of field '${name}' in spec: '${type}'`
+        throw new Error(`Unknown type of field '${name}' in spec: '${type}'`)
       }
 
       fields = [...fields, ...addFields]

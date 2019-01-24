@@ -72,6 +72,11 @@ class DecryptedSubmission implements SubmissionState {
     }
 
     @Override
+    public String getSubmissionMetaData() {
+        return null;
+    }
+
+    @Override
     public void bundleWithIntent(Intent intent) {
         classIdentifier.bundleWithIntent(intent);
         submissionFile.bundleWithIntent(intent);

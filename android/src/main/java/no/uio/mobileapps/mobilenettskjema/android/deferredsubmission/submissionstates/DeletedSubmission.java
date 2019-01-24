@@ -61,6 +61,11 @@ class DeletedSubmission implements SubmissionState {
         return false;
     }
 
+    @Override
+    public String getSubmissionMetaData() {
+        return null;
+    }
+
 
     @Override
     public void bundleWithIntent(Intent intent) {

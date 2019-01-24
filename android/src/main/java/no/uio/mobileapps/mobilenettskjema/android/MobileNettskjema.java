@@ -25,10 +25,15 @@ import com.facebook.react.bridge.ReadableMap;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
+import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.filemanagement.MetaDataFile;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.filemanagement.TemporaryFile;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.Event;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.StorageDirectory;
@@ -58,6 +63,15 @@ public class MobileNettskjema {
         this.storageDirectory = storageDirectory;
         this.context = context;
         this.eventSink = eventSink;
+    }
+
+    public void addToSubmissionQueueWithMetaData(ReadableMap submission, String metaData) throws MobileNettskjemaException {
+        new NettskjemaQueueableFormSubmission(
+                new RNFilledInForm(submission).field(),
+                this.storageDirectory,
+                context,
+                metaData
+        ).submit();
     }
 
     public void addToSubmissionQueue(ReadableMap submission) throws MobileNettskjemaException {
@@ -96,13 +110,32 @@ public class MobileNettskjema {
         sharedPreferences.edit().putString(context.getString(R.string.auto_upload_setting_key), value.toString()).apply();
     }
 
-    public Iterable<SubmissionState> submissionStates() throws MobileNettskjemaException {
+    public Iterable<SubmissionState> submissionStates() throws MobileNettskjemaException, IOException {
         List<SubmissionState> output = new LinkedList<>();
         for (File file: filesInStorageDirectory()) {
-            SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(null);
-            if (submissionState.indicatesSemiPermanentStorageOnDevice()) output.add(submissionState);
+
+            String metaData = null;
+            MetaDataFile mdf = new MetaDataFile(file);
+            if (mdf.metaDataExcists()) {
+                metaData = mdf.readMetaData();
+            }
+
+            SubmissionState submissionState = new SubmissionStateFromFile(file, metaData).withDecision(null);
+            if (submissionState.indicatesSemiPermanentStorageOnDevice()) {
+                output.add(submissionState);
+            }
         }
         return output;
+    }
+
+    public void deleteAllSubmittedRecordings() throws  MobileNettskjemaException {
+        for (File file : filesInStorageDirectory()) {
+            /* TODO: Only delete if matadata is marked as delivered */
+            SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(null);
+            if (submissionState.indicatesSemiPermanentStorageOnDevice()) {
+                /* TODO: Delete file */
+            }
+        }
     }
 
     public void clearTemporaryFiles() throws MobileNettskjemaException {

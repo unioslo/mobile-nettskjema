@@ -69,8 +69,16 @@ public class SubmittedSubmission implements SubmissionState {
 
     @Override
     public SubmissionState next(Context context) throws MobileNettskjemaException {
+        /* update metadata file? */
+        if (submissionFile.isMarked(SubmissionFileState.SUBMITTED)) {
+            return new EncryptedSubmission(submissionFile, submissionDecision, 1);
+        } else {
+            return new EncryptedSubmission(submissionFile, submissionDecision, 2);
+        }
+        /*
         if (submissionFile.isMarked(SubmissionFileState.SUBMITTED)) return new DeletedSubmission(submissionFile);
-        else return new EncryptedSubmission(submissionFile, submissionDecision);
+        else return new EncryptedSubmission(submissionFile, submissionDecision, "SubmissionState next");
+        */
     }
 
     @Override
@@ -81,6 +89,11 @@ public class SubmittedSubmission implements SubmissionState {
     @Override
     public boolean indicatesSemiPermanentStorageOnDevice() {
         return false;
+    }
+
+    @Override
+    public String getSubmissionMetaData() {
+        return null;
     }
 
     private FormSubmissionStatus postSubmission() throws MobileNettskjemaException {

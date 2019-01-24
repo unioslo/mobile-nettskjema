@@ -65,6 +65,17 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         promise.resolve(null);
     }
 
+
+    @ReactMethod
+    public void addToSubmissionQueueWithMetaData(ReadableMap submission, String metaData, Promise promise) {
+        try {
+            mobileNettskjema.addToSubmissionQueueWithMetaData(submission, metaData);
+        } catch (MobileNettskjemaException e) {
+            promise.reject(e);
+        }
+        promise.resolve(null);
+    }
+
     @ReactMethod
     public void forceRetryAllSubmissions(Promise promise) {
         try {
@@ -86,7 +97,7 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         WritableArray output = new WritableNativeArray();
         try {
             for (SubmissionState submissionState: mobileNettskjema.submissionStates()) {
-                output.pushString(submissionState.getClass().getSimpleName());
+                output.pushString(submissionState.getClass().getSimpleName() + ": " + submissionState.getSubmissionMetaData());
             }
         } catch (MobileNettskjemaException e) {
             promise.reject(e);

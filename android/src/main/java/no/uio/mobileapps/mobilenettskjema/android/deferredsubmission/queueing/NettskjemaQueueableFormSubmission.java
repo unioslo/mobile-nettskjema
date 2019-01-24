@@ -19,6 +19,12 @@ package no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.queueing;
 import android.content.Context;
 import android.content.Intent;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.UUID;
 
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjemaException;
@@ -36,6 +42,7 @@ public class NettskjemaQueueableFormSubmission {
     private final FilledInForm filledInForm;
     private final Context context;
     private final StorageDirectory storageDirectory;
+    private String metaData;
 
     public NettskjemaQueueableFormSubmission(FilledInForm filledInForm, StorageDirectory storageDirectory, Context context) {
         this.filledInForm = filledInForm;
@@ -43,10 +50,35 @@ public class NettskjemaQueueableFormSubmission {
         this.context = context;
     }
 
+    public NettskjemaQueueableFormSubmission(FilledInForm filledInForm, StorageDirectory storageDirectory, Context context, String metaData) {
+        this.filledInForm = filledInForm;
+        this.storageDirectory = storageDirectory;
+        this.context = context;
+        this.metaData = metaData;
+    }
+
     public void submit() throws MobileNettskjemaException {
-        JsonFile jsonFile = new JsonFile(storageDirectory.fileNamed(UUID.randomUUID().toString()));
+        String filename = UUID.randomUUID().toString();
+        JsonFile jsonFile = new JsonFile(storageDirectory.fileNamed(filename));
         jsonFile.store(filledInForm);
-        SubmissionFile submissionFile = new SubmissionFile(jsonFile);
+        File metadata = storageDirectory.fileNamed(filename + ".metadata");
+        PrintWriter printWriter = null;
+        try {
+            printWriter = new PrintWriter(metadata);
+            printWriter.println(this.metaData);
+            printWriter.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+        SubmissionFile submissionFile;
+        if(metaData == null) {
+             submissionFile = new SubmissionFile(jsonFile);
+        } else {
+             submissionFile = new SubmissionFile(jsonFile, metaData);
+        }
+
         SubmissionState submission = new InitialSubmission(submissionFile, new SubmitIfConnectionIsSatisfactory());
         Intent intent = new Intent(context, QueueService.class);
         submission.bundleWithIntent(intent);

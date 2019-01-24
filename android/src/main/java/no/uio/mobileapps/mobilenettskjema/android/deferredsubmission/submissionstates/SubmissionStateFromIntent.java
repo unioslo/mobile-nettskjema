@@ -17,6 +17,8 @@
 package no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjemaException;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.SubmissionState;
@@ -35,6 +37,19 @@ public class SubmissionStateFromIntent {
     }
 
     public SubmissionState deserialized() throws MobileNettskjemaException {
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            for (String key : bundle.keySet()) {
+                Object value = bundle.get(key);
+                if(value != null) {
+                    Log.d("INTENT", String.format("%s %s (%s)", key,
+                            value.toString(), value.getClass().getName()));
+                } else {
+                    Log.d("INTENT", String.format("%s %s", key,
+                            value));
+                }
+            }
+        }
         if (className.matches(DecryptedSubmission.class)) return new DecryptedSubmission(intent);
         if (className.matches(EncryptedSubmission.class)) return new EncryptedSubmission(intent);
         if (className.matches(InitialSubmission.class)) return new InitialSubmission(intent);

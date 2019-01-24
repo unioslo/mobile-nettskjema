@@ -25,4 +25,6 @@ public interface SubmissionState extends IntentSerializable {
     SubmissionState next(Context context) throws MobileNettskjemaException;
     boolean isEndOfProcessing();
     boolean indicatesSemiPermanentStorageOnDevice();
+
+    String getSubmissionMetaData();
 }

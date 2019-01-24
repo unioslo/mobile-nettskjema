@@ -22,6 +22,8 @@ import android.content.Intent;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.greenrobot.eventbus.EventBus;
+import org.json.JSONObject;
+import org.json.JSONStringer;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,26 +42,44 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissions
 public class SubmissionFile implements IntentSerializable {
     private static final String PATH_INTENTKEY = InitialSubmission.class.getName() + ".filepath";
     private File file;
+    private File metadata;
+
+    private String metaData;
 
     public SubmissionFile(File file) {
         this.file = file;
     }
 
+    public SubmissionFile(File file, String metaData) {
+        this.file = file;
+        this.metaData = metaData;
+    }
+
     public SubmissionFile(Intent intent) throws MobileNettskjemaException {
-        this(new File(intent.getStringExtra(PATH_INTENTKEY)));
+        this(new File(intent.getStringExtra(PATH_INTENTKEY)), intent.getStringExtra("metadata"));
     }
 
     public SubmissionFile(JsonFile jsonFile) {
         this(jsonFile.storageFile());
     }
 
+    public SubmissionFile(JsonFile jsonFile, String metaData) {
+        this(jsonFile.storageFile(), metaData);
+    }
+
     @Override
     public void bundleWithIntent(Intent intent) {
         intent.putExtra(PATH_INTENTKEY, file.getAbsolutePath());
+        intent.putExtra("metadata", "metadata");
+    }
+
+    public String getMetaData() {
+        return metaData;
     }
 
     public void deleteStoredFile() throws MobileNettskjemaException {
         if (!file.delete()) throw new MobileNettskjemaException("Deleting file " + file.getAbsolutePath() + " failed");
+        if (!metadata.delete()) throw new MobileNettskjemaException("Deleting file " + metadata.getAbsolutePath() + " failed");
     }
 
     public String contents() throws MobileNettskjemaException {
@@ -82,6 +102,13 @@ public class SubmissionFile implements IntentSerializable {
         String identifier = submissionFileState.extension();
         File newFile = new File(FilenameUtils.removeExtension(file.getAbsolutePath()) + "." + identifier);
         if (!file.renameTo(newFile)) throw new MobileNettskjemaException("Renaming file " + file.getAbsolutePath() + " to " + newFile.getAbsolutePath() + "failed");
+        this.file = newFile;
+        EventBus.getDefault().post(new SubmissionStateChanged(submissionFileState));
+    }
+
+    public void updateMetaData(SubmissionFileState submissionFileState) throws MobileNettskjemaException {
+        File newFile = new File(FilenameUtils.removeExtension(file.getAbsolutePath()) + ".metadata");
+        /* TODO: add info about delivery in metadatafile */
         this.file = newFile;
         EventBus.getDefault().post(new SubmissionStateChanged(submissionFileState));
     }

@@ -35,19 +35,37 @@ public class EncryptedSubmission implements SubmissionState {
     private final SubmissionFile submissionFile;
     private final ClassIdentifier classIdentifier;
     private final SubmissionDecision submissionDecision;
+    private int deliveryStatus;
+    private String metaData;
+
+    public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision, int delivered) {
+        this.submissionFile = submissionFile;
+        this.classIdentifier = new ClassIdentifier(this);
+        this.submissionDecision = submissionDecision;
+        this.deliveryStatus = delivered;
+    }
+
+    public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision, String metaData) {
+        this.submissionFile = submissionFile;
+        this.classIdentifier = new ClassIdentifier(this);
+        this.submissionDecision = submissionDecision;
+        this.metaData = metaData;
+        this.deliveryStatus = 0;
+    }
 
     public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision) {
         this.submissionFile = submissionFile;
         this.classIdentifier = new ClassIdentifier(this);
         this.submissionDecision = submissionDecision;
+        this.deliveryStatus = 0;
     }
 
     EncryptedSubmission(Intent intent)  throws MobileNettskjemaException {
-        this(new SubmissionFile(intent), new SubmissionDecisionFromIntent(intent).deserialized());
+        this(new SubmissionFile(intent), new SubmissionDecisionFromIntent(intent).deserialized(), "intent");
     }
 
-    EncryptedSubmission(File file, SubmissionDecision submissionDecision) throws MobileNettskjemaException {
-        this(new SubmissionFile(file), submissionDecision);
+    EncryptedSubmission(File file, SubmissionDecision submissionDecision, String metaData) throws MobileNettskjemaException {
+        this(new SubmissionFile(file), submissionDecision, metaData);
     }
 
     @Override
@@ -58,7 +76,11 @@ public class EncryptedSubmission implements SubmissionState {
 
     @Override
     public SubmissionState next(Context context) throws MobileNettskjemaException {
-        return new DecryptedSubmission(submissionFile, submissionDecision);
+        if(/*TODO*/ true) {
+            return new DecryptedSubmission(submissionFile, submissionDecision);
+        } else {
+            return new DeletedSubmission(submissionFile);
+        }
     }
 
     @Override
@@ -71,6 +93,10 @@ public class EncryptedSubmission implements SubmissionState {
         return true;
     }
 
+    @Override
+    public String getSubmissionMetaData() {
+        return this.metaData;
+    }
 
     @Override
     public void bundleWithIntent(Intent intent) {

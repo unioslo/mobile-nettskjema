@@ -62,21 +62,19 @@ public class NettskjemaQueueableFormSubmission {
         JsonFile jsonFile = new JsonFile(storageDirectory.fileNamed(filename));
         jsonFile.store(filledInForm);
         File metadata = storageDirectory.fileNamed(filename + ".metadata");
-        PrintWriter printWriter = null;
         try {
-            printWriter = new PrintWriter(metadata);
+            PrintWriter printWriter = new PrintWriter(metadata);
             printWriter.println(this.metaData);
             printWriter.close();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            throw new MobileNettskjemaException(e);
         }
-
 
         SubmissionFile submissionFile;
         if(metaData == null) {
              submissionFile = new SubmissionFile(jsonFile);
         } else {
-             submissionFile = new SubmissionFile(jsonFile, metaData);
+             submissionFile = new SubmissionFile(jsonFile, metadata);
         }
 
         SubmissionState submission = new InitialSubmission(submissionFile, new SubmitIfConnectionIsSatisfactory());

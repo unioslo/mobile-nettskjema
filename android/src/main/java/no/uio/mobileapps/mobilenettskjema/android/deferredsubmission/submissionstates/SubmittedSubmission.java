@@ -36,6 +36,9 @@ import no.uio.mobileapps.mobilenettskjema.android.submission.nettskjema.Nettskje
 import no.uio.mobileapps.mobilenettskjema.android.submission.nettskjema
         .NettskjemaFormSubmissionFactory;
 
+import static no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.DeliveryStatus.DELIVERED;
+import static no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.DeliveryStatus.DELIVERY_FAILED;
+
 
 public class SubmittedSubmission implements SubmissionState {
 
@@ -71,9 +74,9 @@ public class SubmittedSubmission implements SubmissionState {
     public SubmissionState next(Context context) throws MobileNettskjemaException {
         /* update metadata file? */
         if (submissionFile.isMarked(SubmissionFileState.SUBMITTED)) {
-            return new EncryptedSubmission(submissionFile, submissionDecision, 1);
+            return new EncryptedSubmission(submissionFile, submissionDecision, DELIVERED);
         } else {
-            return new EncryptedSubmission(submissionFile, submissionDecision, 2);
+            return new EncryptedSubmission(submissionFile, submissionDecision, DELIVERY_FAILED);
         }
         /*
         if (submissionFile.isMarked(SubmissionFileState.SUBMITTED)) return new DeletedSubmission(submissionFile);

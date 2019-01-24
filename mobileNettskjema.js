@@ -15,6 +15,18 @@ export async function addToSubmissionQueueWithMetaData(submission, metaData) {
   );
 }
 
+export async function uploadFile(fileName) {
+  /* Todo: Upload a single (encrypted file) */
+}
+
+export async function deleteFile(fileName) {
+  /* Todo: Delete a single (encrypted) file */
+}
+
+export async function abortUpload() {
+  /* Todo: */
+}
+
 export async function clearTemporaryFiles() {
   return await RNNettskjema.clearTemporaryFiles();
 }

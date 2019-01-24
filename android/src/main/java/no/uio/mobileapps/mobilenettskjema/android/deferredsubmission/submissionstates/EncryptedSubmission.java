@@ -31,33 +31,34 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiond
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiondecisions
         .SubmissionDecisionFromIntent;
 
+import static no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.DeliveryStatus.NOT_DELIVERED;
+
 public class EncryptedSubmission implements SubmissionState {
+
     private final SubmissionFile submissionFile;
     private final ClassIdentifier classIdentifier;
     private final SubmissionDecision submissionDecision;
-    private int deliveryStatus;
-    private String metaData;
+    private DeliveryStatus deliveryStatus;
 
-    public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision, int delivered) {
+    public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision, DeliveryStatus deliveryStatus) {
         this.submissionFile = submissionFile;
         this.classIdentifier = new ClassIdentifier(this);
         this.submissionDecision = submissionDecision;
-        this.deliveryStatus = delivered;
+        this.deliveryStatus = deliveryStatus;
     }
 
     public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision, String metaData) {
         this.submissionFile = submissionFile;
         this.classIdentifier = new ClassIdentifier(this);
         this.submissionDecision = submissionDecision;
-        this.metaData = metaData;
-        this.deliveryStatus = 0;
+        this.deliveryStatus = NOT_DELIVERED;
     }
 
     public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision) {
         this.submissionFile = submissionFile;
         this.classIdentifier = new ClassIdentifier(this);
         this.submissionDecision = submissionDecision;
-        this.deliveryStatus = 0;
+        this.deliveryStatus = NOT_DELIVERED;
     }
 
     EncryptedSubmission(Intent intent)  throws MobileNettskjemaException {
@@ -66,6 +67,10 @@ public class EncryptedSubmission implements SubmissionState {
 
     EncryptedSubmission(File file, SubmissionDecision submissionDecision, String metaData) throws MobileNettskjemaException {
         this(new SubmissionFile(file), submissionDecision, metaData);
+    }
+
+    EncryptedSubmission(File file, SubmissionDecision submissionDecision, File metaDataFile) throws MobileNettskjemaException {
+        this(new SubmissionFile(file, metaDataFile), submissionDecision);
     }
 
     @Override
@@ -95,7 +100,12 @@ public class EncryptedSubmission implements SubmissionState {
 
     @Override
     public String getSubmissionMetaData() {
-        return this.metaData;
+        try {
+            return this.submissionFile.metaDataContents();
+        } catch (MobileNettskjemaException e) {
+            e.printStackTrace();
+        }
+        return "Error reading metadata";
     }
 
     @Override

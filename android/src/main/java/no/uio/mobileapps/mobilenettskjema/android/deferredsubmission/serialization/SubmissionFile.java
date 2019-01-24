@@ -41,8 +41,9 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissions
 
 public class SubmissionFile implements IntentSerializable {
     private static final String PATH_INTENTKEY = InitialSubmission.class.getName() + ".filepath";
+    private static final String PATH_METAKEY = InitialSubmission.class.getName() + "-metadata.filepath";
     private File file;
-    private File metadata;
+    private File metaDataFile;
 
     private String metaData;
 
@@ -50,36 +51,37 @@ public class SubmissionFile implements IntentSerializable {
         this.file = file;
     }
 
-    public SubmissionFile(File file, String metaData) {
+    public SubmissionFile(File file, File metadata) {
         this.file = file;
-        this.metaData = metaData;
+        this.metaDataFile = metadata;
+        try {
+            this.metaData = metaDataContents();
+        } catch (MobileNettskjemaException e) {
+            e.printStackTrace();
+        }
     }
 
     public SubmissionFile(Intent intent) throws MobileNettskjemaException {
-        this(new File(intent.getStringExtra(PATH_INTENTKEY)), intent.getStringExtra("metadata"));
+        this(new File(intent.getStringExtra(PATH_INTENTKEY)), new File(intent.getStringExtra(PATH_METAKEY)));
     }
 
     public SubmissionFile(JsonFile jsonFile) {
         this(jsonFile.storageFile());
     }
 
-    public SubmissionFile(JsonFile jsonFile, String metaData) {
-        this(jsonFile.storageFile(), metaData);
+    public SubmissionFile(JsonFile jsonFile, File metaDataFile) {
+        this(jsonFile.storageFile(), metaDataFile);
     }
 
     @Override
     public void bundleWithIntent(Intent intent) {
         intent.putExtra(PATH_INTENTKEY, file.getAbsolutePath());
-        intent.putExtra("metadata", "metadata");
-    }
-
-    public String getMetaData() {
-        return metaData;
+        intent.putExtra(PATH_METAKEY, metaDataFile == null ? "no metadata" : metaDataFile.getAbsolutePath() );
     }
 
     public void deleteStoredFile() throws MobileNettskjemaException {
         if (!file.delete()) throw new MobileNettskjemaException("Deleting file " + file.getAbsolutePath() + " failed");
-        if (!metadata.delete()) throw new MobileNettskjemaException("Deleting file " + metadata.getAbsolutePath() + " failed");
+        if (!metaDataFile.delete()) throw new MobileNettskjemaException("Deleting file " + metaDataFile.getAbsolutePath() + " failed");
     }
 
     public String contents() throws MobileNettskjemaException {
@@ -88,6 +90,17 @@ public class SubmissionFile implements IntentSerializable {
         } catch (IOException e) {
             throw new MobileNettskjemaException(e);
         }
+    }
+
+    public String metaDataContents() throws MobileNettskjemaException {
+        if(metaDataFile != null && metaDataFile.exists()) {
+            try {
+                return FileUtils.readFileToString(metaDataFile, "UTF-8");
+            } catch (IOException e) {
+                throw new MobileNettskjemaException(e);
+            }
+        }
+        return "no metadata";
     }
 
     public void encrypt(EncryptionMethod encryptionMethod) throws MobileNettskjemaException {

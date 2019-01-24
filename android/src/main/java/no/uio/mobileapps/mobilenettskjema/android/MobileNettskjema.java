@@ -95,7 +95,8 @@ public class MobileNettskjema {
 
         for (File file: filesInStorageDirectory()) {
             Intent intent = new Intent(context, QueueService.class);
-            SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(new AlwaysSubmit()).next(context);
+            File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
+            SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
             submissionState.bundleWithIntent(intent);
             context.startService(intent);
         }
@@ -113,14 +114,8 @@ public class MobileNettskjema {
     public Iterable<SubmissionState> submissionStates() throws MobileNettskjemaException, IOException {
         List<SubmissionState> output = new LinkedList<>();
         for (File file: filesInStorageDirectory()) {
-
-            String metaData = null;
-            MetaDataFile mdf = new MetaDataFile(file);
-            if (mdf.metaDataExcists()) {
-                metaData = mdf.readMetaData();
-            }
-
-            SubmissionState submissionState = new SubmissionStateFromFile(file, metaData).withDecision(null);
+            File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
+            SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(null);
             if (submissionState.indicatesSemiPermanentStorageOnDevice()) {
                 output.add(submissionState);
             }

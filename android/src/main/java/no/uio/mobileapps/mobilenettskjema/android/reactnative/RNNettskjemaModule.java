@@ -25,6 +25,7 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableNativeArray;
 
 import java.io.File;
+import java.io.IOException;
 
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjema;
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjemaException;
@@ -101,6 +102,8 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
             }
         } catch (MobileNettskjemaException e) {
             promise.reject(e);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         promise.resolve(output);
     }

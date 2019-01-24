@@ -28,22 +28,23 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiond
 public class SubmissionStateFromFile {
 
     private final File file;
-    private final String metaData;
+    private final File metaDataFile;
 
     public SubmissionStateFromFile(File file) {
         this.file = file;
-        metaData = null;
+        this.metaDataFile = null;
     }
-    public SubmissionStateFromFile(File file, String metaData) {
+
+    public SubmissionStateFromFile(File file, File metaDataFile) {
         this.file = file;
-        this.metaData = metaData;
+        this.metaDataFile = metaDataFile;
     }
 
 
     public SubmissionState withDecision(SubmissionDecision submissionDecision) throws MobileNettskjemaException {
         String extension = FilenameUtils.getExtension(file.getName());
         if (extension.equals(SubmissionFileState.DECRYPTED.extension())) return new DecryptedSubmission(file, submissionDecision);
-        if (extension.equals(SubmissionFileState.ENCRYPTED.extension())) return new EncryptedSubmission(file, submissionDecision, this.metaData);
+        if (extension.equals(SubmissionFileState.ENCRYPTED.extension())) return new EncryptedSubmission(file, submissionDecision, this.metaDataFile);
         if (extension.equals(SubmissionFileState.SUBMISSION_FAILED.extension())) return new SubmittedSubmission(file, submissionDecision);
         if (extension.equals(SubmissionFileState.SUBMITTED.extension())) return new SubmittedSubmission(file, submissionDecision);
         if (extension.equals(SubmissionFileState.UNENCRYPTED.extension())) return new InitialSubmission(file, submissionDecision);

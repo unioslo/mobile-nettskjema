@@ -16,11 +16,10 @@ public class MetaDataFile {
 
 
     public MetaDataFile(File submissionFile) {
-        this.submissionFileName = submissionFileName;
-        this.metaDataFileName = getMetaDataFileName(submissionFileName);
+        this.submissionFileName = submissionFile;
     }
 
-    private String getMetaDataFileName(File submissionFileName) {
+    public String getMetaDataFileName() {
         StringBuilder text = new StringBuilder();
         String filename = submissionFileName.getAbsolutePath();
         String[] tokens = filename.split("\\.(?=[^\\.]+$)");

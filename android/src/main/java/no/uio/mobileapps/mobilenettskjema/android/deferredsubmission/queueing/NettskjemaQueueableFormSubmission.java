@@ -25,6 +25,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.UUID;
 
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjemaException;
@@ -66,6 +67,7 @@ public class NettskjemaQueueableFormSubmission {
         try {
             JSONObject a = new JSONObject(this.metaData);
             a.put("id", filename);
+            a.put("dateCreated", new Date());
             this.metaData = a.toString();
         } catch (JSONException e) {
             e.printStackTrace();

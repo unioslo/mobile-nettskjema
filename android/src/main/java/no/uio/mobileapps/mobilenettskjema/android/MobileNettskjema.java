@@ -140,6 +140,10 @@ public class MobileNettskjema {
 
     }
 
+    public void deleteSubmissionsIfTooOld() throws MobileNettskjemaException {
+
+    }
+
     public void deleteAllSubmittedRecordings() throws  MobileNettskjemaException {
         for (File file : filesInStorageDirectory()) {
             /* TODO: Only delete if matadata is marked as delivered */

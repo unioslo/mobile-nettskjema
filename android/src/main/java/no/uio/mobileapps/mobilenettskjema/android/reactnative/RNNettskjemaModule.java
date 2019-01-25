@@ -67,7 +67,7 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void uploadFile(String id, Promise promise) {
+    public void uploadSubmission(String id, Promise promise) {
         try {
             mobileNettskjema.retryUploadForFile(id);
         } catch (MobileNettskjemaException e) {

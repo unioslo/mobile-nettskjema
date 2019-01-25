@@ -15,18 +15,22 @@ export async function addToSubmissionQueueWithMetaData(submission, metaData) {
   );
 }
 
-export async function uploadFile(id) {
+export async function uploadSubmission(id) {
   /* Todo: Upload a single (encrypted file) */
-  return await RNNettskjema.uploadFile(id);
+  return await RNNettskjema.uploadSubmission(id);
 }
 
-export async function deleteFile(id) {
-  return await RNNettskjema.deleteFile(id);
+export async function deleteSubmission(id) {
   /* Todo: Delete a single (encrypted) file */
+  return await RNNettskjema.deleteSubmission(id);
 }
 
 export async function abortUpload() {
   /* Todo: */
+}
+
+export async function getSubmissionsWithMetaData() {
+  /* Todo: Get (encrypted) submissions with metadata */
 }
 
 export async function clearTemporaryFiles() {
@@ -69,6 +73,8 @@ export default {
   stateOfSubmissions,
   formSpecification,
   createSubmission,
-  uploadFile,
-  deleteFile,
+  uploadSubmission,
+  deleteSubmission,
+  abortUpload,
+  getSubmissionsWithMetaData,
 };

@@ -90,26 +90,26 @@ public class MobileNettskjema {
         ).submit();
     }
 
+    private void uploadSubmission(File file) throws MobileNettskjemaException {
+        Intent intent = new Intent(context, QueueService.class);
+        File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
+        SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
+        submissionState.bundleWithIntent(intent);
+        context.startService(intent);
+    }
+
     public void forceRetryAllSubmissions() throws MobileNettskjemaException {
         clearTemporaryFiles();
         for (File file: filesInStorageDirectory()) {
-            Intent intent = new Intent(context, QueueService.class);
-            File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
-            SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
-            submissionState.bundleWithIntent(intent);
-            context.startService(intent);
+            uploadSubmission(file);
         }
     }
 
-    /* Todo: check this */
+    /* Todo: check this use string.startsWith instead? */
     public void retryUploadForFile(String submissionId) throws MobileNettskjemaException {
         for(File file: filesInStorageDirectory()) {
             if (file.getName().equals(submissionId + ".ENCRYPTED")) {
-                Intent intent = new Intent(context, QueueService.class);
-                File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
-                SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
-                submissionState.bundleWithIntent(intent);
-                context.startService(intent);
+                uploadSubmission(file);
             }
         }
     }
@@ -133,6 +133,11 @@ public class MobileNettskjema {
             }
         }
         return output;
+    }
+
+    /* Todo: */
+    public void deleteSubmission (String submissionId) {
+
     }
 
     public void deleteAllSubmittedRecordings() throws  MobileNettskjemaException {

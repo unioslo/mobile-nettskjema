@@ -66,6 +66,15 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         promise.resolve(null);
     }
 
+    @ReactMethod
+    public void uploadFile(String id, Promise promise) {
+        try {
+            mobileNettskjema.retryUploadForFile(id);
+        } catch (MobileNettskjemaException e) {
+            e.printStackTrace();
+        }
+        promise.resolve(null);
+    }
 
     @ReactMethod
     public void addToSubmissionQueueWithMetaData(ReadableMap submission, String metaData, Promise promise) {
@@ -98,7 +107,9 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         WritableArray output = new WritableNativeArray();
         try {
             for (SubmissionState submissionState: mobileNettskjema.submissionStates()) {
-                output.pushString(submissionState.getClass().getSimpleName() + ": " + submissionState.getSubmissionMetaData());
+                //output.pushString(submissionState.getClass().getSimpleName() + ": " + submissionState.getSubmissionMetaData());
+                output.pushString(submissionState.getSubmissionMetaData());
+
             }
         } catch (MobileNettskjemaException e) {
             promise.reject(e);

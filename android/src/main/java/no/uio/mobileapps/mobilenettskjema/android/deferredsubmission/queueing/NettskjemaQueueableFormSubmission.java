@@ -62,6 +62,15 @@ public class NettskjemaQueueableFormSubmission {
         JsonFile jsonFile = new JsonFile(storageDirectory.fileNamed(filename));
         jsonFile.store(filledInForm);
         File metadata = storageDirectory.fileNamed(filename + ".metadata");
+
+        try {
+            JSONObject a = new JSONObject(this.metaData);
+            a.put("id", filename);
+            this.metaData = a.toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         try {
             PrintWriter printWriter = new PrintWriter(metadata);
             printWriter.println(this.metaData);

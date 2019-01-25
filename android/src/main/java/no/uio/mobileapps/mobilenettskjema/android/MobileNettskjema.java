@@ -92,13 +92,25 @@ public class MobileNettskjema {
 
     public void forceRetryAllSubmissions() throws MobileNettskjemaException {
         clearTemporaryFiles();
-
         for (File file: filesInStorageDirectory()) {
             Intent intent = new Intent(context, QueueService.class);
             File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
             SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
             submissionState.bundleWithIntent(intent);
             context.startService(intent);
+        }
+    }
+
+    /* Todo: check this */
+    public void retryUploadForFile(String submissionId) throws MobileNettskjemaException {
+        for(File file: filesInStorageDirectory()) {
+            if (file.getName().equals(submissionId + ".ENCRYPTED")) {
+                Intent intent = new Intent(context, QueueService.class);
+                File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
+                SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
+                submissionState.bundleWithIntent(intent);
+                context.startService(intent);
+            }
         }
     }
 

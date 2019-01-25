@@ -15,11 +15,13 @@ export async function addToSubmissionQueueWithMetaData(submission, metaData) {
   );
 }
 
-export async function uploadFile(fileName) {
+export async function uploadFile(id) {
   /* Todo: Upload a single (encrypted file) */
+  return await RNNettskjema.uploadFile(id);
 }
 
-export async function deleteFile(fileName) {
+export async function deleteFile(id) {
+  return await RNNettskjema.deleteFile(id);
   /* Todo: Delete a single (encrypted) file */
 }
 
@@ -67,4 +69,6 @@ export default {
   stateOfSubmissions,
   formSpecification,
   createSubmission,
+  uploadFile,
+  deleteFile,
 };

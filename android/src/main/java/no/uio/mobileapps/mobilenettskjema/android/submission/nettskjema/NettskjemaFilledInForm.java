@@ -63,7 +63,7 @@ public class NettskjemaFilledInForm implements FilledInForm {
             field.addToBuilder(bodyBuilder);
         }
         RequestBody requestBody = bodyBuilder.build();
-        return new Request.Builder().url(form.postUrl()).post(requestBody).build();
+        return new Request.Builder().url(form.postUrl()).header("User-Agent", "Diktafon/Android").post(requestBody).build();
     }
 
     @Override

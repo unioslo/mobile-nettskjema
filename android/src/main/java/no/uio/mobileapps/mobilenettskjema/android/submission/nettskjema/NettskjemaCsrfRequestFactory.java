@@ -22,6 +22,6 @@ import okhttp3.Request;
 class NettskjemaCsrfRequestFactory implements CsrfRequestFactory {
     @Override
     public Request newRequest() {
-        return new Request.Builder().url("https://nettskjema.no/ping.html").build();
+        return new Request.Builder().url("https://nettskjema.no/ping.html").header("User-Agent", "Diktafon/Android").build();
     }
 }

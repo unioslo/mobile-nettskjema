@@ -26,6 +26,7 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.encryption.
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.SubmissionState;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.serialization.ClassIdentifier;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.serialization.SubmissionFile;
+import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiondecisions.DeleteSubmission;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiondecisions
         .SubmissionDecision;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiondecisions
@@ -81,11 +82,20 @@ public class EncryptedSubmission implements SubmissionState {
 
     @Override
     public SubmissionState next(Context context) throws MobileNettskjemaException {
-        if(/*TODO*/ true) {
+        //return submissionDecision.nextSubmissionState(submissionFile, context);
+
+        /* TODO: rewrite this using submissionDecision.nextSubmissionState
+        * Issue with going from encrypted to decrypted to submitted (right now it goes from encrypted to submitted and can't read the file)
+        */
+        if(!submissionDecision.equals(DeleteSubmission.class)) {
             return new DecryptedSubmission(submissionFile, submissionDecision);
         } else {
             return new DeletedSubmission(submissionFile);
         }
+    }
+
+    public SubmissionState deleteSubmission(Context context) throws  MobileNettskjemaException {
+        return new DeletedSubmission(submissionFile);
     }
 
     @Override

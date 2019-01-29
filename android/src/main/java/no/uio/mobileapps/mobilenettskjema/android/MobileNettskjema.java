@@ -42,6 +42,8 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.queueing.Au
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.queueing.NettskjemaQueueableFormSubmission;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.queueing.QueueService;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiondecisions.AlwaysSubmit;
+import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissiondecisions.DeleteSubmission;
+import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.EncryptedSubmission;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.SubmissionStateFromFile;
 import no.uio.mobileapps.mobilenettskjema.android.reactnative.api.RNFilledInForm;
 import no.uio.mobileapps.mobilenettskjema.android.submission.interfaces.FilledInForm;
@@ -136,8 +138,20 @@ public class MobileNettskjema {
     }
 
     /* Todo: */
-    public void deleteSubmission (String submissionId) {
+    public void deleteSubmission (String submissionId) throws MobileNettskjemaException {
+        Intent intent = new Intent(context, QueueService.class);
+        File file = storageDirectory.fileNamed(submissionId + ".ENCRYPTED");
+        File metaDataFile = storageDirectory.fileNamed(submissionId + ".metadata");
+        SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new DeleteSubmission()).next(context);
+        submissionState.bundleWithIntent(intent);
+        context.startService(intent);
+    }
 
+    private void delete(SubmissionState submissionState) throws MobileNettskjemaException {
+        if(submissionState.getClass() == EncryptedSubmission.class) {
+            EncryptedSubmission a = (EncryptedSubmission) submissionState;
+            a.deleteSubmission(context);
+        }
     }
 
     public void deleteSubmissionsIfTooOld() throws MobileNettskjemaException {

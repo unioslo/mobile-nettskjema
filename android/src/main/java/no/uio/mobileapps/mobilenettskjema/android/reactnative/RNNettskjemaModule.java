@@ -57,6 +57,16 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void deleteSubmission(String id, Promise promise) {
+        try {
+            mobileNettskjema.deleteSubmission(id);
+        } catch (MobileNettskjemaException e) {
+            e.printStackTrace();
+        }
+        promise.resolve(null);
+    }
+
+    @ReactMethod
     public void addToSubmissionQueue(ReadableMap submission, Promise promise) {
         try {
             mobileNettskjema.addToSubmissionQueue(submission);

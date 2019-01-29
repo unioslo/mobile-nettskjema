@@ -32,6 +32,8 @@ public class SubmissionDecisionFromIntent {
     public SubmissionDecision deserialized() throws MobileNettskjemaException {
         if (intent.getBooleanExtra(AlwaysSubmit.INTENT_KEY, false)) return new AlwaysSubmit();
         if (intent.getBooleanExtra(SubmitIfConnectionIsSatisfactory.INTENT_KEY, false)) return new SubmitIfConnectionIsSatisfactory();
+        if (intent.getBooleanExtra(DeleteSubmission.INTENT_KEY, false)) return new DeleteSubmission();
+
         throw new MobileNettskjemaException("Intent " + intent + " does not contain a " + SubmissionDecision.class.getSimpleName());
     }
 }

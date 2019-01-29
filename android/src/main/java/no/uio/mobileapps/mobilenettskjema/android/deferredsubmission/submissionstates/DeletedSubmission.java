@@ -27,16 +27,16 @@ import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.serialization.ClassIdentifier;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.serialization.SubmissionFile;
 
-class DeletedSubmission implements SubmissionState {
+public class DeletedSubmission implements SubmissionState {
     private final SubmissionFile submissionFile;
     private final ClassIdentifier classIdentifier;
 
-    DeletedSubmission(SubmissionFile submissionFile) {
+    public DeletedSubmission(SubmissionFile submissionFile) {
         this.submissionFile = submissionFile;
         this.classIdentifier = new ClassIdentifier(this);
     }
 
-    DeletedSubmission(Intent intent) throws MobileNettskjemaException {
+    public DeletedSubmission(Intent intent) throws MobileNettskjemaException {
         this(new SubmissionFile(intent));
     }
 

@@ -15,6 +15,10 @@ export async function addToSubmissionQueueWithMetaData(submission, metaData) {
   );
 }
 
+export async function deleteSubmissionsIfTooOld() {
+  return await RNNettskjema.deleteSubmissionsIfTooOld();
+}
+
 export async function uploadSubmission(id) {
   /* Todo: Upload a single (encrypted file) */
   return await RNNettskjema.uploadSubmission(id);
@@ -77,4 +81,5 @@ export default {
   deleteSubmission,
   abortUpload,
   getSubmissionsWithMetaData,
+  deleteSubmissionsIfTooOld,
 };

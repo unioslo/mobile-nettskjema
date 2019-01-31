@@ -67,7 +67,8 @@ public class NettskjemaQueueableFormSubmission {
         try {
             JSONObject a = new JSONObject(this.metaData);
             a.put("id", filename);
-            a.put("dateCreated", new Date());
+            a.put("dateCreated", new Date().getTime());
+            a.put("submitted", false);
             this.metaData = a.toString();
         } catch (JSONException e) {
             e.printStackTrace();

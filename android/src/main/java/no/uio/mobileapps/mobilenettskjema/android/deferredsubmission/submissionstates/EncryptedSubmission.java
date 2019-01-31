@@ -48,12 +48,6 @@ public class EncryptedSubmission implements SubmissionState {
         this.deliveryStatus = deliveryStatus;
     }
 
-    public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision, String metaData) {
-        this.submissionFile = submissionFile;
-        this.classIdentifier = new ClassIdentifier(this);
-        this.submissionDecision = submissionDecision;
-        this.deliveryStatus = NOT_DELIVERED;
-    }
 
     public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision) {
         this.submissionFile = submissionFile;
@@ -63,11 +57,7 @@ public class EncryptedSubmission implements SubmissionState {
     }
 
     EncryptedSubmission(Intent intent)  throws MobileNettskjemaException {
-        this(new SubmissionFile(intent), new SubmissionDecisionFromIntent(intent).deserialized(), "intent");
-    }
-
-    EncryptedSubmission(File file, SubmissionDecision submissionDecision, String metaData) throws MobileNettskjemaException {
-        this(new SubmissionFile(file), submissionDecision, metaData);
+        this(new SubmissionFile(intent), new SubmissionDecisionFromIntent(intent).deserialized());
     }
 
     EncryptedSubmission(File file, SubmissionDecision submissionDecision, File metaDataFile) throws MobileNettskjemaException {

@@ -40,7 +40,7 @@ public class SubmitIfConnectionIsSatisfactory implements SubmissionDecision {
     @Override
     public SubmissionState nextSubmissionState(SubmissionFile submissionFile, Context context) {
         if (uploadConditionIsMet(context)) return new SubmittedSubmission(submissionFile, this);
-        else return new EncryptedSubmission(submissionFile, this, "nextSubmissionState");
+        else return new EncryptedSubmission(submissionFile, this);
     }
 
     private boolean uploadConditionIsMet(Context context) {

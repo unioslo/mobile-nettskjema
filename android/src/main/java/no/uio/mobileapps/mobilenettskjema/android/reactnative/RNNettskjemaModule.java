@@ -24,6 +24,8 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableNativeArray;
 
+import org.json.JSONException;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -61,6 +63,20 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         try {
             mobileNettskjema.deleteSubmission(id);
         } catch (MobileNettskjemaException e) {
+            e.printStackTrace();
+        }
+        promise.resolve(null);
+    }
+
+    @ReactMethod
+    public void deleteSubmissionsIfTooOld(Promise promise) {
+        try {
+            mobileNettskjema.deleteSubmissionsIfTooOld();
+        } catch (MobileNettskjemaException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         promise.resolve(null);

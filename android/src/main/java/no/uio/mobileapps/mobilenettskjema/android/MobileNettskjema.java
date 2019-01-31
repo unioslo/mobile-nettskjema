@@ -24,6 +24,7 @@ import com.facebook.react.bridge.ReadableMap;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
+import org.json.JSONException;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -147,23 +148,25 @@ public class MobileNettskjema {
         context.startService(intent);
     }
 
-    private void delete(SubmissionState submissionState) throws MobileNettskjemaException {
-        if(submissionState.getClass() == EncryptedSubmission.class) {
-            EncryptedSubmission a = (EncryptedSubmission) submissionState;
-            a.deleteSubmission(context);
+    public void deleteSubmissionsIfTooOld() throws MobileNettskjemaException, IOException, JSONException {
+        for (File file : filesInStorageDirectory()) {
+            if(file.getName().endsWith(".metadata")) {
+                MetaDataFile metaDataFile = new MetaDataFile(file, true);
+                if(metaDataFile.shouldDeleteFile()) {
+                    deleteSubmission(metaDataFile.getSubmissionId());
+                }
+            }
         }
-    }
-
-    public void deleteSubmissionsIfTooOld() throws MobileNettskjemaException {
-
     }
 
     public void deleteAllSubmittedRecordings() throws  MobileNettskjemaException {
         for (File file : filesInStorageDirectory()) {
             /* TODO: Only delete if matadata is marked as delivered */
-            SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(null);
-            if (submissionState.indicatesSemiPermanentStorageOnDevice()) {
+            if (false) {
+                SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(null);
+                if (submissionState.indicatesSemiPermanentStorageOnDevice()) {
                 /* TODO: Delete file */
+                }
             }
         }
     }

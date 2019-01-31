@@ -50,6 +50,18 @@ RCT_EXPORT_METHOD(addToSubmissionQueueWithMetaData:(NSDictionary *)submission me
      }];
 }
 
+RCT_EXPORT_METHOD(deleteSubmission:(NSString *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [mobileNettskjema
+     deleteSubmission:submission
+     onComplete: ^void (NSString *submission) {
+         resolve(submission);
+     }
+     onFailure: ^void (NSString *reason) {
+         reject(@"delete_submission_failed", reason, nil);
+     }];
+}
+
 RCT_EXPORT_METHOD(clearTemporaryFiles:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema clearTemporaryFilesOnComplete:^(void) {

@@ -37,6 +37,19 @@ RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTP
      }];
 }
 
+RCT_EXPORT_METHOD(addToSubmissionQueueWithMetaData:(NSDictionary *)submission metaData:(NSString *)metaData resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [mobileNettskjema
+     addToSubmissionQueue:submission
+     withMetaData:metaData
+     onComplete: ^void (NSString *submission) {
+         resolve(submission);
+     }
+     onFailure: ^void (NSString *reason) {
+         reject(@"add_to_queue_with_metadata_failed", reason, nil);
+     }];
+}
+
 RCT_EXPORT_METHOD(clearTemporaryFiles:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema clearTemporaryFilesOnComplete:^(void) {

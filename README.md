@@ -33,7 +33,7 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 * Add the following inside the `dict` tag of `NSExceptionDomains` in your project's Info.plist file:
 
 ```
-<key>nettskjema.uio.no</key>
+<key>nettskjema.no</key>
 <dict>
   <key>NSExceptionRequiresForwardSecrecy</key>
   <false/>

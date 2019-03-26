@@ -35,7 +35,7 @@ public class NettskjemaForm implements Form {
 
     @Override
     public String postUrl() {
-        return "https://nettskjema.uio.no/answer/deliver.json?formId=" + String.valueOf(id);
+        return "https://nettskjema.no/answer/deliver.json?formId=" + String.valueOf(id);
     }
 
     @Override

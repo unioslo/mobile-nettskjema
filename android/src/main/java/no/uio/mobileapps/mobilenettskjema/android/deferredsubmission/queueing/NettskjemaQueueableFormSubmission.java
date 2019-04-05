@@ -65,7 +65,7 @@ public class NettskjemaQueueableFormSubmission {
         File metadata = storageDirectory.fileNamed(filename + ".metadata");
 
         try {
-            JSONObject a = new JSONObject(this.metaData);
+            JSONObject a = new JSONObject();
             a.put("id", filename);
             a.put("dateCreated", new Date().getTime());
             a.put("submitted", false);

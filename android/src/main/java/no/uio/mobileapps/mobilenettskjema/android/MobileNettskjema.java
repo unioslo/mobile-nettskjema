@@ -96,7 +96,13 @@ public class MobileNettskjema {
     private void uploadSubmission(File file) throws MobileNettskjemaException {
         Intent intent = new Intent(context, QueueService.class);
         File metaDataFile =  new File(new MetaDataFile(file).getMetaDataFileName());
-        SubmissionState submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
+        SubmissionState submissionState;
+
+        if(metaDataFile != null && metaDataFile.exists()) {
+             submissionState = new SubmissionStateFromFile(file, metaDataFile).withDecision(new AlwaysSubmit()).next(context);
+        } else {
+            submissionState = new SubmissionStateFromFile(file).withDecision(new AlwaysSubmit()).next(context);
+        }
         submissionState.bundleWithIntent(intent);
         context.startService(intent);
     }

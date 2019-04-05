@@ -22,11 +22,13 @@ import android.content.Intent;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.greenrobot.eventbus.EventBus;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONStringer;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import no.uio.mobileapps.mobilenettskjema.android.MobileNettskjemaException;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.encryption.DecryptionPipe;
@@ -103,6 +105,19 @@ public class SubmissionFile implements IntentSerializable {
         return "no metadata";
     }
 
+    public void markAsDelivered() throws MobileNettskjemaException {
+        if (metaDataFile == null) return;
+        try {
+            String s =  FileUtils.readFileToString(metaDataFile, "UTF-8");
+            JSONObject a = new JSONObject(s);
+            a.put("submitted", true);
+            a.put("deliveredDate",  new Date().getTime());
+            FileUtils.writeStringToFile(metaDataFile, a.toString());
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void encrypt(EncryptionMethod encryptionMethod) throws MobileNettskjemaException {
         new InplaceFileTransformation(file, new EncryptionPipe(encryptionMethod)).perform();
     }
@@ -117,6 +132,16 @@ public class SubmissionFile implements IntentSerializable {
         if (!file.renameTo(newFile)) throw new MobileNettskjemaException("Renaming file " + file.getAbsolutePath() + " to " + newFile.getAbsolutePath() + "failed");
         this.file = newFile;
         EventBus.getDefault().post(new SubmissionStateChanged(submissionFileState));
+
+        if (metaDataFile == null) return;
+        try {
+            String s =  FileUtils.readFileToString(metaDataFile, "UTF-8");
+            JSONObject a = new JSONObject(s);
+            a.put("type", submissionFileState.extension());
+            FileUtils.writeStringToFile(metaDataFile, a.toString());
+        } catch (IOException | JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void updateMetaData(SubmissionFileState submissionFileState) throws MobileNettskjemaException {

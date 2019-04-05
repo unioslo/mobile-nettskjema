@@ -25,6 +25,7 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableNativeArray;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -134,8 +135,20 @@ public class RNNettskjemaModule extends ReactContextBaseJavaModule {
         try {
             for (SubmissionState submissionState: mobileNettskjema.submissionStates()) {
                 //output.pushString(submissionState.getClass().getSimpleName() + ": " + submissionState.getSubmissionMetaData());
-                output.pushString(submissionState.getSubmissionMetaData());
-
+                try {
+                    JSONObject a;
+                    if(submissionState.getSubmissionMetaData() == null) {
+                        a = new JSONObject();
+                    } else {
+                        a = new JSONObject(submissionState.getSubmissionMetaData());
+                    }
+                    a.put("submissionType", submissionState.getClass().getSimpleName());
+                    String out = a.toString();
+                    output.pushString(out);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    output.pushString(submissionState.getSubmissionMetaData());
+                }
             }
         } catch (MobileNettskjemaException e) {
             promise.reject(e);

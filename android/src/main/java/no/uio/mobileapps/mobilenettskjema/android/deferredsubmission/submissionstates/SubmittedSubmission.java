@@ -72,8 +72,8 @@ public class SubmittedSubmission implements SubmissionState {
 
     @Override
     public SubmissionState next(Context context) throws MobileNettskjemaException {
-        /* update metadata file? */
         if (submissionFile.isMarked(SubmissionFileState.SUBMITTED)) {
+            submissionFile.markAsDelivered();
             return new EncryptedSubmission(submissionFile, submissionDecision, DELIVERED);
         } else {
             return new EncryptedSubmission(submissionFile, submissionDecision, DELIVERY_FAILED);

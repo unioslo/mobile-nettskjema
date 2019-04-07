@@ -41,7 +41,7 @@ public class MetaDataFile {
         return tokens[0] + ".metadata";
     }
 
-    public boolean metaDataExcists () {
+    public boolean metadataExists() {
         return new File(metaDataFileName).exists();
     }
 
@@ -56,7 +56,7 @@ public class MetaDataFile {
             }
             return metaData.toString();
         }
-        Log.d("Metadata manager", "File does not excist!");
+        Log.d("Metadata manager", "File does not exist!");
         return  null;
     }
 

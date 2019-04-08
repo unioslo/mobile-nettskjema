@@ -94,6 +94,18 @@ RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejec
      }];
 }
 
+RCT_EXPORT_METHOD(retryUploadForFile:(NSString *)submissionId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [mobileNettskjema
+     retryUploadForFile:submissionId
+     onComplete: ^void (NSString *submission) {
+         resolve(submission);
+     }
+     onFailure: ^void (NSString *reason) {
+         reject(@"upload_submission_failed", reason, nil);
+     }];
+}
+
 
 RCT_EXPORT_METHOD(setAutoSubmissionsPreference:(NSString *)value resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {

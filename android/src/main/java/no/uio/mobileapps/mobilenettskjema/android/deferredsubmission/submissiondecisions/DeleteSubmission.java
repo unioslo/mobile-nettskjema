@@ -5,7 +5,6 @@ import android.content.Intent;
 
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.interfaces.SubmissionState;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.serialization.SubmissionFile;
-import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.SubmittedSubmission;
 import no.uio.mobileapps.mobilenettskjema.android.deferredsubmission.submissionstates.DeletedSubmission;
 
 public class DeleteSubmission implements SubmissionDecision {

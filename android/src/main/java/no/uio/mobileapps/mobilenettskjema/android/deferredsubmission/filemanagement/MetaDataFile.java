@@ -19,7 +19,6 @@ import java.util.Date;
 
 public class MetaDataFile {
     private static final String extension = "queueTemp";
-    private static final int daysToDelete = 90;
 
     private File submissionFileName;
     private File metaDataFile;
@@ -81,7 +80,7 @@ public class MetaDataFile {
         return String.valueOf(r.get("id"));
     }
 
-    public boolean shouldDeleteFile() throws IOException, JSONException {
+    public boolean isOlderThan(int days) throws IOException, JSONException {
         String m = readMetaData();
         JSONObject r = new JSONObject(m);
 
@@ -90,6 +89,6 @@ public class MetaDataFile {
 
         long diffInMilliseconds = Math.abs(createdInMilliseconds - now.getTime());
         long differenceInDays = diffInMilliseconds / (24 * 60 * 60 * 1000);
-        return differenceInDays > daysToDelete;
+        return differenceInDays > days;
     }
 }

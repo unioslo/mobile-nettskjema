@@ -158,7 +158,7 @@ public class MobileNettskjema {
         for (File file : filesInStorageDirectory()) {
             if(file.getName().endsWith(".metadata")) {
                 MetaDataFile metaDataFile = new MetaDataFile(file, true);
-                if(metaDataFile.shouldDeleteFile()) {
+                if(metaDataFile.isOlderThan(90)) {
                     deleteSubmission(metaDataFile.getSubmissionId());
                 }
             }
@@ -167,7 +167,7 @@ public class MobileNettskjema {
 
     public void deleteAllSubmittedRecordings() throws  MobileNettskjemaException {
         for (File file : filesInStorageDirectory()) {
-            /* TODO: Only delete if matadata is marked as delivered */
+            /* TODO: Only delete if metadata is marked as delivered */
             if (false) {
                 SubmissionState submissionState = new SubmissionStateFromFile(file).withDecision(null);
                 if (submissionState.indicatesSemiPermanentStorageOnDevice()) {

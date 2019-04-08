@@ -31,8 +31,7 @@ public class SubmissionStateFromFile {
     private final File metaDataFile;
 
     public SubmissionStateFromFile(File file) {
-        this.file = file;
-        this.metaDataFile = null;
+        this(file, null);
     }
 
     public SubmissionStateFromFile(File file, File metaDataFile) {

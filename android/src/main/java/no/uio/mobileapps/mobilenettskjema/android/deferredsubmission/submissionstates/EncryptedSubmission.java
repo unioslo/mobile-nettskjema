@@ -50,10 +50,7 @@ public class EncryptedSubmission implements SubmissionState {
 
 
     public EncryptedSubmission(SubmissionFile submissionFile, SubmissionDecision submissionDecision) {
-        this.submissionFile = submissionFile;
-        this.classIdentifier = new ClassIdentifier(this);
-        this.submissionDecision = submissionDecision;
-        this.deliveryStatus = NOT_DELIVERED;
+        this(submissionFile, submissionDecision, NOT_DELIVERED);
     }
 
     EncryptedSubmission(Intent intent)  throws MobileNettskjemaException {

@@ -73,4 +73,13 @@ RCT_EXPORT_METHOD(stateOfSubmissions:(RCTPromiseResolveBlock)resolve rejecter:(R
     }];
 }
 
+RCT_EXPORT_METHOD(stateOfSubmissionsMetadata:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [mobileNettskjema submissionStateMetadataOnComplete:^void (NSArray<NSString *> *results) {
+        resolve(results);
+    } onFailure: ^void (NSString *reason) {
+        reject(@"state_of_submissions_metadata_failed", reason, nil);
+    }];
+}
+
 @end

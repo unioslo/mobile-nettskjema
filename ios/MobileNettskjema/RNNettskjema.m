@@ -73,18 +73,6 @@ RCT_EXPORT_METHOD(deleteSubmissionsIfTooOld:(NSString *)submission resolver:(RCT
      }];
 }
 
-RCT_EXPORT_METHOD(uploadSubmission:(NSString *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
-{
-    [mobileNettskjema
-     uploadSubmission:submission
-     onComplete: ^void (NSString *submission) {
-         resolve(submission);
-     }
-     onFailure: ^void (NSString *reason) {
-         reject(@"upload_submission_failed", reason, nil);
-     }];
-}
-
 RCT_EXPORT_METHOD(clearTemporaryFiles:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema clearTemporaryFilesOnComplete:^(void) {

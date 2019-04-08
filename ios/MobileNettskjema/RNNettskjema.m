@@ -62,6 +62,17 @@ RCT_EXPORT_METHOD(deleteSubmission:(NSString *)submission resolver:(RCTPromiseRe
      }];
 }
 
+RCT_EXPORT_METHOD(deleteSubmissionsIfTooOld:(NSString *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+{
+    [mobileNettskjema
+     deleteSubmissionsIfTooOld:^void (NSArray<NSString *> *deletedSubmissions) {
+         resolve(deletedSubmissions);
+     }
+     onFailure:^void (NSString *reason) {
+         reject(@"delete_old_submissions_failed", reason, nil);
+     }];
+}
+
 RCT_EXPORT_METHOD(uploadSubmission:(NSString *)submission resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema
@@ -98,11 +109,11 @@ RCT_EXPORT_METHOD(retryUploadForFile:(NSString *)submissionId resolver:(RCTPromi
 {
     [mobileNettskjema
      retryUploadForFile:submissionId
-     onComplete: ^void (NSString *submission) {
-         resolve(submission);
+     onComplete: ^void (NSString *submissionResult) {
+         resolve(submissionResult);
      }
      onFailure: ^void (NSString *reason) {
-         reject(@"upload_submission_failed", reason, nil);
+         reject(@"retry_submission_failed", reason, nil);
      }];
 }
 

@@ -40,7 +40,7 @@ RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTP
 RCT_EXPORT_METHOD(addToSubmissionQueueWithMetadata:(NSDictionary *)submission metadata:(NSString *)metadata resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema
-     addToSubmissionQueue:submission
+     addToSubmissionQueueWithMetadata:submission
      withMetadata:metadata
      onComplete: ^void (NSString *submission) {
          resolve(submission);

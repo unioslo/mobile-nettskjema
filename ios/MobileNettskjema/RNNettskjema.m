@@ -37,11 +37,11 @@ RCT_EXPORT_METHOD(addToSubmissionQueue:(NSDictionary *)submission resolver:(RCTP
      }];
 }
 
-RCT_EXPORT_METHOD(addToSubmissionQueueWithMetaData:(NSDictionary *)submission metaData:(NSString *)metaData resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(addToSubmissionQueueWithMetadata:(NSDictionary *)submission metadata:(NSString *)metadata resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema
      addToSubmissionQueue:submission
-     withMetaData:metaData
+     withMetadata:metadata
      onComplete: ^void (NSString *submission) {
          resolve(submission);
      }

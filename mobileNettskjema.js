@@ -38,7 +38,10 @@ export function createSubmission(spec, data) {
 }
 
 export async function addToSubmissionQueueWithMetadata(submission, metadata) {
-  return await RNNettskjema.addToSubmissionQueue(submission, metadata)
+  return await RNNettskjema.addToSubmissionQueueWithMetadata(
+    submission,
+    metadata,
+  )
 }
 
 export async function uploadSubmission(submissionId) {

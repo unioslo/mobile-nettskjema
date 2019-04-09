@@ -17,7 +17,7 @@ export async function forceRetryAllSubmissions() {
 }
 
 export async function setAutoSubmissionsPreference(preference) {
-  const validPreferences = ["ALWAYS", "NEVER", "ONLY_WITH_WIFI"]
+  const validPreferences = ['ALWAYS', 'NEVER', 'ONLY_WITH_WIFI']
   if (validPreferences.includes(preference)) {
     return await RNNettskjema.setAutoSubmissionsPreference(preference)
   } else {
@@ -37,6 +37,14 @@ export function createSubmission(spec, data) {
   return submissionCreator(spec)(data)
 }
 
+export async function addToSubmissionQueueWithMetadata(submission, metadata) {
+  return await RNNettskjema.addToSubmissionQueue(submission, metadata)
+}
+
+export async function uploadSubmission(submissionId) {
+  return await RNNettskjema.retryUploadForFile(submissionId)
+}
+
 export const eventEmitter = new NativeEventEmitter(RNNettskjema)
 
 export default {
@@ -47,4 +55,6 @@ export default {
   stateOfSubmissions,
   formSpecification,
   createSubmission,
+  addToSubmissionQueueWithMetadata,
+  uploadSubmission,
 }

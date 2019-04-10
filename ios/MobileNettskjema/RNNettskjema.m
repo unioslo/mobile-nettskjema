@@ -93,7 +93,7 @@ RCT_EXPORT_METHOD(forceRetryAllSubmissions:(RCTPromiseResolveBlock)resolve rejec
      }];
 }
 
-RCT_EXPORT_METHOD(retryUploadForFile:(NSString *)submissionId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(uploadSubmission:(NSString *)submissionId resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject)
 {
     [mobileNettskjema
      retryUploadForFile:submissionId

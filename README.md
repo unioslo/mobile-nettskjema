@@ -26,6 +26,24 @@ Make sure you have installed [Carthage](https://github.com/Carthage/Carthage).
 * Add the following to the `Cartfile` of your project: `git "ssh://git@bitbucket.usit.uio.no:7999/mob/mobile-nettskjema-ios.git"`
 * Run Carthage (from the ios-folder: `carthage update --platform ios`) and add the installed frameworks to your project as described in the [Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) (step 3 and onwards)
 
+#### Input og outputfiler
+Per carthage dokumentasjon, legg inn dette innholdet i `input.xcfilelist` og `output.xcfilelist`
+```
+$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
+$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/KeychainSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/MobileNettskjemaIOS.framework
+$(SRCROOT)/Carthage/Build/iOS/Reachability.framework
+```
+
+```
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CryptoSwift.framework
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KeychainSwift.framework
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MobileNettskjemaIOS.framework
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reachability.framework
+```
+
 ### Embed standard swift libraries
 * In Xcode, go to `Build settings` and search for `Always Embed Swift Standard Libraries` and make sure this is set to `Yes`
 
